@@ -8,7 +8,12 @@ import pandas as pd
 from tdc_oracles_modified import Oracle
 
 # Load GuacaMol dataset
-guacamol_dataset_path = "/guacamol_dataset/guacamol_v1_train.smiles"
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+guacamol_dataset_path = os.path.join(current_dir, "../guacamol_dataset/guacamol_v1_train.smiles")
+
+# Confirm the exact path being used
+print("Final path to dataset:", guacamol_dataset_path)
 guacamol_dataset = pd.read_csv(guacamol_dataset_path, header=None, names=["smiles"])
 ALL_SMILES = guacamol_dataset["smiles"].tolist()[:10_000]
 known_smiles = ALL_SMILES[:50]
