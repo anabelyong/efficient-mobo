@@ -28,7 +28,7 @@ def independent_tanimoto_gp_predict(
     
     # Compute query_fp every time since query_smiles changes with each iteration
     query_fp = [get_fingerprint(s) for s in query_smiles]
-
+    
     # Calculate Tanimoto similarity matrices
     K_known_known = np.asarray([DataStructs.BulkTanimotoSimilarity(fp, known_fp) for fp in known_fp])
     K_query_known = np.asarray([DataStructs.BulkTanimotoSimilarity(fp, known_fp) for fp in query_fp])
