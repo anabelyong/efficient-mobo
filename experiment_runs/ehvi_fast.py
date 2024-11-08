@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
-from kern_gp.gp_model import independent_tanimoto_gp_predict
+from kern_gp.optimized_gp_model import independent_tanimoto_gp_predict, get_fingerprint  # Import get_fingerprint here
 from utils.utils_final import evaluate_fex_objectives
 
 def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000): 
@@ -35,7 +35,8 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
 
     return ehvi_values
 
-def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point):
+# Adjust ehvi_acquisition to accept precomputed known_fp
+def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point, known_fp):
     pred_means, pred_vars = independent_tanimoto_gp_predict(
         query_smiles=query_smiles,
         known_smiles=known_smiles,
@@ -43,6 +44,7 @@ def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitude
         gp_means=gp_means,
         gp_amplitudes=gp_amplitudes,
         gp_noises=gp_noises,
+        known_fp=known_fp  # Pass precomputed known_fp here
     )
 
     pareto_mask = pareto_front(known_Y)
@@ -52,6 +54,7 @@ def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitude
 
     return ehvi_values, pred_means
 
+# Update bayesian_optimization_loop to precompute known_fp and pass it to ehvi_acquisition
 def bayesian_optimization_loop(
     known_smiles,
     query_smiles,
@@ -64,18 +67,15 @@ def bayesian_optimization_loop(
     scale_max_ref_point=False,
     n_iterations=20,
 ):
+    # Precompute fingerprints for known smiles
+    known_fp = [get_fingerprint(s) for s in known_smiles]
+
     S_chosen = set()
     hypervolumes_bo = []
     acquisition_values = []
     results = []
 
-    print(f"GP Means: {gp_means}")
-    print(f"GP Amplitudes: {gp_amplitudes}")
-    print(f"GP Noises: {gp_noises}\n")
-
     for iteration in range(n_iterations):
-        print(f"Start BO iteration {iteration}. Dataset size={known_Y.shape}")
-
         reference_point = infer_reference_point(
             known_Y, max_ref_point=max_ref_point, scale=scale, scale_max_ref_point=scale_max_ref_point
         )
@@ -95,6 +95,7 @@ def bayesian_optimization_loop(
                 gp_amplitudes=gp_amplitudes,
                 gp_noises=gp_noises,
                 reference_point=reference_point,
+                known_fp=known_fp  # Pass precomputed fingerprints
             )
             ehvi_value = ehvi_values[0]
             if ehvi_value > max_acq:
@@ -103,25 +104,19 @@ def bayesian_optimization_loop(
                 best_means = pred_means[0]
 
         acquisition_values.append(max_acq)
-        print(f"Max acquisition value: {max_acq}")
         if best_smiles:
             S_chosen.add(best_smiles)
             new_Y = evaluate_fex_objectives([best_smiles])
             known_smiles.append(best_smiles)
             known_Y = np.vstack([known_Y, new_Y])
-            print(f"Chosen SMILES: {best_smiles} with acquisition function value = {max_acq}")
-            print(f"Value of chosen SMILES: {new_Y}")
-            print(f"Updated dataset size: {known_Y.shape}")
-            # Store the chosen SMILES EHVI-MPO values
-            f1, f2, f3 = new_Y[0]  # Extract f1, f2, f3 from the actual evaluated values
-            results.append([f1, f2, f3])
-        else:
-            print("No new SMILES selected.")
+            results.append(new_Y[0])
+
+            # Update known_fp with the fingerprint of the new best_smiles
+            known_fp.append(get_fingerprint(best_smiles))
 
         hv = Hypervolume(reference_point)
         current_hypervolume = hv.compute(known_Y)
         hypervolumes_bo.append(current_hypervolume)
-        print(f"Hypervolume: {current_hypervolume}")
 
     return known_smiles, known_Y, hypervolumes_bo, acquisition_values, results
 
