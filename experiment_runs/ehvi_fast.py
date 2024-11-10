@@ -1,16 +1,21 @@
-import random
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 import csv
 from mpl_toolkits.mplot3d import Axes3D
-
+import random
+import logging
+import time
+import numpy as np
+import pandas as pd
 from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
-from kern_gp.optimized_gp_model import independent_tanimoto_gp_predict, get_fingerprint  # Import get_fingerprint here
+from kern_gp.optimized_gp_model import independent_tanimoto_gp_predict, get_fingerprint
 from utils.utils_final import evaluate_fex_objectives
 
-def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000): 
+# Set up logger
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger("bo_logger")
+
+def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000):
     num_points, num_objectives = pred_means.shape
     ehvi_values = np.zeros(num_points)
 
@@ -24,7 +29,6 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
 
         # Monte Carlo integration
         samples = np.random.multivariate_normal(mean, cov, size=N)
-
         hvi = 0.0
         for sample in samples:
             augmented_pareto_front = np.vstack([pareto_front, sample])
@@ -35,8 +39,8 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
 
     return ehvi_values
 
-# Adjust ehvi_acquisition to accept precomputed known_fp
 def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point, known_fp):
+    start_time = time.time()
     pred_means, pred_vars = independent_tanimoto_gp_predict(
         query_smiles=query_smiles,
         known_smiles=known_smiles,
@@ -46,15 +50,17 @@ def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitude
         gp_noises=gp_noises,
         known_fp=known_fp  # Pass precomputed known_fp here
     )
+    logger.debug(f"Acquisition function prediction time: {time.time() - start_time:.2f} seconds")
 
     pareto_mask = pareto_front(known_Y)
     pareto_Y = known_Y[pareto_mask]
 
+    start_time = time.time()
     ehvi_values = expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_Y)
+    logger.debug(f"EHVI calculation time: {time.time() - start_time:.2f} seconds")
 
     return ehvi_values, pred_means
 
-# Update bayesian_optimization_loop to precompute known_fp and pass it to ehvi_acquisition
 def bayesian_optimization_loop(
     known_smiles,
     query_smiles,
@@ -68,7 +74,9 @@ def bayesian_optimization_loop(
     n_iterations=20,
 ):
     # Precompute fingerprints for known smiles
+    start_time = time.time()
     known_fp = [get_fingerprint(s) for s in known_smiles]
+    logger.info(f"Fingerprint precomputation time: {time.time() - start_time:.2f} seconds")
 
     S_chosen = set()
     hypervolumes_bo = []
@@ -76,6 +84,10 @@ def bayesian_optimization_loop(
     results = []
 
     for iteration in range(n_iterations):
+        iter_start_time = time.time()
+        logger.info(f"Start BO iteration {iteration}. Dataset size={known_Y.shape}")
+
+        # Infer reference point for hypervolume calculation
         reference_point = infer_reference_point(
             known_Y, max_ref_point=max_ref_point, scale=scale, scale_max_ref_point=scale_max_ref_point
         )
@@ -87,6 +99,8 @@ def bayesian_optimization_loop(
         for smiles in query_smiles:
             if smiles in S_chosen:
                 continue
+            # Acquisition function
+            ehvi_start_time = time.time()
             ehvi_values, pred_means = ehvi_acquisition(
                 query_smiles=[smiles],
                 known_smiles=known_smiles,
@@ -98,6 +112,8 @@ def bayesian_optimization_loop(
                 known_fp=known_fp  # Pass precomputed fingerprints
             )
             ehvi_value = ehvi_values[0]
+            logger.debug(f"EHVI acquisition for {smiles} took {time.time() - ehvi_start_time:.2f} seconds")
+
             if ehvi_value > max_acq:
                 max_acq = ehvi_value
                 best_smiles = smiles
@@ -113,12 +129,22 @@ def bayesian_optimization_loop(
 
             # Update known_fp with the fingerprint of the new best_smiles
             known_fp.append(get_fingerprint(best_smiles))
+            logger.info(f"Selected SMILES: {best_smiles} with acquisition value = {max_acq}")
+            logger.info(f"Updated known_Y size: {known_Y.shape}")
 
+        # Hypervolume calculation
         hv = Hypervolume(reference_point)
+        hv_start_time = time.time()
         current_hypervolume = hv.compute(known_Y)
         hypervolumes_bo.append(current_hypervolume)
+        logger.info(f"Hypervolume calculation time: {time.time() - hv_start_time:.2f} seconds")
+        logger.info(f"Hypervolume: {current_hypervolume}")
+
+        # Log total time for this iteration
+        logger.info(f"BO iteration {iteration} time: {time.time() - iter_start_time:.2f} seconds\n")
 
     return known_smiles, known_Y, hypervolumes_bo, acquisition_values, results
+
 
 def random_sampling_loop(query_smiles, known_Y, n_iterations=20):
     results = []
