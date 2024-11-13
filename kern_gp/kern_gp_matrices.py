@@ -43,6 +43,7 @@ def calculate_tanimoto_coefficients(known_smiles: list[str], query_smiles: list[
 
     query_fp = [get_fingerprint(s) for s in query_smiles]
     K_query_known = np.asarray([DataStructs.BulkTanimotoSimilarity(fp, known_fp) for fp in query_fp])  # shape (M, N)
+    print("K_query_known", K_query_known)
 
     K_query_query_diagonal = np.asarray([DataStructs.TanimotoSimilarity(fp, fp) for fp in query_fp])  # shape (M,)
 

@@ -1,21 +1,23 @@
-import matplotlib.pyplot as plt
-import csv
-from mpl_toolkits.mplot3d import Axes3D
-import random
 import logging
 import time
 import numpy as np
+import random
 import pandas as pd
 from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
 from kern_gp.optimized_gp_model import independent_tanimoto_gp_predict, get_fingerprint
 from utils.utils_final import evaluate_fex_objectives
 
-# Set up logger
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger("bo_logger")
+# Setup logging
+stream_handler = logging.StreamHandler()
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+stream_handler.setFormatter(formatter)
 
-def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000):
+bo_loop_logger = logging.getLogger("bo_loop_logger")
+bo_loop_logger.setLevel(logging.DEBUG)
+bo_loop_logger.addHandler(stream_handler)
+
+def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000): 
     num_points, num_objectives = pred_means.shape
     ehvi_values = np.zeros(num_points)
 
@@ -29,6 +31,7 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
 
         # Monte Carlo integration
         samples = np.random.multivariate_normal(mean, cov, size=N)
+
         hvi = 0.0
         for sample in samples:
             augmented_pareto_front = np.vstack([pareto_front, sample])
@@ -40,6 +43,7 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
     return ehvi_values
 
 def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point, known_fp):
+    """Calculate the Expected Hypervolume Improvement (EHVI) for given SMILES."""
     start_time = time.time()
     pred_means, pred_vars = independent_tanimoto_gp_predict(
         query_smiles=query_smiles,
@@ -48,35 +52,29 @@ def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitude
         gp_means=gp_means,
         gp_amplitudes=gp_amplitudes,
         gp_noises=gp_noises,
-        known_fp=known_fp  # Pass precomputed known_fp here
+        known_fp=known_fp
     )
-    logger.debug(f"Acquisition function prediction time: {time.time() - start_time:.2f} seconds")
+    bo_loop_logger.debug(f"EHVI prediction time: {time.time() - start_time:.2f} seconds")
 
     pareto_mask = pareto_front(known_Y)
     pareto_Y = known_Y[pareto_mask]
 
     start_time = time.time()
     ehvi_values = expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_Y)
-    logger.debug(f"EHVI calculation time: {time.time() - start_time:.2f} seconds")
+    bo_loop_logger.debug(f"EHVI computation time: {time.time() - start_time:.2f} seconds")
 
     return ehvi_values, pred_means
 
 def bayesian_optimization_loop(
-    known_smiles,
-    query_smiles,
-    known_Y,
-    gp_means,
-    gp_amplitudes,
-    gp_noises,
-    max_ref_point=None,
-    scale=0.1,
-    scale_max_ref_point=False,
-    n_iterations=20,
+    known_smiles, query_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, max_ref_point=None, scale=0.1, scale_max_ref_point=False, n_iterations=20
 ):
-    # Precompute fingerprints for known smiles
+    """Main loop for Bayesian Optimization (BO) with EHVI acquisition function."""
+    bo_loop_logger.info("Starting BO loop...")
+
+    # Precompute fingerprints for known SMILES
     start_time = time.time()
     known_fp = [get_fingerprint(s) for s in known_smiles]
-    logger.info(f"Fingerprint precomputation time: {time.time() - start_time:.2f} seconds")
+    bo_loop_logger.info(f"Fingerprint precomputation time: {time.time() - start_time:.2f} seconds")
 
     S_chosen = set()
     hypervolumes_bo = []
@@ -85,7 +83,7 @@ def bayesian_optimization_loop(
 
     for iteration in range(n_iterations):
         iter_start_time = time.time()
-        logger.info(f"Start BO iteration {iteration}. Dataset size={known_Y.shape}")
+        bo_loop_logger.info(f"BO iteration {iteration}. Dataset size={len(known_Y)}")
 
         # Infer reference point for hypervolume calculation
         reference_point = infer_reference_point(
@@ -94,13 +92,11 @@ def bayesian_optimization_loop(
 
         max_acq = -np.inf
         best_smiles = None
-        best_means = None
 
         for smiles in query_smiles:
             if smiles in S_chosen:
                 continue
-            # Acquisition function
-            ehvi_start_time = time.time()
+            # Compute EHVI acquisition value
             ehvi_values, pred_means = ehvi_acquisition(
                 query_smiles=[smiles],
                 known_smiles=known_smiles,
@@ -109,15 +105,14 @@ def bayesian_optimization_loop(
                 gp_amplitudes=gp_amplitudes,
                 gp_noises=gp_noises,
                 reference_point=reference_point,
-                known_fp=known_fp  # Pass precomputed fingerprints
+                known_fp=known_fp
             )
             ehvi_value = ehvi_values[0]
-            logger.debug(f"EHVI acquisition for {smiles} took {time.time() - ehvi_start_time:.2f} seconds")
+            bo_loop_logger.debug(f"EHVI acquisition for {smiles}: {ehvi_value}")
 
             if ehvi_value > max_acq:
                 max_acq = ehvi_value
                 best_smiles = smiles
-                best_means = pred_means[0]
 
         acquisition_values.append(max_acq)
         if best_smiles:
@@ -127,159 +122,49 @@ def bayesian_optimization_loop(
             known_Y = np.vstack([known_Y, new_Y])
             results.append(new_Y[0])
 
-            # Update known_fp with the fingerprint of the new best_smiles
+            # Update fingerprints with new SMILES
             known_fp.append(get_fingerprint(best_smiles))
-            logger.info(f"Selected SMILES: {best_smiles} with acquisition value = {max_acq}")
-            logger.info(f"Updated known_Y size: {known_Y.shape}")
+            bo_loop_logger.info(f"Selected SMILES: {best_smiles} with acquisition value = {max_acq}")
+            bo_loop_logger.info(f"Updated dataset size: {len(known_Y)}")
 
-        # Hypervolume calculation
+        # Compute hypervolume
         hv = Hypervolume(reference_point)
-        hv_start_time = time.time()
         current_hypervolume = hv.compute(known_Y)
         hypervolumes_bo.append(current_hypervolume)
-        logger.info(f"Hypervolume calculation time: {time.time() - hv_start_time:.2f} seconds")
-        logger.info(f"Hypervolume: {current_hypervolume}")
+        bo_loop_logger.info(f"Iteration {iteration} hypervolume: {current_hypervolume}")
+        bo_loop_logger.info(f"BO iteration {iteration} time: {time.time() - iter_start_time:.2f} seconds")
 
-        # Log total time for this iteration
-        logger.info(f"BO iteration {iteration} time: {time.time() - iter_start_time:.2f} seconds\n")
-
+    bo_loop_logger.info("Completed BO loop.")
     return known_smiles, known_Y, hypervolumes_bo, acquisition_values, results
 
-
-def random_sampling_loop(query_smiles, known_Y, n_iterations=20):
-    results = []
-    for iteration in range(n_iterations):
-        print(f"Start RS iteration {iteration}. Dataset size={known_Y.shape}")
-        
-        random_smiles = random.choice(query_smiles)
-        new_Y = evaluate_fex_objectives([random_smiles])
-        known_Y = np.vstack([known_Y, new_Y])
-        
-        # Store the chosen SMILES RS-MPO values
-        f1, f2, f3 = new_Y[0]  # Extract f1, f2, f3 from the actual evaluated values
-        results.append([f1, f2, f3])
-
-    return known_Y, results
-
-def plot_pairwise_and_3d(experiment_results_bo, experiment_results_rs, experiment_num):
-    experiment_results_bo = np.array(experiment_results_bo)
-    experiment_results_rs = np.array(experiment_results_rs)
-    
-    # Pareto Front
-    pareto_mask_bo = pareto_front(experiment_results_bo)
-    pareto_optimal_bo = experiment_results_bo[pareto_mask_bo]
-
-    # Pairwise Plots
-    fig, axs = plt.subplots(1, 3, figsize=(15, 6))
-    plt.suptitle(f'Pairwise Plots of Pareto Front with Samples - Experiment {experiment_num}')
-
-    axs[0].scatter(experiment_results_bo[:, 0], experiment_results_bo[:, 1], color='blue', label='BO Samples')
-    axs[0].scatter(experiment_results_rs[:, 0], experiment_results_rs[:, 1], color='green', label='RS Samples')
-    axs[0].scatter(pareto_optimal_bo[:, 0], pareto_optimal_bo[:, 1], color='red', label='Pareto Optimal Front')
-    axs[0].set_xlabel('f1')
-    axs[0].set_ylabel('f2')
-    
-    axs[1].scatter(experiment_results_bo[:, 0], experiment_results_bo[:, 2], color='blue')
-    axs[1].scatter(experiment_results_rs[:, 0], experiment_results_rs[:, 2], color='green')
-    axs[1].scatter(pareto_optimal_bo[:, 0], pareto_optimal_bo[:, 2], color='red')
-    axs[1].set_xlabel('f1')
-    axs[1].set_ylabel('f3')
-    
-    axs[2].scatter(experiment_results_bo[:, 1], experiment_results_bo[:, 2], color='blue')
-    axs[2].scatter(experiment_results_rs[:, 1], experiment_results_rs[:, 2], color='green')
-    axs[2].scatter(pareto_optimal_bo[:, 1], pareto_optimal_bo[:, 2], color='red')
-    axs[2].set_xlabel('f2')
-    axs[2].set_ylabel('f3')
-    
-    axs[0].legend()
-    plt.show()
-    
-    # 3D Plot
-    fig = plt.figure(figsize=(8, 6))
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(experiment_results_bo[:, 0], experiment_results_bo[:, 1], experiment_results_bo[:, 2], color='blue', label='BO Samples')
-    ax.scatter(experiment_results_rs[:, 0], experiment_results_rs[:, 1], experiment_results_rs[:, 2], color='green', label='RS Samples')
-    ax.scatter(pareto_optimal_bo[:, 0], pareto_optimal_bo[:, 1], pareto_optimal_bo[:, 2], color='red', label='Pareto Optimal Front')
-    ax.set_xlabel('f1')
-    ax.set_ylabel('f2')
-    ax.set_zlabel('f3')
-    ax.legend()
-    plt.show()
-
-def run_experiment(repeats, n_iterations):
-    all_results = []
-
-    for experiment_num in range(1, repeats + 1):
-        print(f"\nStarting Experiment {experiment_num}...\n")
-
-        guacamol_dataset_path = "guacamol_dataset/guacamol_v1_train.smiles"
-        guacamol_dataset = pd.read_csv(guacamol_dataset_path, header=None, names=["smiles"])
-        ALL_SMILES = guacamol_dataset["smiles"].tolist()[:10_000]
-
-        ALL_SMILES = ALL_SMILES[:10_000]
-        random.shuffle(ALL_SMILES)
-        training_smiles = ALL_SMILES[:10]
-        query_smiles = ALL_SMILES[10:10_000]
-
-        # Calculate objectives for training smiles
-        training_Y = evaluate_fex_objectives(training_smiles)
-
-        # Calculate GP hyperparameters from the training set
-        gp_means = gp_means = np.asarray([0.0, 0.0, 0.0])
-        gp_amplitudes = np.asarray([1.0, 1.0, 1.0])
-        gp_noises = np.asarray([1e-4, 1e-4, 1e-4])
-
-        # Run Bayesian Optimization Loop
-        known_smiles_bo, known_Y_bo, hypervolumes_bo, acquisition_values_bo, experiment_results_bo = bayesian_optimization_loop(
-            known_smiles=training_smiles.copy(),
-            query_smiles=query_smiles,
-            known_Y=training_Y.copy(),
-            gp_means=gp_means,
-            gp_amplitudes=gp_amplitudes,
-            gp_noises=gp_noises,
-            n_iterations=n_iterations,
-        )
-
-        # Run Random Sampling Loop
-        known_Y_rs, experiment_results_rs = random_sampling_loop(
-            query_smiles=query_smiles,
-            known_Y=training_Y.copy(),
-            n_iterations=n_iterations,
-        )
-
-        # Plotting Pairwise and 3D plots for BO and RS results
-        plot_pairwise_and_3d(experiment_results_bo, experiment_results_rs, experiment_num)
-
-        # Append results with experiment number for BO
-        for iteration in range(n_iterations):
-            f1, f2, f3 = experiment_results_bo[iteration]
-            all_results.append([f"Experiment {experiment_num}", iteration + 1, f1, f2, f3])
-
-    return all_results, acquisition_values_bo
-
-def write_results_to_csv(results, filename):
-    with open(filename, mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Experiment", "BO Iteration", "EHVI-MPO-F1", "EHVI-MPO-F2", "EHVI-MPO-F3"])
-        for row in results:
-            writer.writerow(row)
-
 if __name__ == "__main__":
-    repeats = 3  # Number of experiments
-    n_iterations = 20  # Number of BO iterations per experiment
+    # Load the Guacamol dataset and select the top 10,000 SMILES
+    guacamol_dataset_path = "guacamol_dataset/guacamol_v1_train.smiles"  # Ensure path is correct
+    guacamol_dataset = pd.read_csv(guacamol_dataset_path, header=None, names=["smiles"])
+    all_smiles = guacamol_dataset["smiles"].tolist()[:10_000]
 
-    # Run the experiment and collect results
-    results, acquisition_values_bo = run_experiment(repeats, n_iterations)
+    # Shuffle the dataset to introduce randomness
+    random.shuffle(all_smiles)
 
-    # Write results to a CSV file
-    write_results_to_csv(results, 'ehvi_bo_fexofenadine_results.csv')
+    # Select the first 10 SMILES for known_smiles, the rest for query_smiles
+    known_smiles = all_smiles[:10]
+    query_smiles = all_smiles[10:]
 
-    # Plotting the EHVI acquisition function values over BO iterations
-    plt.figure(figsize=(10, 6))
-    plt.plot(np.arange(1, n_iterations + 1), acquisition_values_bo, marker='o', color='blue', label='EHVI MPO')
-    plt.xlabel('BO Iteration')
-    plt.ylabel('EHVI Acquisition Function Value')
-    plt.title('EHVI Acquisition Function Value over BO Iterations')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+    # Calculate initial objective values for known SMILES (replace with actual objective values if available)
+    known_Y = evaluate_fex_objectives(known_smiles)  # Evaluates objectives for the initial SMILES
+
+    # Define GP parameters (these are placeholders and can be tuned based on your application)
+    gp_means = np.array([0.0, 0.0, 0.0])
+    gp_amplitudes = np.array([1.0, 1.0, 1.0])
+    gp_noises = np.array([1e-4, 1e-4, 1e-4])
+
+    # Run Bayesian Optimization
+    bayesian_optimization_loop(
+        known_smiles=known_smiles,
+        query_smiles=query_smiles,
+        known_Y=known_Y,
+        gp_means=gp_means,
+        gp_amplitudes=gp_amplitudes,
+        gp_noises=gp_noises,
+        n_iterations=10
+    )
