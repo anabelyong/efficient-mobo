@@ -100,9 +100,9 @@ def evaluate_amlo_objectives(smiles_list: list[str]) -> np.ndarray:
 def evaluate_fex_objectives(smiles_list: list[str]) -> np.ndarray:
     # Initialize arrays for each objective
     f1 = np.array(TPSA_ORACLE(smiles_list))
-    f2 = np.array(LOGP_ORACLE(smiles_list))
-    f3 = np.array(FEXOFENADINE_SIM_ORACLE(smiles_list))
-
+    f2 = np.array(FEXOFENADINE_SIM_ORACLE(smiles_list))
+    f3 = np.array(LOGP_ORACLE(smiles_list))
+    
     print(f"f1 shape: {f1.shape}")
     print(f"f2 shape: {f2.shape}")
     print(f"f3 shape: {f3.shape}")

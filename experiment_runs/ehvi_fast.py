@@ -17,7 +17,7 @@ bo_loop_logger = logging.getLogger("bo_loop_logger")
 bo_loop_logger.setLevel(logging.DEBUG)
 bo_loop_logger.addHandler(stream_handler)
 
-def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=10000): 
+def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000): 
     """Calculate Expected Hypervolume Improvement (EHVI) for given predictions."""
     num_points, num_objectives = pred_means.shape
     ehvi_values = np.zeros(num_points)
@@ -65,10 +65,8 @@ def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitude
 def bayesian_optimization_loop(
     known_smiles, query_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, max_ref_point=None, scale=0.1, scale_max_ref_point=False, n_iterations=20
 ):
-    """Main loop for Bayesian Optimization (BO) with EHVI acquisition function."""
     bo_loop_logger.info("Starting BO loop...")
 
-    # Initialize CachedTanimotoGP
     cached_gp = IndependentTanimotoGP()
     cached_gp.update_known_smiles(known_smiles)
 
@@ -80,24 +78,19 @@ def bayesian_optimization_loop(
         iter_start_time = time.time()
         bo_loop_logger.info(f"Start BO iteration {iteration}. Dataset size={len(known_Y)}")
 
-        # Infer reference point for hypervolume calculation
         reference_point = infer_reference_point(
             known_Y, max_ref_point=max_ref_point, scale=scale, scale_max_ref_point=scale_max_ref_point
         )
 
-        max_acq = -np.inf
-        best_smiles = None
-
         acq_fn_values = {}
         bo_loop_logger.debug(f"Starting acquisition function evaluation for BO iteration {iteration}")
-        
-        # Compute similarity matrices for the entire query set once
+
+        # Precompute similarity matrices for all query SMILES
         K_query_known, K_query_query_diagonal, query_fp = cached_gp.compute_similarity_matrices(query_smiles)
 
         for i, smiles in enumerate(query_smiles):
             if smiles in S_chosen:
                 continue
-            # Compute EHVI acquisition value
             ehvi_values, pred_means = independent_tanimoto_gp_predict(
                 query_smiles=[smiles],
                 known_smiles=known_smiles,
@@ -105,26 +98,28 @@ def bayesian_optimization_loop(
                 gp_means=gp_means,
                 gp_amplitudes=gp_amplitudes,
                 gp_noises=gp_noises,
-                cached_gp=cached_gp,
+                known_fp=cached_gp.known_fp,
+                query_fp=[query_fp[i]],
+                K_query_known=K_query_known[i],
+                K_query_query_diagonal=K_query_query_diagonal[i],
             )
             acq_fn_values[smiles] = ehvi_values[0]
 
-        # Select SMILES with highest acquisition value
+        # Select and update
         if acq_fn_values:
             sorted_acq_fn_values = sorted(acq_fn_values.items(), key=lambda x: x[1], reverse=True)
-            eval_batch = [s for s, _ in sorted_acq_fn_values[:1]]  # Top batch size = 1
-
-            best_smiles = eval_batch[0]
-            max_acq = acq_fn_values[best_smiles]
+            best_smiles = sorted_acq_fn_values[0][0]
+            max_acq = sorted_acq_fn_values[0][1]
 
             S_chosen.add(best_smiles)
             new_Y = evaluate_fex_objectives([best_smiles])
             known_smiles.append(best_smiles)
             known_Y = np.vstack([known_Y, new_Y])
-
-            # Update CachedTanimotoGP with the new known SMILES
             cached_gp.update_known_smiles(known_smiles)
+
+            # Log selected SMILES and its objective values
             bo_loop_logger.info(f"Selected SMILES: {best_smiles} with acquisition value = {max_acq}")
+            bo_loop_logger.info(f"f1, f2, f3 Objective Values for selected SMILES: {new_Y.flatten().tolist()}")
             bo_loop_logger.info(f"Updated dataset size: {len(known_Y)}")
 
         # Compute hypervolume
@@ -160,5 +155,5 @@ if __name__ == "__main__":
         gp_means=gp_means,
         gp_amplitudes=gp_amplitudes,
         gp_noises=gp_noises,
-        n_iterations=10
+        n_iterations=500
     )
