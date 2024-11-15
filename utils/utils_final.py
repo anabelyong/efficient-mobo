@@ -16,9 +16,9 @@ guacamol_dataset_path = os.path.join(current_dir, "../guacamol_dataset/guacamol_
 print("Final path to dataset:", guacamol_dataset_path)
 guacamol_dataset = pd.read_csv(guacamol_dataset_path, header=None, names=["smiles"])
 ALL_SMILES = guacamol_dataset["smiles"].tolist()[:10_000]
-known_smiles = ALL_SMILES[:50]
-print("Known SMILES:")
-pprint(known_smiles)
+known_smiles = ALL_SMILES[:10]
+#print("Known SMILES:")
+#pprint(known_smiles)
 
 # Create "oracles" for FEXOFENADINE objectives
 TPSA_ORACLE = Oracle("tpsa_score_single")

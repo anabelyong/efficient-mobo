@@ -17,8 +17,8 @@ bo_loop_logger = logging.getLogger("bo_loop_logger")
 bo_loop_logger.setLevel(logging.DEBUG)
 bo_loop_logger.addHandler(stream_handler)
 
-
-def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000): 
+def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=10000): 
+    """Calculate Expected Hypervolume Improvement (EHVI) for given predictions."""
     num_points, num_objectives = pred_means.shape
     ehvi_values = np.zeros(num_points)
 
@@ -30,9 +30,8 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
         var = pred_vars[i]
         cov = np.diag(var)
 
-        # Monte Carlo integration (sampling 1000 points)
+        # Monte Carlo integration
         samples = np.random.multivariate_normal(mean, cov, size=N)
-
         hvi = 0.0
         for sample in samples:
             augmented_pareto_front = np.vstack([pareto_front, sample])
@@ -43,9 +42,8 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
 
     return ehvi_values
 
-
 def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point, known_fp):
-    """Calculate the Expected Hypervolume Improvement (EHVI) for given SMILES."""
+    """Calculate the EHVI for each query SMILES."""
     pred_means, pred_vars = independent_tanimoto_gp_predict(
         query_smiles=query_smiles,
         known_smiles=known_smiles,
@@ -69,6 +67,11 @@ def bayesian_optimization_loop(
     """Main loop for Bayesian Optimization (BO) with EHVI acquisition function."""
     bo_loop_logger.info("Starting BO loop...")
 
+    # Canonicalize and remove duplicates
+    bo_loop_logger.info("Canonicalizing all SMILES")
+    known_smiles = list(set(known_smiles))
+    query_smiles = list(set(query_smiles))
+
     # Precompute fingerprints for known SMILES
     start_time = time.time()
     known_fp = [get_fingerprint(s) for s in known_smiles]
@@ -80,7 +83,7 @@ def bayesian_optimization_loop(
 
     for iteration in range(n_iterations):
         iter_start_time = time.time()
-        bo_loop_logger.info(f"BO iteration {iteration}. Dataset size={len(known_Y)}")
+        bo_loop_logger.info(f"Start BO iteration {iteration}. Dataset size={len(known_Y)}")
 
         # Infer reference point for hypervolume calculation
         reference_point = infer_reference_point(
@@ -90,7 +93,7 @@ def bayesian_optimization_loop(
         max_acq = -np.inf
         best_smiles = None
 
-        # Log the start of MC sampling generation
+        acq_fn_values = {}
         bo_loop_logger.debug(f"Starting Monte Carlo sampling for BO iteration {iteration}")
         mc_total_start_time = time.time()
 
@@ -108,24 +111,25 @@ def bayesian_optimization_loop(
                 reference_point=reference_point,
                 known_fp=known_fp
             )
-            ehvi_value = ehvi_values[0]
+            acq_fn_values[smiles] = ehvi_values[0]
 
-            if ehvi_value > max_acq:
-                max_acq = ehvi_value
-                best_smiles = smiles
+        # Log total MC sampling time
+        bo_loop_logger.debug(f"Total time for Monte Carlo sampling in BO iteration {iteration}: {time.time() - mc_total_start_time:.4f} seconds")
 
-        # Log the total time taken for MC sampling across all calls in this iteration
-        mc_total_time = time.time() - mc_total_start_time
-        bo_loop_logger.debug(f"Total time for generating all Monte Carlo samples in BO iteration {iteration}: {mc_total_time:.4f} seconds")
+        # Select SMILES with highest acquisition value
+        if acq_fn_values:
+            sorted_acq_fn_values = sorted(acq_fn_values.items(), key=lambda x: x[1], reverse=True)
+            eval_batch = [s for s, _ in sorted_acq_fn_values[:1]]  # Top batch size = 1
 
-        acquisition_values.append(max_acq)
-        if best_smiles:
+            best_smiles = eval_batch[0]
+            max_acq = acq_fn_values[best_smiles]
+
             S_chosen.add(best_smiles)
             new_Y = evaluate_fex_objectives([best_smiles])
             known_smiles.append(best_smiles)
             known_Y = np.vstack([known_Y, new_Y])
 
-            # Update fingerprints with new SMILES
+            # Update fingerprints
             known_fp.append(get_fingerprint(best_smiles))
             bo_loop_logger.info(f"Selected SMILES: {best_smiles} with acquisition value = {max_acq}")
             bo_loop_logger.info(f"Updated dataset size: {len(known_Y)}")
@@ -141,29 +145,22 @@ def bayesian_optimization_loop(
     return known_smiles, known_Y, hypervolumes_bo, acquisition_values
 
 
-
 if __name__ == "__main__":
-    # Load the Guacamol dataset and select the top 10,000 SMILES
-    guacamol_dataset_path = "guacamol_dataset/guacamol_v1_train.smiles"  # Ensure path is correct
+    guacamol_dataset_path = "guacamol_dataset/guacamol_v1_train.smiles"
     guacamol_dataset = pd.read_csv(guacamol_dataset_path, header=None, names=["smiles"])
     all_smiles = guacamol_dataset["smiles"].tolist()[:10_000]
 
-    # Shuffle the dataset to introduce randomness
     random.shuffle(all_smiles)
 
-    # Select the first 10 SMILES for known_smiles, the rest for query_smiles
     known_smiles = all_smiles[:10]
     query_smiles = all_smiles[10:]
 
-    # Calculate initial objective values for known SMILES (replace with actual objective values if available)
-    known_Y = evaluate_fex_objectives(known_smiles)  # Evaluates objectives for the initial SMILES
+    known_Y = evaluate_fex_objectives(known_smiles)
 
-    # Define GP parameters (these are placeholders and can be tuned based on your application)
     gp_means = np.array([0.0, 0.0, 0.0])
     gp_amplitudes = np.array([1.0, 1.0, 1.0])
     gp_noises = np.array([1e-4, 1e-4, 1e-4])
 
-    # Run Bayesian Optimization
     bayesian_optimization_loop(
         known_smiles=known_smiles,
         query_smiles=query_smiles,
