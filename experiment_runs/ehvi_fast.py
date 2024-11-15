@@ -17,6 +17,7 @@ bo_loop_logger = logging.getLogger("bo_loop_logger")
 bo_loop_logger.setLevel(logging.DEBUG)
 bo_loop_logger.addHandler(stream_handler)
 
+
 def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000): 
     num_points, num_objectives = pred_means.shape
     ehvi_values = np.zeros(num_points)
@@ -29,7 +30,7 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
         var = pred_vars[i]
         cov = np.diag(var)
 
-        # Monte Carlo integration
+        # Monte Carlo integration (sampling 1000 points)
         samples = np.random.multivariate_normal(mean, cov, size=N)
 
         hvi = 0.0
@@ -42,9 +43,9 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
 
     return ehvi_values
 
+
 def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point, known_fp):
     """Calculate the Expected Hypervolume Improvement (EHVI) for given SMILES."""
-    start_time = time.time()
     pred_means, pred_vars = independent_tanimoto_gp_predict(
         query_smiles=query_smiles,
         known_smiles=known_smiles,
@@ -54,14 +55,11 @@ def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitude
         gp_noises=gp_noises,
         known_fp=known_fp
     )
-    bo_loop_logger.debug(f"EHVI prediction time: {time.time() - start_time:.2f} seconds")
 
     pareto_mask = pareto_front(known_Y)
     pareto_Y = known_Y[pareto_mask]
 
-    start_time = time.time()
     ehvi_values = expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_Y)
-    bo_loop_logger.debug(f"EHVI computation time: {time.time() - start_time:.2f} seconds")
 
     return ehvi_values, pred_means
 
@@ -79,7 +77,6 @@ def bayesian_optimization_loop(
     S_chosen = set()
     hypervolumes_bo = []
     acquisition_values = []
-    results = []
 
     for iteration in range(n_iterations):
         iter_start_time = time.time()
@@ -92,6 +89,10 @@ def bayesian_optimization_loop(
 
         max_acq = -np.inf
         best_smiles = None
+
+        # Log the start of MC sampling generation
+        bo_loop_logger.debug(f"Starting Monte Carlo sampling for BO iteration {iteration}")
+        mc_total_start_time = time.time()
 
         for smiles in query_smiles:
             if smiles in S_chosen:
@@ -108,11 +109,14 @@ def bayesian_optimization_loop(
                 known_fp=known_fp
             )
             ehvi_value = ehvi_values[0]
-            bo_loop_logger.debug(f"EHVI acquisition for {smiles}: {ehvi_value}")
 
             if ehvi_value > max_acq:
                 max_acq = ehvi_value
                 best_smiles = smiles
+
+        # Log the total time taken for MC sampling across all calls in this iteration
+        mc_total_time = time.time() - mc_total_start_time
+        bo_loop_logger.debug(f"Total time for generating all Monte Carlo samples in BO iteration {iteration}: {mc_total_time:.4f} seconds")
 
         acquisition_values.append(max_acq)
         if best_smiles:
@@ -120,7 +124,6 @@ def bayesian_optimization_loop(
             new_Y = evaluate_fex_objectives([best_smiles])
             known_smiles.append(best_smiles)
             known_Y = np.vstack([known_Y, new_Y])
-            results.append(new_Y[0])
 
             # Update fingerprints with new SMILES
             known_fp.append(get_fingerprint(best_smiles))
@@ -135,7 +138,9 @@ def bayesian_optimization_loop(
         bo_loop_logger.info(f"BO iteration {iteration} time: {time.time() - iter_start_time:.2f} seconds")
 
     bo_loop_logger.info("Completed BO loop.")
-    return known_smiles, known_Y, hypervolumes_bo, acquisition_values, results
+    return known_smiles, known_Y, hypervolumes_bo, acquisition_values
+
+
 
 if __name__ == "__main__":
     # Load the Guacamol dataset and select the top 10,000 SMILES
