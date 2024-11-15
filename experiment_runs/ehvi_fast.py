@@ -42,7 +42,7 @@ def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, par
 
     return ehvi_values
 
-def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point, known_fp):
+def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitudes, gp_noises, reference_point, known_fp, query_fp):
     """Calculate the EHVI for each query SMILES."""
     pred_means, pred_vars = independent_tanimoto_gp_predict(
         query_smiles=query_smiles,
@@ -51,7 +51,8 @@ def ehvi_acquisition(query_smiles, known_smiles, known_Y, gp_means, gp_amplitude
         gp_means=gp_means,
         gp_amplitudes=gp_amplitudes,
         gp_noises=gp_noises,
-        known_fp=known_fp
+        known_fp=known_fp,
+        query_fp=query_fp
     )
 
     pareto_mask = pareto_front(known_Y)
@@ -67,15 +68,10 @@ def bayesian_optimization_loop(
     """Main loop for Bayesian Optimization (BO) with EHVI acquisition function."""
     bo_loop_logger.info("Starting BO loop...")
 
-    # Canonicalize and remove duplicates
-    bo_loop_logger.info("Canonicalizing all SMILES")
-    known_smiles = list(set(known_smiles))
-    query_smiles = list(set(query_smiles))
-
-    # Precompute fingerprints for known SMILES
-    start_time = time.time()
+    # Precompute fingerprints for known_smiles and query_smiles
+    bo_loop_logger.info("Precomputing fingerprints for known and query SMILES")
     known_fp = [get_fingerprint(s) for s in known_smiles]
-    bo_loop_logger.info(f"Fingerprint precomputation time: {time.time() - start_time:.2f} seconds")
+    query_fp = [get_fingerprint(s) for s in query_smiles]
 
     S_chosen = set()
     hypervolumes_bo = []
@@ -94,10 +90,8 @@ def bayesian_optimization_loop(
         best_smiles = None
 
         acq_fn_values = {}
-        bo_loop_logger.debug(f"Starting Monte Carlo sampling for BO iteration {iteration}")
-        mc_total_start_time = time.time()
-
-        for smiles in query_smiles:
+        bo_loop_logger.debug(f"Starting acquisition function evaluation for BO iteration {iteration}")
+        for i, smiles in enumerate(query_smiles):
             if smiles in S_chosen:
                 continue
             # Compute EHVI acquisition value
@@ -109,12 +103,10 @@ def bayesian_optimization_loop(
                 gp_amplitudes=gp_amplitudes,
                 gp_noises=gp_noises,
                 reference_point=reference_point,
-                known_fp=known_fp
+                known_fp=known_fp,
+                query_fp=[query_fp[i]]  # Pass the precomputed query fingerprint for this SMILES
             )
             acq_fn_values[smiles] = ehvi_values[0]
-
-        # Log total MC sampling time
-        bo_loop_logger.debug(f"Total time for Monte Carlo sampling in BO iteration {iteration}: {time.time() - mc_total_start_time:.4f} seconds")
 
         # Select SMILES with highest acquisition value
         if acq_fn_values:
@@ -143,6 +135,8 @@ def bayesian_optimization_loop(
 
     bo_loop_logger.info("Completed BO loop.")
     return known_smiles, known_Y, hypervolumes_bo, acquisition_values
+
+
 
 
 if __name__ == "__main__":

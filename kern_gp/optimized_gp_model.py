@@ -17,18 +17,18 @@ def independent_tanimoto_gp_predict(
     gp_means: np.ndarray,  # shape K
     gp_amplitudes: np.ndarray,  # shape K
     gp_noises: np.ndarray,  # shape K
-    known_fp=None  # Optional precomputed fingerprints for known_smiles
+    known_fp=None,  # Optional precomputed fingerprints for known_smiles
+    query_fp=None   # Optional precomputed fingerprints for query_smiles
 ) -> tuple[np.ndarray, np.ndarray]:
     for hparam_arr in (gp_means, gp_amplitudes, gp_noises):
         assert hparam_arr.shape == (known_Y.shape[1],)
 
-    # Compute known_fp if not provided
+    # Compute fingerprints if not provided
     if known_fp is None:
         known_fp = [get_fingerprint(s) for s in known_smiles]
-    
-    # Compute query_fp every time since query_smiles changes with each iteration
-    query_fp = [get_fingerprint(s) for s in query_smiles]
-    
+    if query_fp is None:
+        query_fp = [get_fingerprint(s) for s in query_smiles]
+
     # Calculate Tanimoto similarity matrices
     K_known_known = np.asarray([DataStructs.BulkTanimotoSimilarity(fp, known_fp) for fp in known_fp])
     K_query_known = np.asarray([DataStructs.BulkTanimotoSimilarity(fp, known_fp) for fp in query_fp])
