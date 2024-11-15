@@ -5,7 +5,7 @@ import random
 import pandas as pd
 from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
-from kern_gp.optimized_gp_model import independent_tanimoto_gp_predict, get_fingerprint
+from kern_gp.optimized_gp_model import independent_tanimoto_gp_predict, get_fingerprint, IndependentTanimotoGP
 from utils.utils_final import evaluate_fex_objectives
 
 # Setup logging
@@ -68,10 +68,9 @@ def bayesian_optimization_loop(
     """Main loop for Bayesian Optimization (BO) with EHVI acquisition function."""
     bo_loop_logger.info("Starting BO loop...")
 
-    # Precompute fingerprints for known_smiles and query_smiles
-    bo_loop_logger.info("Precomputing fingerprints for known and query SMILES")
-    known_fp = [get_fingerprint(s) for s in known_smiles]
-    query_fp = [get_fingerprint(s) for s in query_smiles]
+    # Initialize CachedTanimotoGP
+    cached_gp = IndependentTanimotoGP()
+    cached_gp.update_known_smiles(known_smiles)
 
     S_chosen = set()
     hypervolumes_bo = []
@@ -91,20 +90,22 @@ def bayesian_optimization_loop(
 
         acq_fn_values = {}
         bo_loop_logger.debug(f"Starting acquisition function evaluation for BO iteration {iteration}")
+        
+        # Compute similarity matrices for the entire query set once
+        K_query_known, K_query_query_diagonal, query_fp = cached_gp.compute_similarity_matrices(query_smiles)
+
         for i, smiles in enumerate(query_smiles):
             if smiles in S_chosen:
                 continue
             # Compute EHVI acquisition value
-            ehvi_values, pred_means = ehvi_acquisition(
+            ehvi_values, pred_means = independent_tanimoto_gp_predict(
                 query_smiles=[smiles],
                 known_smiles=known_smiles,
                 known_Y=known_Y,
                 gp_means=gp_means,
                 gp_amplitudes=gp_amplitudes,
                 gp_noises=gp_noises,
-                reference_point=reference_point,
-                known_fp=known_fp,
-                query_fp=[query_fp[i]]  # Pass the precomputed query fingerprint for this SMILES
+                cached_gp=cached_gp,
             )
             acq_fn_values[smiles] = ehvi_values[0]
 
@@ -121,8 +122,8 @@ def bayesian_optimization_loop(
             known_smiles.append(best_smiles)
             known_Y = np.vstack([known_Y, new_Y])
 
-            # Update fingerprints
-            known_fp.append(get_fingerprint(best_smiles))
+            # Update CachedTanimotoGP with the new known SMILES
+            cached_gp.update_known_smiles(known_smiles)
             bo_loop_logger.info(f"Selected SMILES: {best_smiles} with acquisition value = {max_acq}")
             bo_loop_logger.info(f"Updated dataset size: {len(known_Y)}")
 
@@ -135,9 +136,6 @@ def bayesian_optimization_loop(
 
     bo_loop_logger.info("Completed BO loop.")
     return known_smiles, known_Y, hypervolumes_bo, acquisition_values
-
-
-
 
 if __name__ == "__main__":
     guacamol_dataset_path = "guacamol_dataset/guacamol_v1_train.smiles"
