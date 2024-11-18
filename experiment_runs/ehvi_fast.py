@@ -1,4 +1,6 @@
 import logging
+import sys  # Added for redirecting output
+from pprint import pprint
 import time
 import numpy as np
 import random
@@ -7,6 +9,16 @@ from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
 from kern_gp.optimized_gp_model import independent_tanimoto_gp_predict, get_fingerprint, IndependentTanimotoGP
 from utils.utils_final import evaluate_fex_objectives
+
+# Redirect stdout and stderr to a log file
+log_file = "terminal_output.log"
+sys.stdout = open(log_file, "w")
+sys.stderr = sys.stdout
+
+# Setup logging
+stream_handler = logging.StreamHandler()
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+stream_handler.setFormatter(formatter)
 
 # Setup logging
 stream_handler = logging.StreamHandler()
@@ -17,7 +29,7 @@ bo_loop_logger = logging.getLogger("bo_loop_logger")
 bo_loop_logger.setLevel(logging.DEBUG)
 bo_loop_logger.addHandler(stream_handler)
 
-def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=1000): 
+def expected_hypervolume_improvement(pred_means, pred_vars, reference_point, pareto_front, N=5000): 
     """Calculate Expected Hypervolume Improvement (EHVI) for given predictions."""
     num_points, num_objectives = pred_means.shape
     ehvi_values = np.zeros(num_points)
@@ -140,9 +152,13 @@ if __name__ == "__main__":
     random.shuffle(all_smiles)
 
     known_smiles = all_smiles[:10]
+    print("Known SMILES:")
+    pprint(known_smiles)
     query_smiles = all_smiles[10:]
 
     known_Y = evaluate_fex_objectives(known_smiles)
+    print("known_Y:")
+    print(known_Y)
 
     gp_means = np.array([0.0, 0.0, 0.0])
     gp_amplitudes = np.array([1.0, 1.0, 1.0])
@@ -157,3 +173,6 @@ if __name__ == "__main__":
         gp_noises=gp_noises,
         n_iterations=500
     )
+
+sys.stdout.close()
+
