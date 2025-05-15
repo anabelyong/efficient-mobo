@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #creating objective functions SEPARATELY for 3 different MPOs: fexofenadine, ranolazine, and osimertinib objectives
 #UPDATED: created separated MPOs for 2 objectives: perindopril and amlodipine MPOs
 from pprint import pprint

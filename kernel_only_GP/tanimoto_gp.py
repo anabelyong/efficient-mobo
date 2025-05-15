@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from typing import Any, Callable, NamedTuple
 
 import kernel_only_GP.kern_gp as kgp

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """miscellaneous utilities functions
 """
 

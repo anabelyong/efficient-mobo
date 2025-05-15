@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Add additional objectives for the MPO methods <- to test
 from .oracle.oracle import (
     PyScreener_meta,

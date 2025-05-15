@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 Contains code for zero-mean GP with kernel a*k(x,x) + s*I for some base kernel k.
 
