@@ -16,10 +16,9 @@ from rdkit.Chem import DataStructs
 from kernel_only_GP.tanimoto_gp import ZeroMeanTanimotoGP, TanimotoGP_Params, get_fingerprint
 from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
-from utils.utils_final import evaluate_fex_objectives
-
+from utils.utils_final import evaluate_amlo_objectives
 # === Logging setup ===
-log_file = "terminal_output_jax_fex.log"
+log_file = "logs/terminal_output_jax_amlo_ehvi.log"
 sys.stdout = open(log_file, "w")
 sys.stderr = sys.stdout
 
@@ -46,15 +45,8 @@ def expected_hypervolume_improvement(
     pareto_Y: np.ndarray,
     N: int = 500
 ) -> np.ndarray:
-    """
-    Compute EHVI by MC sampling (JIT-compiled sampler) + Python HV loop.
-    means, vars_: (P, D) NumPy arrays
-    pareto_Y: (M, D)
-    ref_point: (D,)
-    """
     P, D = means.shape
     bo_loop_logger.info(f"  EHVI: {P} candidates with {N} MC samples")
-    # draw samples in JAX, bring back to NumPy
     key = jax.random.PRNGKey(0)
     samples = np.array(sample_outcomes(
         jnp.array(means), jnp.array(vars_), key, N
@@ -105,7 +97,7 @@ def bayesian_optimization_loop(
         gp_models.append(gp)
         gp_params.append(params)
 
-    chosen = set()   # indices already selected
+    chosen = set()
     Y_train = known_Y.copy()
     hypervolumes, acq_vals = [], []
 
@@ -148,7 +140,7 @@ def bayesian_optimization_loop(
         chosen.add(best_global)
         acq_vals.append(float(ehvi[best_local]))
         best_smiles = all_smiles[best_global]
-        new_y = evaluate_fex_objectives([best_smiles])[0]
+        new_y = evaluate_amlo_objectives([best_smiles])[0]
         bo_loop_logger.info(f" Selected idx={best_global} ({best_smiles}) → {new_y}")
 
         # 6) Update training set & GPs
@@ -177,7 +169,7 @@ if __name__ == "__main__":
     query_smiles = all_sm[10:]
 
     pprint(known_smiles)
-    known_Y = evaluate_fex_objectives(known_smiles)
+    known_Y = evaluate_amlo_objectives(known_smiles)
     bo_loop_logger.info(f"Initial objectives:\n{known_Y}")
 
     final_Y, hvs, acqs = bayesian_optimization_loop(
@@ -189,6 +181,14 @@ if __name__ == "__main__":
         n_iterations=200,
         mc_samples=500
     )
+
+    # Print Pareto front ===
+    mask_final = pareto_front(final_Y)
+    pareto_Y_final = final_Y[mask_final]
+    pareto_indices = np.where(mask_final)[0]
+    pareto_smiles = [known_smiles[i] if i < len(known_smiles) else None for i in pareto_indices]
+    bo_loop_logger.info(f"\nFinal Pareto front points: {pareto_Y_final.tolist()}")
+    bo_loop_logger.info(f"Final Pareto front SMILES: {pareto_smiles}")
 
     handler.close()
     sys.stdout.close()
