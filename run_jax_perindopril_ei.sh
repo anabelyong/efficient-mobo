@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=ehvi_jax
+#SBATCH --job-name=ei_jax
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:h100-47:1
 #SBATCH --mem=16G
-#SBATCH --time=02:00:00
+#SBATCH --time=96:00:00
 #SBATCH --output=ehvi.%j.out
 source "$HOME/miniconda3/etc/profile.d/conda.sh"
 

@@ -31,7 +31,7 @@ bo_loop_logger.addHandler(handler)
 
 # === JAX-jit’d MC sampler ===
 @partial(jax.jit, static_argnums=(3,))
-def sample_outcomes(means, vars_, key, N=500):
+def sample_outcomes(means, vars_, key, N=1000):
     """
     Draw N samples from multivariate normals: shape (P, N, D)
     """
@@ -44,7 +44,7 @@ def expected_hypervolume_improvement(
     vars_: np.ndarray,
     ref_point: np.ndarray,
     pareto_Y: np.ndarray,
-    N: int = 500
+    N: int = 1000
 ) -> np.ndarray:
     P, D = means.shape
     bo_loop_logger.info(f"  EHVI: {P} candidates with {N} MC samples")
@@ -72,7 +72,7 @@ def bayesian_optimization_loop(
     query_smiles,    # list[str] of pool SMILES
     gp_amplitudes, gp_noises,
     max_ref_point=None, scale=0.1, scale_max_ref_point=False,
-    n_iterations=20, mc_samples=500
+    n_iterations=20, mc_samples=1000
 ):
     D = known_Y.shape[1]
 

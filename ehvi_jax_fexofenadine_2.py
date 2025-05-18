@@ -16,9 +16,10 @@ from rdkit.Chem import DataStructs
 from kernel_only_GP.tanimoto_gp import ZeroMeanTanimotoGP, TanimotoGP_Params, get_fingerprint
 from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
-from utils.utils_final import evaluate_perin_objectives
+from utils.utils_final import evaluate_fex_objectives
+
 # === Logging setup ===
-log_file = "logs/terminal_output_jax_perin_ehvi.log"
+log_file = "logs_trial3/terminal_output_jax_fex_ehvi.log"
 sys.stdout = open(log_file, "w")
 sys.stderr = sys.stdout
 
@@ -140,7 +141,7 @@ def bayesian_optimization_loop(
         chosen.add(best_global)
         acq_vals.append(float(ehvi[best_local]))
         best_smiles = all_smiles[best_global]
-        new_y = evaluate_perin_objectives([best_smiles])[0]
+        new_y = evaluate_fex_objectives([best_smiles])[0]
         bo_loop_logger.info(f" Selected idx={best_global} ({best_smiles}) → {new_y}")
 
         # 6) Update training set & GPs
@@ -169,7 +170,7 @@ if __name__ == "__main__":
     query_smiles = all_sm[10:]
 
     pprint(known_smiles)
-    known_Y = evaluate_perin_objectives(known_smiles)
+    known_Y = evaluate_fex_objectives(known_smiles)
     bo_loop_logger.info(f"Initial objectives:\n{known_Y}")
 
     final_Y, hvs, acqs = bayesian_optimization_loop(

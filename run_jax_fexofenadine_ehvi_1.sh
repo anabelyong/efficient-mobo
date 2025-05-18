@@ -12,4 +12,4 @@ conda activate seed-mobo
 export PYTHONNOUSERSITE=True
 echo "Using Python at: $(which python)"
 echo "PYTHONNOUSERSITE=$PYTHONNOUSERSITE"
-python /home/s/shuyuan/efficient-mobo/ehvi_jax_fexofenadine.py
+python /home/s/shuyuan/efficient-mobo/ehvi_jax_fexofenadine_1.py

@@ -18,7 +18,7 @@ from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
 from utils.utils_final import evaluate_perin_objectives
 # === Logging setup ===
-log_file = "logs/terminal_output_jax_perin_ehvi.log"
+log_file = "logs_trial2/terminal_output_jax_perin_ehvi.log"
 sys.stdout = open(log_file, "w")
 sys.stderr = sys.stdout
 

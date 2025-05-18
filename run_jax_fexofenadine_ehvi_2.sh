@@ -3,7 +3,7 @@
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:h100-47:1
 #SBATCH --mem=16G
-#SBATCH --time=48:00:00
+#SBATCH --time=96:00:00
 #SBATCH --output=ehvi.%j.out
 source "$HOME/miniconda3/etc/profile.d/conda.sh"
 
@@ -12,4 +12,4 @@ conda activate seed-mobo
 export PYTHONNOUSERSITE=True
 echo "Using Python at: $(which python)"
 echo "PYTHONNOUSERSITE=$PYTHONNOUSERSITE"
-python /home/s/shuyuan/efficient-mobo/ehvi_jax_fexofenadine.py
+python /home/s/shuyuan/efficient-mobo/ehvi_jax_fexofenadine_2.py
