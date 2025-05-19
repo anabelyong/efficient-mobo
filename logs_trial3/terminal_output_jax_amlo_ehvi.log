@@ -1,0 +1,2027 @@
+['CCC(C)c1ccc(-n2c(=O)oc3cc(C)ccc3c2=S)cc1',
+ 'COC(C(=O)N1CCC(CCC(=O)Nc2ccccc2)CC1)c1ccccc1',
+ 'N#CC1=C(N)N(Cc2ccccc2)C(NCc2ccccc2)=C([N+](=O)[O-])C12C(=O)Nc1ccc(F)cc12',
+ 'COc1cccc(C(=O)Nc2nnc(-c3cccs3)s2)c1',
+ 'Fc1ccccc1CC1=NC(c2ccccc2)C(c2ccccc2)N1',
+ 'O=C1Nc2ccc(F)c(F)c2C(C#Cc2ccco2)(C(F)(F)F)O1',
+ 'CN1CCC23CC(=O)C(CC(=O)N4CCC(O)CC4)CC2(O)C1Cc1ccc(O)cc13',
+ 'CSCCC(NC(=O)C(Cc1ccccc1)NC(=O)CNC(=O)CNC(=O)C(N)Cc1ccc(O)cc1)C(=O)NC(C)C(N)=O',
+ 'COC(=O)c1cccc2c1c(C(=O)CCCCCCn1c(C)nc3cnccc31)cn2C(=O)N(C)C',
+ 'COc1ccccc1N1CCN(c2cc(=O)n(-c3ccccc3Cl)c(=O)[nH]2)CC1']
+f1 shape: (10,)
+f2 shape: (10,)
+2025-05-18 03:47:10,995 - INFO - Initial objectives:
+[[1.55737705e-01 1.00000000e+00]
+ [1.79104478e-01 1.00000000e+00]
+ [1.44654088e-01 3.35462628e-04]
+ [1.59663866e-01 1.00000000e+00]
+ [1.35338346e-01 1.35335283e-01]
+ [1.25984252e-01 1.00000000e+00]
+ [1.08108108e-01 3.35462628e-04]
+ [1.48571429e-01 1.35335283e-01]
+ [2.19178082e-01 1.35335283e-01]
+ [1.94029851e-01 1.35335283e-01]]
+2025-05-18 03:47:12,677 - INFO - Precomputed 10000 Morgan-fps in 1.682s
+2025-05-18 03:47:13,444 - INFO - 
+--- Iter 0 (train size (10, 2)) ---
+2025-05-18 03:47:13,445 - INFO -  Scoring full pool: 9990 candidates
+2025-05-18 03:47:14,699 - INFO -  GP predict time: 1.254s
+2025-05-18 03:47:14,699 - INFO -   EHVI: 9990 candidates with 500 MC samples
+2025-05-18 03:49:01,199 - INFO -  EHVI time: 106.501s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 03:49:01,201 - INFO -  Selected idx=4790 (O=C(Nc1cc2c3c(c1)CC(=O)N3CCC2)c1ccc(F)cc1) → [0.12598425 0.13533528]
+2025-05-18 03:49:01,208 - INFO -  Hypervolume: 0.0997
+2025-05-18 03:49:01,208 - INFO - 
+--- Iter 1 (train size (11, 2)) ---
+2025-05-18 03:49:01,209 - INFO -  Scoring full pool: 9989 candidates
+2025-05-18 03:49:02,429 - INFO -  GP predict time: 1.220s
+2025-05-18 03:49:02,429 - INFO -   EHVI: 9989 candidates with 500 MC samples
+2025-05-18 03:50:49,251 - INFO -  EHVI time: 106.822s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 03:50:49,252 - INFO -  Selected idx=9606 (CC(=O)c1ccc(N(C(=O)c2ccco2)C(C(=O)NC2CCCC2)c2cccs2)cc1) → [0.1369863  0.13533528]
+2025-05-18 03:50:49,263 - INFO -  Hypervolume: 0.0997
+2025-05-18 03:50:49,263 - INFO - 
+--- Iter 2 (train size (12, 2)) ---
+2025-05-18 03:50:49,264 - INFO -  Scoring full pool: 9988 candidates
+2025-05-18 03:50:50,567 - INFO -  GP predict time: 1.304s
+2025-05-18 03:50:50,567 - INFO -   EHVI: 9988 candidates with 500 MC samples
+2025-05-18 03:52:37,963 - INFO -  EHVI time: 107.396s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 03:52:37,965 - INFO -  Selected idx=1440 (O=C(CCc1nc2cccnc2n1Cc1ccccc1)NCc1ccccc1F) → [0.16546763 0.13533528]
+2025-05-18 03:52:37,974 - INFO -  Hypervolume: 0.0997
+2025-05-18 03:52:37,974 - INFO - 
+--- Iter 3 (train size (13, 2)) ---
+2025-05-18 03:52:37,975 - INFO -  Scoring full pool: 9987 candidates
+2025-05-18 03:52:39,343 - INFO -  GP predict time: 1.368s
+2025-05-18 03:52:39,343 - INFO -   EHVI: 9987 candidates with 500 MC samples
+2025-05-18 03:54:26,080 - INFO -  EHVI time: 106.737s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 03:54:26,081 - INFO -  Selected idx=6810 (COc1ccc(-n2cncc2-c2ccc(S(C)(=O)=O)cc2)cc1) → [0.136 1.   ]
+2025-05-18 03:54:26,090 - INFO -  Hypervolume: 0.0997
+2025-05-18 03:54:26,090 - INFO - 
+--- Iter 4 (train size (14, 2)) ---
+2025-05-18 03:54:26,091 - INFO -  Scoring full pool: 9986 candidates
+2025-05-18 03:54:27,515 - INFO -  GP predict time: 1.424s
+2025-05-18 03:54:27,515 - INFO -   EHVI: 9986 candidates with 500 MC samples
+2025-05-18 03:56:14,338 - INFO -  EHVI time: 106.822s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 03:56:14,339 - INFO -  Selected idx=6523 (CCOC(=O)c1[nH]cc(C)c1-c1ccn(-c2ccccc2)c1) → [0.27272727 1.        ]
+2025-05-18 03:56:14,348 - INFO -  Hypervolume: 0.1932
+2025-05-18 03:56:14,348 - INFO - 
+--- Iter 5 (train size (15, 2)) ---
+2025-05-18 03:56:14,348 - INFO -  Scoring full pool: 9985 candidates
+2025-05-18 03:56:15,885 - INFO -  GP predict time: 1.536s
+2025-05-18 03:56:15,885 - INFO -   EHVI: 9985 candidates with 500 MC samples
+2025-05-18 03:57:45,382 - INFO -  EHVI time: 89.497s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 03:57:45,383 - INFO -  Selected idx=8213 (COC(=O)C(Cc1c[nH]c2ccccc12)N(C)C) → [0.23300971 0.13533528]
+2025-05-18 03:57:45,395 - INFO -  Hypervolume: 0.1991
+2025-05-18 03:57:45,395 - INFO - 
+--- Iter 6 (train size (16, 2)) ---
+2025-05-18 03:57:45,396 - INFO -  Scoring full pool: 9984 candidates
+2025-05-18 03:57:47,049 - INFO -  GP predict time: 1.653s
+2025-05-18 03:57:47,049 - INFO -   EHVI: 9984 candidates with 500 MC samples
+2025-05-18 03:59:16,259 - INFO -  EHVI time: 89.210s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 03:59:16,261 - INFO -  Selected idx=9164 (Cc1cccc(-n2cc(CN3CCN(c4ccccc4)CC3)c3ccccc32)c1) → [0.13194444 0.00033546]
+2025-05-18 03:59:16,273 - INFO -  Hypervolume: 0.1991
+2025-05-18 03:59:16,273 - INFO - 
+--- Iter 7 (train size (17, 2)) ---
+2025-05-18 03:59:16,274 - INFO -  Scoring full pool: 9983 candidates
+2025-05-18 03:59:17,975 - INFO -  GP predict time: 1.701s
+2025-05-18 03:59:17,975 - INFO -   EHVI: 9983 candidates with 500 MC samples
+2025-05-18 04:00:47,281 - INFO -  EHVI time: 89.306s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:00:47,282 - INFO -  Selected idx=8873 (COc1cc2c(C(=O)C=C(O)C(=O)O)cn(Cc3ccc(Cl)cc3Cl)c2cc1OC) → [0.20454545 1.        ]
+2025-05-18 04:00:47,295 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:00:47,295 - INFO - 
+--- Iter 8 (train size (18, 2)) ---
+2025-05-18 04:00:47,296 - INFO -  Scoring full pool: 9982 candidates
+2025-05-18 04:00:49,153 - INFO -  GP predict time: 1.857s
+2025-05-18 04:00:49,153 - INFO -   EHVI: 9982 candidates with 500 MC samples
+2025-05-18 04:02:18,837 - INFO -  EHVI time: 89.683s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:02:18,838 - INFO -  Selected idx=1725 (COc1cccc(-c2cc(=O)c3ccc4occc4c3o2)c1) → [0.13709677 0.13533528]
+2025-05-18 04:02:18,851 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:02:18,851 - INFO - 
+--- Iter 9 (train size (19, 2)) ---
+2025-05-18 04:02:18,852 - INFO -  Scoring full pool: 9981 candidates
+2025-05-18 04:02:20,792 - INFO -  GP predict time: 1.940s
+2025-05-18 04:02:20,792 - INFO -   EHVI: 9981 candidates with 500 MC samples
+2025-05-18 04:03:50,280 - INFO -  EHVI time: 89.487s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:03:50,281 - INFO -  Selected idx=1653 (O=S(=O)(Nc1ccc2ccccc2n1)c1ccc2c(c1)CCO2) → [0.14285714 0.13533528]
+2025-05-18 04:03:50,291 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:03:50,292 - INFO - 
+--- Iter 10 (train size (20, 2)) ---
+2025-05-18 04:03:50,293 - INFO -  Scoring full pool: 9980 candidates
+2025-05-18 04:03:52,266 - INFO -  GP predict time: 1.973s
+2025-05-18 04:03:52,266 - INFO -   EHVI: 9980 candidates with 500 MC samples
+2025-05-18 04:05:21,689 - INFO -  EHVI time: 89.423s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:05:21,691 - INFO -  Selected idx=2674 ([H]C([H])([H])C(c1ccc(C2(C(F)(F)F)N=N2)cc1)n1cncc1C(=O)OCC) → [0.17886179 1.        ]
+2025-05-18 04:05:21,704 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:05:21,704 - INFO - 
+--- Iter 11 (train size (21, 2)) ---
+2025-05-18 04:05:21,705 - INFO -  Scoring full pool: 9979 candidates
+2025-05-18 04:05:23,747 - INFO -  GP predict time: 2.042s
+2025-05-18 04:05:23,747 - INFO -   EHVI: 9979 candidates with 500 MC samples
+2025-05-18 04:06:53,319 - INFO -  EHVI time: 89.572s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:06:53,321 - INFO -  Selected idx=371 (COc1ccccc1-c1nc2ccccc2c(=O)n1O) → [0.1754386 1.       ]
+2025-05-18 04:06:53,334 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:06:53,334 - INFO - 
+--- Iter 12 (train size (22, 2)) ---
+2025-05-18 04:06:53,336 - INFO -  Scoring full pool: 9978 candidates
+2025-05-18 04:06:55,445 - INFO -  GP predict time: 2.110s
+2025-05-18 04:06:55,446 - INFO -   EHVI: 9978 candidates with 500 MC samples
+2025-05-18 04:08:24,871 - INFO -  EHVI time: 89.425s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:08:24,873 - INFO -  Selected idx=8146 (NC(=O)c1cc(C(N)=O)n(-c2cccc(-c3cc(C(F)(F)F)ccc3C(F)(F)F)c2)n1) → [0.14285714 1.        ]
+2025-05-18 04:08:24,886 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:08:24,887 - INFO - 
+--- Iter 13 (train size (23, 2)) ---
+2025-05-18 04:08:24,888 - INFO -  Scoring full pool: 9977 candidates
+2025-05-18 04:08:27,062 - INFO -  GP predict time: 2.174s
+2025-05-18 04:08:27,062 - INFO -   EHVI: 9977 candidates with 500 MC samples
+2025-05-18 04:09:56,388 - INFO -  EHVI time: 89.326s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:09:56,390 - INFO -  Selected idx=3293 (COc1ccccc1C(=O)n1nnc2ccccc21) → [0.17857143 1.        ]
+2025-05-18 04:09:56,402 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:09:56,402 - INFO - 
+--- Iter 14 (train size (24, 2)) ---
+2025-05-18 04:09:56,403 - INFO -  Scoring full pool: 9976 candidates
+2025-05-18 04:09:58,646 - INFO -  GP predict time: 2.243s
+2025-05-18 04:09:58,646 - INFO -   EHVI: 9976 candidates with 500 MC samples
+2025-05-18 04:11:28,156 - INFO -  EHVI time: 89.510s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:11:28,158 - INFO -  Selected idx=6031 (CCc1cc(C(=O)NC(CCl)c2ccc(Cl)cc2)n(C)n1) → [0.17391304 0.13533528]
+2025-05-18 04:11:28,173 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:11:28,173 - INFO - 
+--- Iter 15 (train size (25, 2)) ---
+2025-05-18 04:11:28,174 - INFO -  Scoring full pool: 9975 candidates
+2025-05-18 04:11:30,492 - INFO -  GP predict time: 2.318s
+2025-05-18 04:11:30,492 - INFO -   EHVI: 9975 candidates with 500 MC samples
+2025-05-18 04:12:59,808 - INFO -  EHVI time: 89.316s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:12:59,810 - INFO -  Selected idx=4855 (COc1ccc2c(c1)C(=O)N(CC1(C#Cc3nc(C(=O)N4CCN(C)CC4)ccc3OC)NC(=O)NC1=O)C2) → [0.15432099 0.00033546]
+2025-05-18 04:12:59,824 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:12:59,824 - INFO - 
+--- Iter 16 (train size (26, 2)) ---
+2025-05-18 04:12:59,825 - INFO -  Scoring full pool: 9974 candidates
+2025-05-18 04:13:02,227 - INFO -  GP predict time: 2.402s
+2025-05-18 04:13:02,227 - INFO -   EHVI: 9974 candidates with 500 MC samples
+2025-05-18 04:14:31,878 - INFO -  EHVI time: 89.651s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:14:31,880 - INFO -  Selected idx=7874 (CSc1ccc2c(c1)c(O)c(C(=O)C1(c3ccccc3)CC1)c(=O)n2C) → [0.17322835 0.13533528]
+2025-05-18 04:14:31,896 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:14:31,896 - INFO - 
+--- Iter 17 (train size (27, 2)) ---
+2025-05-18 04:14:31,897 - INFO -  Scoring full pool: 9973 candidates
+2025-05-18 04:14:34,463 - INFO -  GP predict time: 2.566s
+2025-05-18 04:14:34,463 - INFO -   EHVI: 9973 candidates with 500 MC samples
+2025-05-18 04:16:04,010 - INFO -  EHVI time: 89.547s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:16:04,011 - INFO -  Selected idx=975 (COc1ccccc1NC(=O)C(C)NS(=O)(=O)c1ccccc1) → [0.175      0.13533528]
+2025-05-18 04:16:04,027 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:16:04,027 - INFO - 
+--- Iter 18 (train size (28, 2)) ---
+2025-05-18 04:16:04,029 - INFO -  Scoring full pool: 9972 candidates
+2025-05-18 04:16:06,701 - INFO -  GP predict time: 2.672s
+2025-05-18 04:16:06,701 - INFO -   EHVI: 9972 candidates with 500 MC samples
+2025-05-18 04:17:35,952 - INFO -  EHVI time: 89.251s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:17:35,953 - INFO -  Selected idx=7470 (CCOC(=O)c1nn(-c2ccc(C)c(C)c2)c(=O)c2c(N)scc12) → [0.25438596 1.        ]
+2025-05-18 04:17:35,968 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:17:35,968 - INFO - 
+--- Iter 19 (train size (29, 2)) ---
+2025-05-18 04:17:35,969 - INFO -  Scoring full pool: 9971 candidates
+2025-05-18 04:17:38,572 - INFO -  GP predict time: 2.603s
+2025-05-18 04:17:38,572 - INFO -   EHVI: 9971 candidates with 500 MC samples
+2025-05-18 04:19:07,800 - INFO -  EHVI time: 89.227s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:19:07,801 - INFO -  Selected idx=7949 (COc1ccc(-c2cn3nc(S(N)(=O)=O)sc3n2)cc1) → [0.14655172 1.        ]
+2025-05-18 04:19:07,818 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:19:07,818 - INFO - 
+--- Iter 20 (train size (30, 2)) ---
+2025-05-18 04:19:07,820 - INFO -  Scoring full pool: 9970 candidates
+2025-05-18 04:19:10,622 - INFO -  GP predict time: 2.803s
+2025-05-18 04:19:10,622 - INFO -   EHVI: 9970 candidates with 500 MC samples
+2025-05-18 04:20:40,201 - INFO -  EHVI time: 89.578s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:20:40,202 - INFO -  Selected idx=8109 (COc1ccc(-c2nc3ccccn3c(=O)c2-c2ccc(OC)c(OC)c2)cc1) → [0.16788321 0.13533528]
+2025-05-18 04:20:40,219 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:20:40,219 - INFO - 
+--- Iter 21 (train size (31, 2)) ---
+2025-05-18 04:20:40,220 - INFO -  Scoring full pool: 9969 candidates
+2025-05-18 04:20:43,049 - INFO -  GP predict time: 2.829s
+2025-05-18 04:20:43,050 - INFO -   EHVI: 9969 candidates with 500 MC samples
+2025-05-18 04:22:12,197 - INFO -  EHVI time: 89.147s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:22:12,199 - INFO -  Selected idx=3675 (Nc1scc2c(C(=O)O)nn(-c3ccc(F)cc3)c(=O)c12) → [0.1440678 1.       ]
+2025-05-18 04:22:12,217 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:22:12,217 - INFO - 
+--- Iter 22 (train size (32, 2)) ---
+2025-05-18 04:22:12,218 - INFO -  Scoring full pool: 9968 candidates
+2025-05-18 04:22:15,164 - INFO -  GP predict time: 2.946s
+2025-05-18 04:22:15,164 - INFO -   EHVI: 9968 candidates with 500 MC samples
+2025-05-18 04:23:44,644 - INFO -  EHVI time: 89.480s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:23:44,646 - INFO -  Selected idx=9331 (C=CCN(C)c1ccnc2sc3c(=O)n(-c4ccc(OC)cc4)cnc3c12) → [0.13235294 0.13533528]
+2025-05-18 04:23:44,664 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:23:44,664 - INFO - 
+--- Iter 23 (train size (33, 2)) ---
+2025-05-18 04:23:44,665 - INFO -  Scoring full pool: 9967 candidates
+2025-05-18 04:23:47,791 - INFO -  GP predict time: 3.125s
+2025-05-18 04:23:47,791 - INFO -   EHVI: 9967 candidates with 500 MC samples
+2025-05-18 04:25:16,950 - INFO -  EHVI time: 89.159s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:25:16,952 - INFO -  Selected idx=2232 (COC(=O)Cc1cc(O)nc(N=C(N)Nc2ccc(C)cc2)n1) → [0.19491525 0.13533528]
+2025-05-18 04:25:16,971 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:25:16,971 - INFO - 
+--- Iter 24 (train size (34, 2)) ---
+2025-05-18 04:25:16,972 - INFO -  Scoring full pool: 9966 candidates
+2025-05-18 04:25:20,082 - INFO -  GP predict time: 3.110s
+2025-05-18 04:25:20,082 - INFO -   EHVI: 9966 candidates with 500 MC samples
+2025-05-18 04:26:49,467 - INFO -  EHVI time: 89.385s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:26:49,469 - INFO -  Selected idx=1741 (CC(C)C(=O)Nc1nc(-c2ccc(S(=O)(=O)N3CCOCC3)cc2)cs1) → [0.11940299 1.        ]
+2025-05-18 04:26:49,490 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:26:49,490 - INFO - 
+--- Iter 25 (train size (35, 2)) ---
+2025-05-18 04:26:49,491 - INFO -  Scoring full pool: 9965 candidates
+2025-05-18 04:26:52,815 - INFO -  GP predict time: 3.324s
+2025-05-18 04:26:52,815 - INFO -   EHVI: 9965 candidates with 500 MC samples
+2025-05-18 04:28:22,373 - INFO -  EHVI time: 89.558s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:28:22,375 - INFO -  Selected idx=676 (COc1cc(C=CC(=O)C=Cc2cc([N+](=O)[O-])ccc2F)ccc1O) → [0.1496063  0.13533528]
+2025-05-18 04:28:22,395 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:28:22,395 - INFO - 
+--- Iter 26 (train size (36, 2)) ---
+2025-05-18 04:28:22,396 - INFO -  Scoring full pool: 9964 candidates
+2025-05-18 04:28:25,765 - INFO -  GP predict time: 3.369s
+2025-05-18 04:28:25,765 - INFO -   EHVI: 9964 candidates with 500 MC samples
+2025-05-18 04:29:55,333 - INFO -  EHVI time: 89.568s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:29:55,335 - INFO -  Selected idx=1125 (CCOC(=O)c1ccc(-c2nn(CC)c3ccccc23)cc1) → [0.26126126 1.        ]
+2025-05-18 04:29:55,356 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:29:55,357 - INFO - 
+--- Iter 27 (train size (37, 2)) ---
+2025-05-18 04:29:55,358 - INFO -  Scoring full pool: 9963 candidates
+2025-05-18 04:29:58,753 - INFO -  GP predict time: 3.395s
+2025-05-18 04:29:58,753 - INFO -   EHVI: 9963 candidates with 500 MC samples
+2025-05-18 04:31:28,090 - INFO -  EHVI time: 89.337s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:31:28,092 - INFO -  Selected idx=9064 (NNC(=O)c1nn(-c2ccc(Cl)cc2)ccc1=O) → [0.15454545 0.13533528]
+2025-05-18 04:31:28,113 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:31:28,113 - INFO - 
+--- Iter 28 (train size (38, 2)) ---
+2025-05-18 04:31:28,114 - INFO -  Scoring full pool: 9962 candidates
+2025-05-18 04:31:31,510 - INFO -  GP predict time: 3.396s
+2025-05-18 04:31:31,510 - INFO -   EHVI: 9962 candidates with 500 MC samples
+2025-05-18 04:33:00,675 - INFO -  EHVI time: 89.165s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:33:00,677 - INFO -  Selected idx=9868 (CN(C(=O)C(C)(C)c1ccc(F)cc1)C1CCc2c(CC(=O)O)c3ccccc3n2C1) → [0.19852941 0.13533528]
+2025-05-18 04:33:00,700 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:33:00,701 - INFO - 
+--- Iter 29 (train size (39, 2)) ---
+2025-05-18 04:33:00,702 - INFO -  Scoring full pool: 9961 candidates
+2025-05-18 04:33:04,396 - INFO -  GP predict time: 3.694s
+2025-05-18 04:33:04,396 - INFO -   EHVI: 9961 candidates with 500 MC samples
+2025-05-18 04:34:34,229 - INFO -  EHVI time: 89.834s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:34:34,231 - INFO -  Selected idx=5721 (Nc1sc(-c2ccccc2)cc1C(=O)c1ccc(Cl)cc1) → [0.19130435 1.        ]
+2025-05-18 04:34:34,253 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:34:34,253 - INFO - 
+--- Iter 30 (train size (40, 2)) ---
+2025-05-18 04:34:34,255 - INFO -  Scoring full pool: 9960 candidates
+2025-05-18 04:34:37,786 - INFO -  GP predict time: 3.531s
+2025-05-18 04:34:37,786 - INFO -   EHVI: 9960 candidates with 500 MC samples
+2025-05-18 04:36:07,564 - INFO -  EHVI time: 89.778s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:36:07,566 - INFO -  Selected idx=2092 (CCOC(=O)c1cc(-c2csc(CS(=O)(=O)c3ccccc3)n2)c(=O)[nH]c1C) → [0.2704918 1.       ]
+2025-05-18 04:36:07,589 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:36:07,589 - INFO - 
+--- Iter 31 (train size (41, 2)) ---
+2025-05-18 04:36:07,590 - INFO -  Scoring full pool: 9959 candidates
+2025-05-18 04:36:11,142 - INFO -  GP predict time: 3.552s
+2025-05-18 04:36:11,143 - INFO -   EHVI: 9959 candidates with 500 MC samples
+2025-05-18 04:37:41,150 - INFO -  EHVI time: 90.008s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:37:41,152 - INFO -  Selected idx=2550 (Cn1cccc1C=C1SC(=S)N(NC(=O)c2cccc(Cl)c2)C1=O) → [0.17073171 1.        ]
+2025-05-18 04:37:41,174 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:37:41,174 - INFO - 
+--- Iter 32 (train size (42, 2)) ---
+2025-05-18 04:37:41,175 - INFO -  Scoring full pool: 9958 candidates
+2025-05-18 04:37:44,813 - INFO -  GP predict time: 3.637s
+2025-05-18 04:37:44,813 - INFO -   EHVI: 9958 candidates with 500 MC samples
+2025-05-18 04:39:14,368 - INFO -  EHVI time: 89.555s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:39:14,370 - INFO -  Selected idx=6177 (Cc1cc(C)n(-c2ccc(C(=O)Nc3nc4ccccc4s3)cc2)n1) → [0.17322835 0.13533528]
+2025-05-18 04:39:14,394 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:39:14,394 - INFO - 
+--- Iter 33 (train size (43, 2)) ---
+2025-05-18 04:39:14,395 - INFO -  Scoring full pool: 9957 candidates
+2025-05-18 04:39:18,150 - INFO -  GP predict time: 3.755s
+2025-05-18 04:39:18,151 - INFO -   EHVI: 9957 candidates with 500 MC samples
+2025-05-18 04:40:47,882 - INFO -  EHVI time: 89.732s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:40:47,884 - INFO -  Selected idx=1051 (COc1ccc2oc3cc(NCCN(C)C)ccc3c(=O)c2c1) → [0.16393443 1.        ]
+2025-05-18 04:40:47,905 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:40:47,905 - INFO - 
+--- Iter 34 (train size (44, 2)) ---
+2025-05-18 04:40:47,906 - INFO -  Scoring full pool: 9956 candidates
+2025-05-18 04:40:51,706 - INFO -  GP predict time: 3.800s
+2025-05-18 04:40:51,706 - INFO -   EHVI: 9956 candidates with 500 MC samples
+2025-05-18 04:42:21,509 - INFO -  EHVI time: 89.803s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:42:21,511 - INFO -  Selected idx=276 (COc1ccc(C=C2CCN3C=C(C)SC3=NC2=O)cc1) → [0.1512605 1.       ]
+2025-05-18 04:42:21,535 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:42:21,535 - INFO - 
+--- Iter 35 (train size (45, 2)) ---
+2025-05-18 04:42:21,536 - INFO -  Scoring full pool: 9955 candidates
+2025-05-18 04:42:25,508 - INFO -  GP predict time: 3.972s
+2025-05-18 04:42:25,508 - INFO -   EHVI: 9955 candidates with 500 MC samples
+2025-05-18 04:43:55,246 - INFO -  EHVI time: 89.737s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:43:55,247 - INFO -  Selected idx=300 (COc1ccc(NC(=O)Cn2nc(-c3ccccc3)c3cnc4ccc(C)cc4c32)cc1) → [0.17241379 0.00033546]
+2025-05-18 04:43:55,273 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:43:55,273 - INFO - 
+--- Iter 36 (train size (46, 2)) ---
+2025-05-18 04:43:55,275 - INFO -  Scoring full pool: 9954 candidates
+2025-05-18 04:43:59,270 - INFO -  GP predict time: 3.995s
+2025-05-18 04:43:59,270 - INFO -   EHVI: 9954 candidates with 500 MC samples
+2025-05-18 04:45:29,009 - INFO -  EHVI time: 89.739s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:45:29,011 - INFO -  Selected idx=7542 (COC(=O)c1cn(C(=O)c2ccc(Cl)cc2)c2ccccc12) → [0.26363636 1.        ]
+2025-05-18 04:45:29,037 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:45:29,037 - INFO - 
+--- Iter 37 (train size (47, 2)) ---
+2025-05-18 04:45:29,039 - INFO -  Scoring full pool: 9953 candidates
+2025-05-18 04:45:33,084 - INFO -  GP predict time: 4.045s
+2025-05-18 04:45:33,084 - INFO -   EHVI: 9953 candidates with 500 MC samples
+2025-05-18 04:47:02,669 - INFO -  EHVI time: 89.584s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:47:02,671 - INFO -  Selected idx=5574 (CC(C)(C)Cn1cc(-c2ccc(C(=O)NCCc3ccc(S(C)(=O)=O)cc3)cc2)c(N)n1) → [0.16197183 1.        ]
+2025-05-18 04:47:02,698 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:47:02,698 - INFO - 
+--- Iter 38 (train size (48, 2)) ---
+2025-05-18 04:47:02,700 - INFO -  Scoring full pool: 9952 candidates
+2025-05-18 04:47:06,819 - INFO -  GP predict time: 4.119s
+2025-05-18 04:47:06,819 - INFO -   EHVI: 9952 candidates with 500 MC samples
+2025-05-18 04:48:36,574 - INFO -  EHVI time: 89.755s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:48:36,576 - INFO -  Selected idx=4828 (CCCc1ccc(-c2nc(-c3cccc4c3CCN4CC(N)(CO)CO)no2)cc1) → [0.13986014 0.13533528]
+2025-05-18 04:48:36,604 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:48:36,604 - INFO - 
+--- Iter 39 (train size (49, 2)) ---
+2025-05-18 04:48:36,605 - INFO -  Scoring full pool: 9951 candidates
+2025-05-18 04:48:40,882 - INFO -  GP predict time: 4.277s
+2025-05-18 04:48:40,883 - INFO -   EHVI: 9951 candidates with 500 MC samples
+2025-05-18 04:50:10,930 - INFO -  EHVI time: 90.047s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:50:10,931 - INFO -  Selected idx=3757 (CCCCN(C(=O)c1ccc(C(F)(F)F)cc1)c1nnc(-c2ccc(CN(C)C)cc2)s1) → [0.16083916 1.        ]
+2025-05-18 04:50:10,960 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:50:10,960 - INFO - 
+--- Iter 40 (train size (50, 2)) ---
+2025-05-18 04:50:10,962 - INFO -  Scoring full pool: 9950 candidates
+2025-05-18 04:50:15,406 - INFO -  GP predict time: 4.444s
+2025-05-18 04:50:15,406 - INFO -   EHVI: 9950 candidates with 500 MC samples
+2025-05-18 04:51:45,179 - INFO -  EHVI time: 89.773s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:51:45,181 - INFO -  Selected idx=509 (COCCOCc1ncccc1C1C(C(=O)C(C)(C)C)C(=O)C(=O)N1c1ccc(-c2ccsc2)cc1) → [0.22758621 0.13533528]
+2025-05-18 04:51:45,210 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:51:45,210 - INFO - 
+--- Iter 41 (train size (51, 2)) ---
+2025-05-18 04:51:45,212 - INFO -  Scoring full pool: 9949 candidates
+2025-05-18 04:51:49,636 - INFO -  GP predict time: 4.424s
+2025-05-18 04:51:49,636 - INFO -   EHVI: 9949 candidates with 500 MC samples
+2025-05-18 04:53:19,296 - INFO -  EHVI time: 89.660s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:53:19,298 - INFO -  Selected idx=3674 (CS(=O)(=O)N1CCc2cc(C(=O)OCC(=O)c3ccccc3)ccc21) → [0.20491803 1.        ]
+2025-05-18 04:53:19,328 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:53:19,328 - INFO - 
+--- Iter 42 (train size (52, 2)) ---
+2025-05-18 04:53:19,329 - INFO -  Scoring full pool: 9948 candidates
+2025-05-18 04:53:23,835 - INFO -  GP predict time: 4.506s
+2025-05-18 04:53:23,835 - INFO -   EHVI: 9948 candidates with 500 MC samples
+2025-05-18 04:54:53,542 - INFO -  EHVI time: 89.707s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:54:53,544 - INFO -  Selected idx=4766 (CCOC(=O)c1csc(NC(=O)c2ccncc2NS(=O)(=O)c2ccc(C)cc2)n1) → [0.21969697 1.        ]
+2025-05-18 04:54:53,572 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:54:53,572 - INFO - 
+--- Iter 43 (train size (53, 2)) ---
+2025-05-18 04:54:53,574 - INFO -  Scoring full pool: 9947 candidates
+2025-05-18 04:54:58,296 - INFO -  GP predict time: 4.722s
+2025-05-18 04:54:58,296 - INFO -   EHVI: 9947 candidates with 500 MC samples
+2025-05-18 04:56:28,046 - INFO -  EHVI time: 89.749s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:56:28,047 - INFO -  Selected idx=1056 (COc1ccc(S(=O)(=O)Nc2cc(Cl)ccc2C(=O)O)cc1) → [0.17094017 0.13533528]
+2025-05-18 04:56:28,079 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:56:28,079 - INFO - 
+--- Iter 44 (train size (54, 2)) ---
+2025-05-18 04:56:28,081 - INFO -  Scoring full pool: 9946 candidates
+2025-05-18 04:56:32,839 - INFO -  GP predict time: 4.758s
+2025-05-18 04:56:32,839 - INFO -   EHVI: 9946 candidates with 500 MC samples
+2025-05-18 04:58:02,540 - INFO -  EHVI time: 89.701s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:58:02,542 - INFO -  Selected idx=4916 (CNc1cncc(-c2cccc(O)c2)n1) → [0.11111111 0.13533528]
+2025-05-18 04:58:02,755 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:58:02,755 - INFO - 
+--- Iter 45 (train size (55, 2)) ---
+2025-05-18 04:58:02,756 - INFO -  Scoring full pool: 9945 candidates
+2025-05-18 04:58:07,465 - INFO -  GP predict time: 4.708s
+2025-05-18 04:58:07,465 - INFO -   EHVI: 9945 candidates with 500 MC samples
+2025-05-18 04:59:37,398 - INFO -  EHVI time: 89.933s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 04:59:37,400 - INFO -  Selected idx=8046 (CCC(=O)Nc1cc2ccc(-c3cc(F)ccc3C)cc2cn1) → [0.16393443 1.        ]
+2025-05-18 04:59:37,432 - INFO -  Hypervolume: 0.1991
+2025-05-18 04:59:37,433 - INFO - 
+--- Iter 46 (train size (56, 2)) ---
+2025-05-18 04:59:37,434 - INFO -  Scoring full pool: 9944 candidates
+2025-05-18 04:59:42,374 - INFO -  GP predict time: 4.940s
+2025-05-18 04:59:42,374 - INFO -   EHVI: 9944 candidates with 500 MC samples
+2025-05-18 05:01:11,847 - INFO -  EHVI time: 89.472s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:01:11,849 - INFO -  Selected idx=8450 (CCOC(=O)c1c(N)sc2c1CCN(Cc1ccccc1)C2) → [0.26126126 1.        ]
+2025-05-18 05:01:11,882 - INFO -  Hypervolume: 0.1991
+2025-05-18 05:01:11,882 - INFO - 
+--- Iter 47 (train size (57, 2)) ---
+2025-05-18 05:01:11,884 - INFO -  Scoring full pool: 9943 candidates
+2025-05-18 05:01:16,902 - INFO -  GP predict time: 5.017s
+2025-05-18 05:01:16,902 - INFO -   EHVI: 9943 candidates with 500 MC samples
+2025-05-18 05:02:46,891 - INFO -  EHVI time: 89.990s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:02:46,893 - INFO -  Selected idx=9501 (CCOC(=O)c1cnc2c(ccc3ccccc32)c1Cl) → [0.28846154 1.        ]
+2025-05-18 05:02:46,925 - INFO -  Hypervolume: 0.2164
+2025-05-18 05:02:46,926 - INFO - 
+--- Iter 48 (train size (58, 2)) ---
+2025-05-18 05:02:46,927 - INFO -  Scoring full pool: 9942 candidates
+2025-05-18 05:02:51,940 - INFO -  GP predict time: 5.013s
+2025-05-18 05:02:51,941 - INFO -   EHVI: 9942 candidates with 500 MC samples
+2025-05-18 05:04:21,934 - INFO -  EHVI time: 89.993s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:04:21,935 - INFO -  Selected idx=7474 (CCOC(=O)c1cc2ccccc2n1Cc1cccc(C(=N)N)c1) → [0.26086957 1.        ]
+2025-05-18 05:04:21,967 - INFO -  Hypervolume: 0.2182
+2025-05-18 05:04:21,967 - INFO - 
+--- Iter 49 (train size (59, 2)) ---
+2025-05-18 05:04:21,969 - INFO -  Scoring full pool: 9941 candidates
+2025-05-18 05:04:27,020 - INFO -  GP predict time: 5.051s
+2025-05-18 05:04:27,020 - INFO -   EHVI: 9941 candidates with 500 MC samples
+2025-05-18 05:05:57,009 - INFO -  EHVI time: 89.989s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:05:57,011 - INFO -  Selected idx=4080 (Cc1ccc(NC(=O)NCCOCCn2c(=O)oc3ccccc32)cc1C) → [0.24193548 1.        ]
+2025-05-18 05:05:57,047 - INFO -  Hypervolume: 0.2182
+2025-05-18 05:05:57,047 - INFO - 
+--- Iter 50 (train size (60, 2)) ---
+2025-05-18 05:05:57,049 - INFO -  Scoring full pool: 9940 candidates
+2025-05-18 05:06:02,281 - INFO -  GP predict time: 5.232s
+2025-05-18 05:06:02,281 - INFO -   EHVI: 9940 candidates with 500 MC samples
+2025-05-18 05:07:32,332 - INFO -  EHVI time: 90.051s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:07:32,334 - INFO -  Selected idx=368 (CCCCCc1nc2ccccc2c(O)c1C(=O)OCC) → [0.2952381  0.13533528]
+2025-05-18 05:07:32,370 - INFO -  Hypervolume: 0.2197
+2025-05-18 05:07:32,370 - INFO - 
+--- Iter 51 (train size (61, 2)) ---
+2025-05-18 05:07:32,373 - INFO -  Scoring full pool: 9939 candidates
+2025-05-18 05:07:37,673 - INFO -  GP predict time: 5.300s
+2025-05-18 05:07:37,673 - INFO -   EHVI: 9939 candidates with 500 MC samples
+2025-05-18 05:09:24,543 - INFO -  EHVI time: 106.870s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:09:24,545 - INFO -  Selected idx=3693 (CCOC(=O)c1ccc(-n2nc(C(=O)OCC)c3csc(N)c3c2=O)cc1) → [0.26666667 1.        ]
+2025-05-18 05:09:24,582 - INFO -  Hypervolume: 0.2205
+2025-05-18 05:09:24,582 - INFO - 
+--- Iter 52 (train size (62, 2)) ---
+2025-05-18 05:09:24,584 - INFO -  Scoring full pool: 9938 candidates
+2025-05-18 05:09:30,018 - INFO -  GP predict time: 5.434s
+2025-05-18 05:09:30,018 - INFO -   EHVI: 9938 candidates with 500 MC samples
+2025-05-18 05:11:17,619 - INFO -  EHVI time: 107.601s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:11:17,621 - INFO -  Selected idx=5309 (CCOc1cc(C(=O)N2CCNC(=O)C2)cc(Br)c1OC) → [0.17391304 0.13533528]
+2025-05-18 05:11:17,657 - INFO -  Hypervolume: 0.2205
+2025-05-18 05:11:17,657 - INFO - 
+--- Iter 53 (train size (63, 2)) ---
+2025-05-18 05:11:17,659 - INFO -  Scoring full pool: 9937 candidates
+2025-05-18 05:11:23,101 - INFO -  GP predict time: 5.442s
+2025-05-18 05:11:23,101 - INFO -   EHVI: 9937 candidates with 500 MC samples
+2025-05-18 05:13:11,056 - INFO -  EHVI time: 107.955s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:13:11,058 - INFO -  Selected idx=2886 (COC(=O)c1cc(Br)c(=O)n(Cc2ccc(C(=O)O)cc2)c1) → [0.21238938 0.13533528]
+2025-05-18 05:13:11,096 - INFO -  Hypervolume: 0.2205
+2025-05-18 05:13:11,096 - INFO - 
+--- Iter 54 (train size (64, 2)) ---
+2025-05-18 05:13:11,098 - INFO -  Scoring full pool: 9936 candidates
+2025-05-18 05:13:16,390 - INFO -  GP predict time: 5.291s
+2025-05-18 05:13:16,390 - INFO -   EHVI: 9936 candidates with 500 MC samples
+2025-05-18 05:15:03,850 - INFO -  EHVI time: 107.460s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:15:03,852 - INFO -  Selected idx=2284 (CCSC1=NCCN1S(=O)(=O)c1ccc2ccccc2c1) → [0.16101695 1.        ]
+2025-05-18 05:15:03,892 - INFO -  Hypervolume: 0.2205
+2025-05-18 05:15:03,892 - INFO - 
+--- Iter 55 (train size (65, 2)) ---
+2025-05-18 05:15:03,894 - INFO -  Scoring full pool: 9935 candidates
+2025-05-18 05:15:09,537 - INFO -  GP predict time: 5.643s
+2025-05-18 05:15:09,537 - INFO -   EHVI: 9935 candidates with 500 MC samples
+2025-05-18 05:16:56,953 - INFO -  EHVI time: 107.416s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:16:56,954 - INFO -  Selected idx=8029 (Cc1sc2nc(CSC(C)C(=O)N(C)CC(=O)Nc3ccccc3C(F)(F)F)nc(O)c2c1C) → [0.19858156 1.        ]
+2025-05-18 05:16:56,993 - INFO -  Hypervolume: 0.2205
+2025-05-18 05:16:56,993 - INFO - 
+--- Iter 56 (train size (66, 2)) ---
+2025-05-18 05:16:56,995 - INFO -  Scoring full pool: 9934 candidates
+2025-05-18 05:17:02,576 - INFO -  GP predict time: 5.581s
+2025-05-18 05:17:02,577 - INFO -   EHVI: 9934 candidates with 500 MC samples
+2025-05-18 05:18:50,070 - INFO -  EHVI time: 107.493s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:18:50,071 - INFO -  Selected idx=6337 (CCOC(=O)c1cc(-c2ccccc2)sc1NC(=O)COC) → [0.31132075 0.13533528]
+2025-05-18 05:18:50,111 - INFO -  Hypervolume: 0.2243
+2025-05-18 05:18:50,111 - INFO - 
+--- Iter 57 (train size (67, 2)) ---
+2025-05-18 05:18:50,113 - INFO -  Scoring full pool: 9933 candidates
+2025-05-18 05:18:55,697 - INFO -  GP predict time: 5.584s
+2025-05-18 05:18:55,697 - INFO -   EHVI: 9933 candidates with 500 MC samples
+2025-05-18 05:20:43,259 - INFO -  EHVI time: 107.562s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:20:43,260 - INFO -  Selected idx=9042 (COC(=O)c1ccc(Oc2ccc3nnc(C)n3n2)cc1) → [0.20175439 1.        ]
+2025-05-18 05:20:43,301 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:20:43,301 - INFO - 
+--- Iter 58 (train size (68, 2)) ---
+2025-05-18 05:20:43,303 - INFO -  Scoring full pool: 9932 candidates
+2025-05-18 05:20:48,930 - INFO -  GP predict time: 5.627s
+2025-05-18 05:20:48,930 - INFO -   EHVI: 9932 candidates with 500 MC samples
+2025-05-18 05:22:36,387 - INFO -  EHVI time: 107.457s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:22:36,389 - INFO -  Selected idx=6145 (COc1ccc(S(=O)(=O)N(Cc2ccccn2)C(C(=O)NO)C(C)C)cc1) → [0.17054264 0.13533528]
+2025-05-18 05:22:36,432 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:22:36,432 - INFO - 
+--- Iter 59 (train size (69, 2)) ---
+2025-05-18 05:22:36,435 - INFO -  Scoring full pool: 9931 candidates
+2025-05-18 05:22:42,302 - INFO -  GP predict time: 5.867s
+2025-05-18 05:22:42,302 - INFO -   EHVI: 9931 candidates with 500 MC samples
+2025-05-18 05:24:30,519 - INFO -  EHVI time: 108.217s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:24:30,521 - INFO -  Selected idx=947 (COc1ccc(NC(=O)C(Cl)=C(Cl)[S+]([O-])Cc2ccccc2Cl)cn1) → [0.21666667 0.13533528]
+2025-05-18 05:24:30,792 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:24:30,792 - INFO - 
+--- Iter 60 (train size (70, 2)) ---
+2025-05-18 05:24:30,794 - INFO -  Scoring full pool: 9930 candidates
+2025-05-18 05:24:36,882 - INFO -  GP predict time: 6.087s
+2025-05-18 05:24:36,882 - INFO -   EHVI: 9930 candidates with 500 MC samples
+2025-05-18 05:26:24,270 - INFO -  EHVI time: 107.388s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:26:24,272 - INFO -  Selected idx=5518 (O=C(c1ccc2cc(Oc3ccc(C(F)(F)F)cn3)ccc2n1)N1CCC1) → [0.11678832 0.13533528]
+2025-05-18 05:26:24,316 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:26:24,316 - INFO - 
+--- Iter 61 (train size (71, 2)) ---
+2025-05-18 05:26:24,319 - INFO -  Scoring full pool: 9929 candidates
+2025-05-18 05:26:30,254 - INFO -  GP predict time: 5.935s
+2025-05-18 05:26:30,254 - INFO -   EHVI: 9929 candidates with 500 MC samples
+2025-05-18 05:28:17,910 - INFO -  EHVI time: 107.656s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:28:17,911 - INFO -  Selected idx=9034 (Cc1cc(C(=O)OCC(=O)c2ccccc2)c2ccccc2n1) → [0.23275862 1.        ]
+2025-05-18 05:28:17,954 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:28:17,954 - INFO - 
+--- Iter 62 (train size (72, 2)) ---
+2025-05-18 05:28:17,957 - INFO -  Scoring full pool: 9928 candidates
+2025-05-18 05:28:24,174 - INFO -  GP predict time: 6.217s
+2025-05-18 05:28:24,174 - INFO -   EHVI: 9928 candidates with 500 MC samples
+2025-05-18 05:30:11,592 - INFO -  EHVI time: 107.418s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:30:11,594 - INFO -  Selected idx=839 (COC(=O)Cn1cc(C(=O)C(F)(F)F)c2ccccc21) → [0.22429907 0.13533528]
+2025-05-18 05:30:11,641 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:30:11,641 - INFO - 
+--- Iter 63 (train size (73, 2)) ---
+2025-05-18 05:30:11,644 - INFO -  Scoring full pool: 9927 candidates
+2025-05-18 05:30:18,046 - INFO -  GP predict time: 6.403s
+2025-05-18 05:30:18,047 - INFO -   EHVI: 9927 candidates with 500 MC samples
+2025-05-18 05:32:05,486 - INFO -  EHVI time: 107.440s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:32:05,488 - INFO -  Selected idx=7388 (CCOC(=O)c1csc(NN=C(C)c2ccccn2)n1) → [0.2293578  0.13533528]
+2025-05-18 05:32:05,538 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:32:05,538 - INFO - 
+--- Iter 64 (train size (74, 2)) ---
+2025-05-18 05:32:05,540 - INFO -  Scoring full pool: 9926 candidates
+2025-05-18 05:32:11,926 - INFO -  GP predict time: 6.385s
+2025-05-18 05:32:11,926 - INFO -   EHVI: 9926 candidates with 500 MC samples
+2025-05-18 05:33:59,481 - INFO -  EHVI time: 107.556s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:33:59,483 - INFO -  Selected idx=8725 (CS(=O)(=O)Nc1cccc(CNC(=O)Nc2nc(-c3ccncc3)cs2)c1) → [0.13235294 1.        ]
+2025-05-18 05:33:59,531 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:33:59,531 - INFO - 
+--- Iter 65 (train size (75, 2)) ---
+2025-05-18 05:33:59,533 - INFO -  Scoring full pool: 9925 candidates
+2025-05-18 05:34:05,806 - INFO -  GP predict time: 6.273s
+2025-05-18 05:34:05,806 - INFO -   EHVI: 9925 candidates with 500 MC samples
+2025-05-18 05:35:53,097 - INFO -  EHVI time: 107.291s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:35:53,099 - INFO -  Selected idx=3142 (O=C(Cn1sc2ccccc2c1=O)Nc1ccccc1F) → [0.17094017 1.        ]
+2025-05-18 05:35:53,150 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:35:53,150 - INFO - 
+--- Iter 66 (train size (76, 2)) ---
+2025-05-18 05:35:53,153 - INFO -  Scoring full pool: 9924 candidates
+2025-05-18 05:35:59,672 - INFO -  GP predict time: 6.519s
+2025-05-18 05:35:59,672 - INFO -   EHVI: 9924 candidates with 500 MC samples
+2025-05-18 05:37:47,321 - INFO -  EHVI time: 107.649s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:37:47,322 - INFO -  Selected idx=3153 (COc1ccccc1Cn1c(SCC(N)=O)nc2c(oc3ccccc32)c1=O) → [0.19847328 0.13533528]
+2025-05-18 05:37:47,372 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:37:47,372 - INFO - 
+--- Iter 67 (train size (77, 2)) ---
+2025-05-18 05:37:47,374 - INFO -  Scoring full pool: 9923 candidates
+2025-05-18 05:37:54,061 - INFO -  GP predict time: 6.686s
+2025-05-18 05:37:54,061 - INFO -   EHVI: 9923 candidates with 500 MC samples
+2025-05-18 05:39:41,694 - INFO -  EHVI time: 107.633s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:39:41,695 - INFO -  Selected idx=2060 (COc1ccc2oc(=O)c(C(=O)NCc3ccc(C)cc3)cc2c1) → [0.17886179 1.        ]
+2025-05-18 05:39:41,748 - INFO -  Hypervolume: 0.2260
+2025-05-18 05:39:41,748 - INFO - 
+--- Iter 68 (train size (78, 2)) ---
+2025-05-18 05:39:41,750 - INFO -  Scoring full pool: 9922 candidates
+2025-05-18 05:39:48,573 - INFO -  GP predict time: 6.822s
+2025-05-18 05:39:48,573 - INFO -   EHVI: 9922 candidates with 500 MC samples
+2025-05-18 05:41:36,166 - INFO -  EHVI time: 107.594s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:41:36,168 - INFO -  Selected idx=8627 (CCOC(=O)C1=C(C)N=C(C)C(=C(O)OCC)C1c1nc2ccccc2[nH]1) → [0.34513274 1.        ]
+2025-05-18 05:41:36,221 - INFO -  Hypervolume: 0.2830
+2025-05-18 05:41:36,221 - INFO - 
+--- Iter 69 (train size (79, 2)) ---
+2025-05-18 05:41:36,224 - INFO -  Scoring full pool: 9921 candidates
+2025-05-18 05:41:43,078 - INFO -  GP predict time: 6.854s
+2025-05-18 05:41:43,078 - INFO -   EHVI: 9921 candidates with 500 MC samples
+2025-05-18 05:43:13,023 - INFO -  EHVI time: 89.945s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:43:13,025 - INFO -  Selected idx=9794 (Cc1ccc(CC(=O)c2ccc(Cl)cc2)cc1) → [0.1682243  0.13533528]
+2025-05-18 05:43:13,080 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:43:13,080 - INFO - 
+--- Iter 70 (train size (80, 2)) ---
+2025-05-18 05:43:13,083 - INFO -  Scoring full pool: 9920 candidates
+2025-05-18 05:43:19,998 - INFO -  GP predict time: 6.915s
+2025-05-18 05:43:19,998 - INFO -   EHVI: 9920 candidates with 500 MC samples
+2025-05-18 05:44:50,356 - INFO -  EHVI time: 90.357s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:44:50,357 - INFO -  Selected idx=4592 (CCOC(=O)C1C(C(=O)OCC)C12C(=O)N(C)c1ccccc12) → [0.28440367 1.        ]
+2025-05-18 05:44:50,413 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:44:50,413 - INFO - 
+--- Iter 71 (train size (81, 2)) ---
+2025-05-18 05:44:50,416 - INFO -  Scoring full pool: 9919 candidates
+2025-05-18 05:44:57,239 - INFO -  GP predict time: 6.823s
+2025-05-18 05:44:57,239 - INFO -   EHVI: 9919 candidates with 500 MC samples
+2025-05-18 05:46:27,125 - INFO -  EHVI time: 89.886s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:46:27,127 - INFO -  Selected idx=68 (Cc1ccc(-c2cc(-c3nnc(SCC(=O)NCC(C)C)n3N)c3ccccc3n2)cc1) → [0.18309859 0.13533528]
+2025-05-18 05:46:27,185 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:46:27,185 - INFO - 
+--- Iter 72 (train size (82, 2)) ---
+2025-05-18 05:46:27,188 - INFO -  Scoring full pool: 9918 candidates
+2025-05-18 05:46:34,446 - INFO -  GP predict time: 7.258s
+2025-05-18 05:46:34,446 - INFO -   EHVI: 9918 candidates with 500 MC samples
+2025-05-18 05:48:04,593 - INFO -  EHVI time: 90.147s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:48:04,594 - INFO -  Selected idx=9986 (O=C(Nc1nnc(-c2ccc(F)cc2)s1)Nc1ccccc1F) → [0.15322581 1.        ]
+2025-05-18 05:48:04,652 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:48:04,653 - INFO - 
+--- Iter 73 (train size (83, 2)) ---
+2025-05-18 05:48:04,656 - INFO -  Scoring full pool: 9917 candidates
+2025-05-18 05:48:11,775 - INFO -  GP predict time: 7.119s
+2025-05-18 05:48:11,775 - INFO -   EHVI: 9917 candidates with 500 MC samples
+2025-05-18 05:49:41,672 - INFO -  EHVI time: 89.897s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:49:41,674 - INFO -  Selected idx=2905 (CCOC(=O)Cc1cc(-c2ccc(C(F)(F)F)cc2)n(-c2ccc(S(C)(=O)=O)cc2)c1C) → [0.19708029 1.        ]
+2025-05-18 05:49:41,732 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:49:41,733 - INFO - 
+--- Iter 74 (train size (84, 2)) ---
+2025-05-18 05:49:41,736 - INFO -  Scoring full pool: 9916 candidates
+2025-05-18 05:49:48,921 - INFO -  GP predict time: 7.185s
+2025-05-18 05:49:48,921 - INFO -   EHVI: 9916 candidates with 500 MC samples
+2025-05-18 05:51:18,991 - INFO -  EHVI time: 90.070s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:51:18,992 - INFO -  Selected idx=7231 (CCOc1cc(C(=O)OCC(=O)Nc2cc(C)on2)ccc1OCC(C)C) → [0.25619835 0.13533528]
+2025-05-18 05:51:19,050 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:51:19,050 - INFO - 
+--- Iter 75 (train size (85, 2)) ---
+2025-05-18 05:51:19,053 - INFO -  Scoring full pool: 9915 candidates
+2025-05-18 05:51:26,222 - INFO -  GP predict time: 7.168s
+2025-05-18 05:51:26,222 - INFO -   EHVI: 9915 candidates with 500 MC samples
+2025-05-18 05:52:55,977 - INFO -  EHVI time: 89.755s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:52:55,978 - INFO -  Selected idx=8671 (COc1ccc2oc(C(=O)OCC(=O)N3CCCC(C)C3)c(C)c2c1) → [0.225 1.   ]
+2025-05-18 05:52:56,039 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:52:56,039 - INFO - 
+--- Iter 76 (train size (86, 2)) ---
+2025-05-18 05:52:56,042 - INFO -  Scoring full pool: 9914 candidates
+2025-05-18 05:53:03,384 - INFO -  GP predict time: 7.342s
+2025-05-18 05:53:03,384 - INFO -   EHVI: 9914 candidates with 500 MC samples
+2025-05-18 05:54:33,355 - INFO -  EHVI time: 89.971s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:54:33,357 - INFO -  Selected idx=8162 (CC(CCn1ccc(-c2ccc3ccccc3c2)cc1=O)(C(=O)NO)S(C)(=O)=O) → [0.17164179 1.        ]
+2025-05-18 05:54:33,419 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:54:33,419 - INFO - 
+--- Iter 77 (train size (87, 2)) ---
+2025-05-18 05:54:33,423 - INFO -  Scoring full pool: 9913 candidates
+2025-05-18 05:54:41,042 - INFO -  GP predict time: 7.619s
+2025-05-18 05:54:41,042 - INFO -   EHVI: 9913 candidates with 500 MC samples
+2025-05-18 05:56:10,707 - INFO -  EHVI time: 89.665s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:56:10,709 - INFO -  Selected idx=5274 (CCOC(=O)c1c(C)[nH]c(C(=O)COc2ccc3ccc(=O)oc3c2)c1C) → [0.27731092 1.        ]
+2025-05-18 05:56:10,773 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:56:10,773 - INFO - 
+--- Iter 78 (train size (88, 2)) ---
+2025-05-18 05:56:10,777 - INFO -  Scoring full pool: 9912 candidates
+2025-05-18 05:56:18,109 - INFO -  GP predict time: 7.332s
+2025-05-18 05:56:18,109 - INFO -   EHVI: 9912 candidates with 500 MC samples
+2025-05-18 05:57:48,162 - INFO -  EHVI time: 90.053s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:57:48,164 - INFO -  Selected idx=1699 (CCN(C(=O)c1ccc(O)nc1)c1c(N)n(Cc2ccccc2)c(=O)[nH]c1=O) → [0.20155039 1.        ]
+2025-05-18 05:57:48,228 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:57:48,228 - INFO - 
+--- Iter 79 (train size (89, 2)) ---
+2025-05-18 05:57:48,232 - INFO -  Scoring full pool: 9911 candidates
+2025-05-18 05:57:56,116 - INFO -  GP predict time: 7.884s
+2025-05-18 05:57:56,116 - INFO -   EHVI: 9911 candidates with 500 MC samples
+2025-05-18 05:59:26,029 - INFO -  EHVI time: 89.913s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 05:59:26,030 - INFO -  Selected idx=1328 (CCSCn1c(Cc2ccccc2)c(CC)c(=O)[nH]c1=O) → [0.22522523 0.13533528]
+2025-05-18 05:59:26,095 - INFO -  Hypervolume: 0.2867
+2025-05-18 05:59:26,095 - INFO - 
+--- Iter 80 (train size (90, 2)) ---
+2025-05-18 05:59:26,099 - INFO -  Scoring full pool: 9910 candidates
+2025-05-18 05:59:34,043 - INFO -  GP predict time: 7.944s
+2025-05-18 05:59:34,043 - INFO -   EHVI: 9910 candidates with 500 MC samples
+2025-05-18 06:01:04,518 - INFO -  EHVI time: 90.475s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:01:04,520 - INFO -  Selected idx=8752 (Cc1cnc(NC(=O)c2nn(C)c(-c3ccc(F)cc3)c2C)s1) → [0.1557377 1.       ]
+2025-05-18 06:01:04,587 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:01:04,587 - INFO - 
+--- Iter 81 (train size (91, 2)) ---
+2025-05-18 06:01:04,591 - INFO -  Scoring full pool: 9909 candidates
+2025-05-18 06:01:12,451 - INFO -  GP predict time: 7.860s
+2025-05-18 06:01:12,451 - INFO -   EHVI: 9909 candidates with 500 MC samples
+2025-05-18 06:02:42,156 - INFO -  EHVI time: 89.705s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:02:42,158 - INFO -  Selected idx=293 (COC(=O)c1cc2sccc2n1CC(=O)N(C)c1ccccc1) → [0.24561404 1.        ]
+2025-05-18 06:02:42,229 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:02:42,229 - INFO - 
+--- Iter 82 (train size (92, 2)) ---
+2025-05-18 06:02:42,233 - INFO -  Scoring full pool: 9908 candidates
+2025-05-18 06:02:50,141 - INFO -  GP predict time: 7.908s
+2025-05-18 06:02:50,142 - INFO -   EHVI: 9908 candidates with 500 MC samples
+2025-05-18 06:04:20,228 - INFO -  EHVI time: 90.086s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:04:20,230 - INFO -  Selected idx=3001 (c1ccc2[nH]c(-c3ccc(C4CNCCO4)cc3)nc2c1) → [0.13821138 0.13533528]
+2025-05-18 06:04:20,299 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:04:20,299 - INFO - 
+--- Iter 83 (train size (93, 2)) ---
+2025-05-18 06:04:20,303 - INFO -  Scoring full pool: 9907 candidates
+2025-05-18 06:04:28,201 - INFO -  GP predict time: 7.898s
+2025-05-18 06:04:28,201 - INFO -   EHVI: 9907 candidates with 500 MC samples
+2025-05-18 06:05:57,799 - INFO -  EHVI time: 89.598s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:05:57,801 - INFO -  Selected idx=305 (Cc1ccc2c(=O)cc(C(=O)NCc3ccccc3)oc2c1C) → [0.20338983 1.        ]
+2025-05-18 06:05:57,871 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:05:57,871 - INFO - 
+--- Iter 84 (train size (94, 2)) ---
+2025-05-18 06:05:57,875 - INFO -  Scoring full pool: 9906 candidates
+2025-05-18 06:06:05,635 - INFO -  GP predict time: 7.760s
+2025-05-18 06:06:05,635 - INFO -   EHVI: 9906 candidates with 500 MC samples
+2025-05-18 06:07:35,414 - INFO -  EHVI time: 89.779s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:07:35,416 - INFO -  Selected idx=8646 (Cc1nn(-c2ccccc2)c(Cl)c1C(=O)OCC(=O)NCCc1ccccc1) → [0.24603175 1.        ]
+2025-05-18 06:07:35,491 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:07:35,491 - INFO - 
+--- Iter 85 (train size (95, 2)) ---
+2025-05-18 06:07:35,495 - INFO -  Scoring full pool: 9905 candidates
+2025-05-18 06:07:43,544 - INFO -  GP predict time: 8.050s
+2025-05-18 06:07:43,544 - INFO -   EHVI: 9905 candidates with 500 MC samples
+2025-05-18 06:09:13,547 - INFO -  EHVI time: 90.003s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:09:13,549 - INFO -  Selected idx=5512 (COc1ccc(-c2nc(C)cc(SCC(N)=O)n2)cc1) → [0.1875     0.13533528]
+2025-05-18 06:09:13,622 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:09:13,622 - INFO - 
+--- Iter 86 (train size (96, 2)) ---
+2025-05-18 06:09:13,625 - INFO -  Scoring full pool: 9904 candidates
+2025-05-18 06:09:22,080 - INFO -  GP predict time: 8.455s
+2025-05-18 06:09:22,080 - INFO -   EHVI: 9904 candidates with 500 MC samples
+2025-05-18 06:10:51,695 - INFO -  EHVI time: 89.615s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:10:51,697 - INFO -  Selected idx=9683 (CCOc1ncccc1C(=O)OCC(=O)c1ccc(C)c(C)c1) → [0.27027027 0.13533528]
+2025-05-18 06:10:51,772 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:10:51,772 - INFO - 
+--- Iter 87 (train size (97, 2)) ---
+2025-05-18 06:10:51,776 - INFO -  Scoring full pool: 9903 candidates
+2025-05-18 06:10:59,992 - INFO -  GP predict time: 8.216s
+2025-05-18 06:10:59,992 - INFO -   EHVI: 9903 candidates with 500 MC samples
+2025-05-18 06:12:30,036 - INFO -  EHVI time: 90.044s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:12:30,038 - INFO -  Selected idx=432 (CCOC(=O)c1cc2n(c1C)-c1ccccc1-c1ccccc1-2) → [0.26548673 0.13533528]
+2025-05-18 06:12:30,113 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:12:30,113 - INFO - 
+--- Iter 88 (train size (98, 2)) ---
+2025-05-18 06:12:30,116 - INFO -  Scoring full pool: 9902 candidates
+2025-05-18 06:12:38,398 - INFO -  GP predict time: 8.282s
+2025-05-18 06:12:38,398 - INFO -   EHVI: 9902 candidates with 500 MC samples
+2025-05-18 06:14:08,952 - INFO -  EHVI time: 90.554s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:14:08,954 - INFO -  Selected idx=9144 (CCn1cc(C(=O)Nc2ccccc2)c(=O)c2ccc(C)nc21) → [0.21367521 1.        ]
+2025-05-18 06:14:09,030 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:14:09,030 - INFO - 
+--- Iter 89 (train size (99, 2)) ---
+2025-05-18 06:14:09,034 - INFO -  Scoring full pool: 9901 candidates
+2025-05-18 06:14:17,375 - INFO -  GP predict time: 8.341s
+2025-05-18 06:14:17,375 - INFO -   EHVI: 9901 candidates with 500 MC samples
+2025-05-18 06:15:46,945 - INFO -  EHVI time: 89.569s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:15:46,946 - INFO -  Selected idx=361 (CCOC(=O)C(Cc1ccccc1)Cc1nc2ccccc2s1) → [0.22033898 1.        ]
+2025-05-18 06:15:47,021 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:15:47,021 - INFO - 
+--- Iter 90 (train size (100, 2)) ---
+2025-05-18 06:15:47,025 - INFO -  Scoring full pool: 9900 candidates
+2025-05-18 06:15:55,360 - INFO -  GP predict time: 8.335s
+2025-05-18 06:15:55,360 - INFO -   EHVI: 9900 candidates with 500 MC samples
+2025-05-18 06:17:25,054 - INFO -  EHVI time: 89.694s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:17:25,056 - INFO -  Selected idx=9068 (CCOC(=O)c1csc(NN=Cc2cccc3ccccc23)n1) → [0.23076923 1.        ]
+2025-05-18 06:17:25,134 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:17:25,135 - INFO - 
+--- Iter 91 (train size (101, 2)) ---
+2025-05-18 06:17:25,138 - INFO -  Scoring full pool: 9899 candidates
+2025-05-18 06:17:33,627 - INFO -  GP predict time: 8.489s
+2025-05-18 06:17:33,627 - INFO -   EHVI: 9899 candidates with 500 MC samples
+2025-05-18 06:19:03,865 - INFO -  EHVI time: 90.238s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:19:03,867 - INFO -  Selected idx=7196 (CCOC(=O)c1c(-c2cc3ccc(OC)cc3oc2=O)nn(-c2ccccc2)c1C(=O)OCC) → [0.28148148 0.13533528]
+2025-05-18 06:19:03,947 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:19:03,948 - INFO - 
+--- Iter 92 (train size (102, 2)) ---
+2025-05-18 06:19:03,951 - INFO -  Scoring full pool: 9898 candidates
+2025-05-18 06:19:12,520 - INFO -  GP predict time: 8.568s
+2025-05-18 06:19:12,520 - INFO -   EHVI: 9898 candidates with 500 MC samples
+2025-05-18 06:20:42,124 - INFO -  EHVI time: 89.604s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:20:42,126 - INFO -  Selected idx=281 (Cc1ccc(S(=O)(=O)N(C)C)cc1NC(=O)C(C)N(C)Cc1sccc1C) → [0.15503876 0.13533528]
+2025-05-18 06:20:42,210 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:20:42,210 - INFO - 
+--- Iter 93 (train size (103, 2)) ---
+2025-05-18 06:20:42,214 - INFO -  Scoring full pool: 9897 candidates
+2025-05-18 06:20:50,956 - INFO -  GP predict time: 8.742s
+2025-05-18 06:20:50,956 - INFO -   EHVI: 9897 candidates with 500 MC samples
+2025-05-18 06:22:20,706 - INFO -  EHVI time: 89.750s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:22:20,708 - INFO -  Selected idx=8841 (CC(C)Oc1cc2c(cc1NC(=O)c1ccncc1)n(C)c(=O)n2C) → [0.15873016 1.        ]
+2025-05-18 06:22:20,791 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:22:20,791 - INFO - 
+--- Iter 94 (train size (104, 2)) ---
+2025-05-18 06:22:20,795 - INFO -  Scoring full pool: 9896 candidates
+2025-05-18 06:22:29,498 - INFO -  GP predict time: 8.702s
+2025-05-18 06:22:29,498 - INFO -   EHVI: 9896 candidates with 500 MC samples
+2025-05-18 06:23:59,135 - INFO -  EHVI time: 89.638s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:23:59,137 - INFO -  Selected idx=8588 (NC(=O)c1ccc(-c2noc(C3CCCCN3C(=O)COc3ccccc3)n2)cc1) → [0.17985612 0.13533528]
+2025-05-18 06:23:59,221 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:23:59,221 - INFO - 
+--- Iter 95 (train size (105, 2)) ---
+2025-05-18 06:23:59,225 - INFO -  Scoring full pool: 9895 candidates
+2025-05-18 06:24:08,485 - INFO -  GP predict time: 9.260s
+2025-05-18 06:24:08,485 - INFO -   EHVI: 9895 candidates with 500 MC samples
+2025-05-18 06:25:38,551 - INFO -  EHVI time: 90.066s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:25:38,553 - INFO -  Selected idx=6955 (CCOC(=O)c1c(C)n(Cc2ccccc2)c2ccc(OCC(O)CN3CCOCC3)cc12) → [0.24637681 0.13533528]
+2025-05-18 06:25:38,639 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:25:38,639 - INFO - 
+--- Iter 96 (train size (106, 2)) ---
+2025-05-18 06:25:38,643 - INFO -  Scoring full pool: 9894 candidates
+2025-05-18 06:25:47,930 - INFO -  GP predict time: 9.287s
+2025-05-18 06:25:47,930 - INFO -   EHVI: 9894 candidates with 500 MC samples
+2025-05-18 06:27:17,813 - INFO -  EHVI time: 89.883s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:27:17,815 - INFO -  Selected idx=7566 (CCN(CC)c1nc(C(F)(F)F)nc2c1nnn2Cc1ccccc1) → [0.16666667 1.        ]
+2025-05-18 06:27:17,902 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:27:17,902 - INFO - 
+--- Iter 97 (train size (107, 2)) ---
+2025-05-18 06:27:17,906 - INFO -  Scoring full pool: 9893 candidates
+2025-05-18 06:27:26,982 - INFO -  GP predict time: 9.077s
+2025-05-18 06:27:26,983 - INFO -   EHVI: 9893 candidates with 500 MC samples
+2025-05-18 06:28:56,331 - INFO -  EHVI time: 89.348s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:28:56,332 - INFO -  Selected idx=3902 (COCCOC(=O)c1c(C)oc2ccc(OC(=O)c3cccs3)cc12) → [0.27586207 1.        ]
+2025-05-18 06:28:56,420 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:28:56,420 - INFO - 
+--- Iter 98 (train size (108, 2)) ---
+2025-05-18 06:28:56,424 - INFO -  Scoring full pool: 9892 candidates
+2025-05-18 06:29:05,621 - INFO -  GP predict time: 9.196s
+2025-05-18 06:29:05,621 - INFO -   EHVI: 9892 candidates with 500 MC samples
+2025-05-18 06:30:35,310 - INFO -  EHVI time: 89.689s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:30:35,311 - INFO -  Selected idx=1174 (CCOC(=O)c1c2c(n3ccc(C)cc13)C(=O)c1ccccc1C2=O) → [0.26724138 0.13533528]
+2025-05-18 06:30:35,397 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:30:35,397 - INFO - 
+--- Iter 99 (train size (109, 2)) ---
+2025-05-18 06:30:35,401 - INFO -  Scoring full pool: 9891 candidates
+2025-05-18 06:30:44,667 - INFO -  GP predict time: 9.265s
+2025-05-18 06:30:44,667 - INFO -   EHVI: 9891 candidates with 500 MC samples
+2025-05-18 06:32:14,418 - INFO -  EHVI time: 89.751s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:32:14,420 - INFO -  Selected idx=6036 (Cc1cc(C)cc(C(=O)Nc2nc(CC(=O)NO)cs2)c1) → [0.1637931  0.13533528]
+2025-05-18 06:32:14,510 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:32:14,510 - INFO - 
+--- Iter 100 (train size (110, 2)) ---
+2025-05-18 06:32:14,515 - INFO -  Scoring full pool: 9890 candidates
+2025-05-18 06:32:24,093 - INFO -  GP predict time: 9.578s
+2025-05-18 06:32:24,093 - INFO -   EHVI: 9890 candidates with 500 MC samples
+2025-05-18 06:33:54,726 - INFO -  EHVI time: 90.633s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:33:54,728 - INFO -  Selected idx=2405 (CCOc1ccc(-c2nc(CSCC(=O)NCc3ccc(C)cc3)c(C)o2)cc1) → [0.19402985 1.        ]
+2025-05-18 06:33:54,822 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:33:54,822 - INFO - 
+--- Iter 101 (train size (111, 2)) ---
+2025-05-18 06:33:54,826 - INFO -  Scoring full pool: 9889 candidates
+2025-05-18 06:34:04,502 - INFO -  GP predict time: 9.675s
+2025-05-18 06:34:04,502 - INFO -   EHVI: 9889 candidates with 500 MC samples
+2025-05-18 06:35:34,541 - INFO -  EHVI time: 90.039s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:35:34,543 - INFO -  Selected idx=162 (CCN(CC)C(=O)c1ccc(CNS(=O)(=O)c2cccc(Cl)c2)cc1) → [0.18699187 0.13533528]
+2025-05-18 06:35:34,633 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:35:34,633 - INFO - 
+--- Iter 102 (train size (112, 2)) ---
+2025-05-18 06:35:34,637 - INFO -  Scoring full pool: 9888 candidates
+2025-05-18 06:35:44,123 - INFO -  GP predict time: 9.486s
+2025-05-18 06:35:44,123 - INFO -   EHVI: 9888 candidates with 500 MC samples
+2025-05-18 06:37:13,734 - INFO -  EHVI time: 89.611s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:37:13,736 - INFO -  Selected idx=4185 (CCOC(=O)c1c(N)sc(N=Cc2ccc(Cl)cc2)c1C(=O)OCC) → [0.30357143 0.13533528]
+2025-05-18 06:37:13,830 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:37:13,830 - INFO - 
+--- Iter 103 (train size (113, 2)) ---
+2025-05-18 06:37:13,834 - INFO -  Scoring full pool: 9887 candidates
+2025-05-18 06:37:23,667 - INFO -  GP predict time: 9.832s
+2025-05-18 06:37:23,667 - INFO -   EHVI: 9887 candidates with 500 MC samples
+2025-05-18 06:38:52,991 - INFO -  EHVI time: 89.325s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:38:52,993 - INFO -  Selected idx=5810 (CCOC(=O)C(C(=O)NCc1ccc(F)cc1)c1ncc(C(F)(F)F)cc1Cl) → [0.224      0.13533528]
+2025-05-18 06:38:53,089 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:38:53,089 - INFO - 
+--- Iter 104 (train size (114, 2)) ---
+2025-05-18 06:38:53,094 - INFO -  Scoring full pool: 9886 candidates
+2025-05-18 06:39:02,515 - INFO -  GP predict time: 9.421s
+2025-05-18 06:39:02,515 - INFO -   EHVI: 9886 candidates with 500 MC samples
+2025-05-18 06:40:32,442 - INFO -  EHVI time: 89.927s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:40:32,444 - INFO -  Selected idx=4870 (CCC1SC(=C(C#N)C(=O)NCc2ccco2)N(c2ccc(Br)cc2)C1=O) → [0.16793893 1.        ]
+2025-05-18 06:40:32,542 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:40:32,542 - INFO - 
+--- Iter 105 (train size (115, 2)) ---
+2025-05-18 06:40:32,546 - INFO -  Scoring full pool: 9885 candidates
+2025-05-18 06:40:42,573 - INFO -  GP predict time: 10.027s
+2025-05-18 06:40:42,573 - INFO -   EHVI: 9885 candidates with 500 MC samples
+2025-05-18 06:42:12,037 - INFO -  EHVI time: 89.464s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:42:12,038 - INFO -  Selected idx=7306 (COc1ccc2ccc(-c3cccnc3)c(Cl)c2c1F) → [0.15517241 1.        ]
+2025-05-18 06:42:12,473 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:42:12,473 - INFO - 
+--- Iter 106 (train size (116, 2)) ---
+2025-05-18 06:42:12,477 - INFO -  Scoring full pool: 9884 candidates
+2025-05-18 06:42:22,369 - INFO -  GP predict time: 9.892s
+2025-05-18 06:42:22,369 - INFO -   EHVI: 9884 candidates with 500 MC samples
+2025-05-18 06:43:52,150 - INFO -  EHVI time: 89.781s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:43:52,152 - INFO -  Selected idx=2649 (CCOc1ccc(NC(=O)c2ccccc2NS(C)(=O)=O)cc1) → [0.20512821 0.13533528]
+2025-05-18 06:43:52,253 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:43:52,253 - INFO - 
+--- Iter 107 (train size (117, 2)) ---
+2025-05-18 06:43:52,257 - INFO -  Scoring full pool: 9883 candidates
+2025-05-18 06:44:02,113 - INFO -  GP predict time: 9.856s
+2025-05-18 06:44:02,113 - INFO -   EHVI: 9883 candidates with 500 MC samples
+2025-05-18 06:45:31,748 - INFO -  EHVI time: 89.635s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:45:31,750 - INFO -  Selected idx=2419 (COC(=O)C1=C(c2ccc3ccccc3c2)CC2CCC1N2C) → [0.24347826 0.13533528]
+2025-05-18 06:45:31,852 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:45:31,852 - INFO - 
+--- Iter 108 (train size (118, 2)) ---
+2025-05-18 06:45:31,856 - INFO -  Scoring full pool: 9882 candidates
+2025-05-18 06:45:42,189 - INFO -  GP predict time: 10.332s
+2025-05-18 06:45:42,189 - INFO -   EHVI: 9882 candidates with 500 MC samples
+2025-05-18 06:47:11,840 - INFO -  EHVI time: 89.651s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:47:11,842 - INFO -  Selected idx=2070 (COc1ccccc1-c1nc(-c2ccc3c(c2)CCN3S(C)(=O)=O)cs1) → [0.17054264 0.13533528]
+2025-05-18 06:47:11,944 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:47:11,944 - INFO - 
+--- Iter 109 (train size (119, 2)) ---
+2025-05-18 06:47:11,949 - INFO -  Scoring full pool: 9881 candidates
+2025-05-18 06:47:21,998 - INFO -  GP predict time: 10.049s
+2025-05-18 06:47:21,998 - INFO -   EHVI: 9881 candidates with 500 MC samples
+2025-05-18 06:48:51,509 - INFO -  EHVI time: 89.510s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:48:51,511 - INFO -  Selected idx=9912 (Cc1csc2nc(CNC(=O)c3cccc(C(F)(F)F)c3)cn12) → [0.14634146 1.        ]
+2025-05-18 06:48:51,614 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:48:51,614 - INFO - 
+--- Iter 110 (train size (120, 2)) ---
+2025-05-18 06:48:51,619 - INFO -  Scoring full pool: 9880 candidates
+2025-05-18 06:49:01,705 - INFO -  GP predict time: 10.086s
+2025-05-18 06:49:01,705 - INFO -   EHVI: 9880 candidates with 500 MC samples
+2025-05-18 06:50:31,429 - INFO -  EHVI time: 89.724s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:50:31,431 - INFO -  Selected idx=9239 (CS(=O)(=O)c1ccc(OCc2nnc3sc(-c4ccccc4Cl)nn23)cc1) → [0.203125   0.13533528]
+2025-05-18 06:50:31,536 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:50:31,537 - INFO - 
+--- Iter 111 (train size (121, 2)) ---
+2025-05-18 06:50:31,541 - INFO -  Scoring full pool: 9879 candidates
+2025-05-18 06:50:42,029 - INFO -  GP predict time: 10.487s
+2025-05-18 06:50:42,029 - INFO -   EHVI: 9879 candidates with 500 MC samples
+2025-05-18 06:52:11,613 - INFO -  EHVI time: 89.584s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:52:11,615 - INFO -  Selected idx=6960 (CCOC(=O)c1c(C)oc2c1c1c(c3ccccc32)OCN(Cc2cccnc2)C1) → [0.23308271 0.00033546]
+2025-05-18 06:52:11,722 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:52:11,722 - INFO - 
+--- Iter 112 (train size (122, 2)) ---
+2025-05-18 06:52:11,727 - INFO -  Scoring full pool: 9878 candidates
+2025-05-18 06:52:22,003 - INFO -  GP predict time: 10.277s
+2025-05-18 06:52:22,004 - INFO -   EHVI: 9878 candidates with 500 MC samples
+2025-05-18 06:53:51,646 - INFO -  EHVI time: 89.642s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:53:51,647 - INFO -  Selected idx=3329 (CN(C)CCn1c(=O)oc2cc(C(=O)c3ccccc3)ccc21) → [0.19327731 1.        ]
+2025-05-18 06:53:51,750 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:53:51,750 - INFO - 
+--- Iter 113 (train size (123, 2)) ---
+2025-05-18 06:53:51,754 - INFO -  Scoring full pool: 9877 candidates
+2025-05-18 06:54:01,993 - INFO -  GP predict time: 10.239s
+2025-05-18 06:54:01,994 - INFO -   EHVI: 9877 candidates with 500 MC samples
+2025-05-18 06:55:31,347 - INFO -  EHVI time: 89.354s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:55:31,349 - INFO -  Selected idx=8419 (Cn1cc(-c2ccccc2)nn1) → [0.13131313 0.13533528]
+2025-05-18 06:55:31,459 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:55:31,459 - INFO - 
+--- Iter 114 (train size (124, 2)) ---
+2025-05-18 06:55:31,463 - INFO -  Scoring full pool: 9876 candidates
+2025-05-18 06:55:42,200 - INFO -  GP predict time: 10.737s
+2025-05-18 06:55:42,200 - INFO -   EHVI: 9876 candidates with 500 MC samples
+2025-05-18 06:57:11,646 - INFO -  EHVI time: 89.445s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:57:11,647 - INFO -  Selected idx=4308 (Cc1c(C)c2ccc(OC(C)C(=O)O)cc2oc1=O) → [0.18518519 0.13533528]
+2025-05-18 06:57:11,759 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:57:11,759 - INFO - 
+--- Iter 115 (train size (125, 2)) ---
+2025-05-18 06:57:11,763 - INFO -  Scoring full pool: 9875 candidates
+2025-05-18 06:57:22,553 - INFO -  GP predict time: 10.789s
+2025-05-18 06:57:22,553 - INFO -   EHVI: 9875 candidates with 500 MC samples
+2025-05-18 06:58:51,942 - INFO -  EHVI time: 89.389s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 06:58:51,944 - INFO -  Selected idx=2493 (CCCCCn1cc(C(=O)NCc2ccccc2)c(=O)c2c(C)nn(C)c21) → [0.23387097 1.        ]
+2025-05-18 06:58:52,057 - INFO -  Hypervolume: 0.2867
+2025-05-18 06:58:52,057 - INFO - 
+--- Iter 116 (train size (126, 2)) ---
+2025-05-18 06:58:52,062 - INFO -  Scoring full pool: 9874 candidates
+2025-05-18 06:59:02,933 - INFO -  GP predict time: 10.871s
+2025-05-18 06:59:02,933 - INFO -   EHVI: 9874 candidates with 500 MC samples
+2025-05-18 07:00:32,057 - INFO -  EHVI time: 89.124s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:00:32,059 - INFO -  Selected idx=2295 (COC(=O)c1ccc(S(=O)(=O)N(CCC(F)(F)F)c2sc3ccccc3c2C)cc1) → [0.23255814 1.        ]
+2025-05-18 07:00:32,174 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:00:32,174 - INFO - 
+--- Iter 117 (train size (127, 2)) ---
+2025-05-18 07:00:32,179 - INFO -  Scoring full pool: 9873 candidates
+2025-05-18 07:00:42,860 - INFO -  GP predict time: 10.681s
+2025-05-18 07:00:42,860 - INFO -   EHVI: 9873 candidates with 500 MC samples
+2025-05-18 07:02:12,500 - INFO -  EHVI time: 89.640s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:02:12,501 - INFO -  Selected idx=4289 (Cc1ccccc1-c1nc(CNCCCN(C)c2ccccc2)co1) → [0.171875 1.      ]
+2025-05-18 07:02:12,618 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:02:12,618 - INFO - 
+--- Iter 118 (train size (128, 2)) ---
+2025-05-18 07:02:12,622 - INFO -  Scoring full pool: 9872 candidates
+2025-05-18 07:02:23,643 - INFO -  GP predict time: 11.020s
+2025-05-18 07:02:23,643 - INFO -   EHVI: 9872 candidates with 500 MC samples
+2025-05-18 07:03:53,218 - INFO -  EHVI time: 89.575s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:03:53,220 - INFO -  Selected idx=907 (CCOP(=O)(Cc1ccc(-c2nc3cccc(O)c3s2)cc1)OCC) → [0.184 1.   ]
+2025-05-18 07:03:53,338 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:03:53,338 - INFO - 
+--- Iter 119 (train size (129, 2)) ---
+2025-05-18 07:03:53,343 - INFO -  Scoring full pool: 9871 candidates
+2025-05-18 07:04:04,504 - INFO -  GP predict time: 11.161s
+2025-05-18 07:04:04,504 - INFO -   EHVI: 9871 candidates with 500 MC samples
+2025-05-18 07:05:33,940 - INFO -  EHVI time: 89.436s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:05:33,941 - INFO -  Selected idx=794 (Cc1nc(-c2cnn(C)c2Oc2ccccc2)cn2c(C)nnc12) → [0.168      0.13533528]
+2025-05-18 07:05:34,057 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:05:34,057 - INFO - 
+--- Iter 120 (train size (130, 2)) ---
+2025-05-18 07:05:34,062 - INFO -  Scoring full pool: 9870 candidates
+2025-05-18 07:05:45,319 - INFO -  GP predict time: 11.257s
+2025-05-18 07:05:45,319 - INFO -   EHVI: 9870 candidates with 500 MC samples
+2025-05-18 07:07:15,238 - INFO -  EHVI time: 89.919s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:07:15,240 - INFO -  Selected idx=7212 (CC(CN(C)Cc1ccccc1)NC(=O)c1ccc(-c2noc(C(F)(F)F)n2)cc1) → [0.15827338 1.        ]
+2025-05-18 07:07:15,363 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:07:15,363 - INFO - 
+--- Iter 121 (train size (131, 2)) ---
+2025-05-18 07:07:15,368 - INFO -  Scoring full pool: 9869 candidates
+2025-05-18 07:07:26,447 - INFO -  GP predict time: 11.079s
+2025-05-18 07:07:26,447 - INFO -   EHVI: 9869 candidates with 500 MC samples
+2025-05-18 07:08:56,073 - INFO -  EHVI time: 89.626s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:08:56,075 - INFO -  Selected idx=4366 (CCN(Cc1ccccc1)C(=O)Cn1c(=O)n(-c2ccc(OC)cc2OC)c(=O)c2c(C)c(C)sc21) → [0.21232877 0.13533528]
+2025-05-18 07:08:56,198 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:08:56,198 - INFO - 
+--- Iter 122 (train size (132, 2)) ---
+2025-05-18 07:08:56,203 - INFO -  Scoring full pool: 9868 candidates
+2025-05-18 07:09:07,322 - INFO -  GP predict time: 11.119s
+2025-05-18 07:09:07,323 - INFO -   EHVI: 9868 candidates with 500 MC samples
+2025-05-18 07:10:37,186 - INFO -  EHVI time: 89.864s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:10:37,187 - INFO -  Selected idx=8853 (CN(C)CCCCOC(=O)Nc1cccc(Cn2nc(Nc3ccccc3)ccc2=O)c1) → [0.19858156 1.        ]
+2025-05-18 07:10:37,307 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:10:37,307 - INFO - 
+--- Iter 123 (train size (133, 2)) ---
+2025-05-18 07:10:37,312 - INFO -  Scoring full pool: 9867 candidates
+2025-05-18 07:10:48,479 - INFO -  GP predict time: 11.167s
+2025-05-18 07:10:48,479 - INFO -   EHVI: 9867 candidates with 500 MC samples
+2025-05-18 07:12:17,674 - INFO -  EHVI time: 89.195s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:12:17,676 - INFO -  Selected idx=4276 (CCOC(=O)c1cc2sccc2n1CC(=O)Nc1ccc(OC)cc1OC) → [0.275 1.   ]
+2025-05-18 07:12:17,802 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:12:17,802 - INFO - 
+--- Iter 124 (train size (134, 2)) ---
+2025-05-18 07:12:17,807 - INFO -  Scoring full pool: 9866 candidates
+2025-05-18 07:12:29,374 - INFO -  GP predict time: 11.567s
+2025-05-18 07:12:29,374 - INFO -   EHVI: 9866 candidates with 500 MC samples
+2025-05-18 07:13:58,590 - INFO -  EHVI time: 89.216s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:13:58,592 - INFO -  Selected idx=3702 (CC(=O)N(C(C)=O)c1ccc(-c2nc3ccccc3s2)cc1C) → [0.22608696 1.        ]
+2025-05-18 07:13:58,719 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:13:58,719 - INFO - 
+--- Iter 125 (train size (135, 2)) ---
+2025-05-18 07:13:58,724 - INFO -  Scoring full pool: 9865 candidates
+2025-05-18 07:14:10,477 - INFO -  GP predict time: 11.753s
+2025-05-18 07:14:10,477 - INFO -   EHVI: 9865 candidates with 500 MC samples
+2025-05-18 07:15:39,684 - INFO -  EHVI time: 89.207s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:15:39,686 - INFO -  Selected idx=4758 (Cc1noc(-c2ccccc2)c1C(=O)NC(C(=O)c1ccc(C#N)cc1)C(C)C) → [0.1969697 1.       ]
+2025-05-18 07:15:40,186 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:15:40,186 - INFO - 
+--- Iter 126 (train size (136, 2)) ---
+2025-05-18 07:15:40,191 - INFO -  Scoring full pool: 9864 candidates
+2025-05-18 07:15:51,515 - INFO -  GP predict time: 11.324s
+2025-05-18 07:15:51,515 - INFO -   EHVI: 9864 candidates with 500 MC samples
+2025-05-18 07:17:20,883 - INFO -  EHVI time: 89.368s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:17:20,884 - INFO -  Selected idx=12 (CCOC(=O)c1c(-c2ccc([N+](=O)[O-])cc2)[n+]([O-])c2ccccc2[n+]1[O-]) → [0.24166667 1.        ]
+2025-05-18 07:17:21,011 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:17:21,011 - INFO - 
+--- Iter 127 (train size (137, 2)) ---
+2025-05-18 07:17:21,016 - INFO -  Scoring full pool: 9863 candidates
+2025-05-18 07:17:32,799 - INFO -  GP predict time: 11.783s
+2025-05-18 07:17:32,799 - INFO -   EHVI: 9863 candidates with 500 MC samples
+2025-05-18 07:19:02,096 - INFO -  EHVI time: 89.297s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:19:02,098 - INFO -  Selected idx=4320 (NC(=O)c1cc2ccccc2n1Cc1ccc(Cl)c(Cl)c1) → [0.21428571 1.        ]
+2025-05-18 07:19:02,231 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:19:02,231 - INFO - 
+--- Iter 128 (train size (138, 2)) ---
+2025-05-18 07:19:02,236 - INFO -  Scoring full pool: 9862 candidates
+2025-05-18 07:19:13,964 - INFO -  GP predict time: 11.728s
+2025-05-18 07:19:13,964 - INFO -   EHVI: 9862 candidates with 500 MC samples
+2025-05-18 07:20:42,869 - INFO -  EHVI time: 88.904s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:20:42,870 - INFO -  Selected idx=609 (CCOC(=O)Cc1ccccc1OC(=O)c1cc(OC)cc(OC)c1) → [0.3125     0.13533528]
+2025-05-18 07:20:43,004 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:20:43,004 - INFO - 
+--- Iter 129 (train size (139, 2)) ---
+2025-05-18 07:20:43,010 - INFO -  Scoring full pool: 9861 candidates
+2025-05-18 07:20:54,720 - INFO -  GP predict time: 11.710s
+2025-05-18 07:20:54,720 - INFO -   EHVI: 9861 candidates with 500 MC samples
+2025-05-18 07:22:24,228 - INFO -  EHVI time: 89.508s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:22:24,230 - INFO -  Selected idx=703 (CSC1=NC(=O)C(=Cc2cccc3ccccc23)S1) → [0.15789474 1.        ]
+2025-05-18 07:22:24,744 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:22:24,744 - INFO - 
+--- Iter 130 (train size (140, 2)) ---
+2025-05-18 07:22:24,749 - INFO -  Scoring full pool: 9860 candidates
+2025-05-18 07:22:36,461 - INFO -  GP predict time: 11.712s
+2025-05-18 07:22:36,461 - INFO -   EHVI: 9860 candidates with 500 MC samples
+2025-05-18 07:24:05,628 - INFO -  EHVI time: 89.167s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:24:05,630 - INFO -  Selected idx=4423 (Cc1ccc(OCC(=O)NCCCNC(=O)c2ccncc2)cc1C) → [0.19354839 0.13533528]
+2025-05-18 07:24:05,769 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:24:05,769 - INFO - 
+--- Iter 131 (train size (141, 2)) ---
+2025-05-18 07:24:05,774 - INFO -  Scoring full pool: 9859 candidates
+2025-05-18 07:24:18,019 - INFO -  GP predict time: 12.245s
+2025-05-18 07:24:18,019 - INFO -   EHVI: 9859 candidates with 500 MC samples
+2025-05-18 07:25:47,232 - INFO -  EHVI time: 89.213s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:25:47,234 - INFO -  Selected idx=5489 (CCOC(=O)c1nc2cc(C(F)(F)F)ccc2nc1Oc1ccc(C(=O)OC)cc1) → [0.26984127 1.        ]
+2025-05-18 07:25:47,374 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:25:47,374 - INFO - 
+--- Iter 132 (train size (142, 2)) ---
+2025-05-18 07:25:47,379 - INFO -  Scoring full pool: 9858 candidates
+2025-05-18 07:26:00,024 - INFO -  GP predict time: 12.644s
+2025-05-18 07:26:00,024 - INFO -   EHVI: 9858 candidates with 500 MC samples
+2025-05-18 07:27:29,403 - INFO -  EHVI time: 89.379s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:27:29,405 - INFO -  Selected idx=8347 (O=C(O)CC1c2[nH]c3ccccc3c2CCN1C(=O)Cc1ccccc1) → [0.19685039 0.13533528]
+2025-05-18 07:27:29,546 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:27:29,546 - INFO - 
+--- Iter 133 (train size (143, 2)) ---
+2025-05-18 07:27:29,551 - INFO -  Scoring full pool: 9857 candidates
+2025-05-18 07:27:41,929 - INFO -  GP predict time: 12.377s
+2025-05-18 07:27:41,929 - INFO -   EHVI: 9857 candidates with 500 MC samples
+2025-05-18 07:29:11,418 - INFO -  EHVI time: 89.489s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:29:11,420 - INFO -  Selected idx=2151 (CCNC(=O)C1(C)CCCN(C(=O)c2oc3ccccc3c2C)C1) → [0.22033898 1.        ]
+2025-05-18 07:29:11,564 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:29:11,564 - INFO - 
+--- Iter 134 (train size (144, 2)) ---
+2025-05-18 07:29:11,570 - INFO -  Scoring full pool: 9856 candidates
+2025-05-18 07:29:23,675 - INFO -  GP predict time: 12.105s
+2025-05-18 07:29:23,676 - INFO -   EHVI: 9856 candidates with 500 MC samples
+2025-05-18 07:30:52,761 - INFO -  EHVI time: 89.085s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:30:52,762 - INFO -  Selected idx=9616 (Cc1ccc(-c2nonc2NC(=O)c2ccco2)cc1C) → [0.16101695 1.        ]
+2025-05-18 07:30:53,298 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:30:53,298 - INFO - 
+--- Iter 135 (train size (145, 2)) ---
+2025-05-18 07:30:53,304 - INFO -  Scoring full pool: 9855 candidates
+2025-05-18 07:31:05,377 - INFO -  GP predict time: 12.074s
+2025-05-18 07:31:05,377 - INFO -   EHVI: 9855 candidates with 500 MC samples
+2025-05-18 07:32:34,854 - INFO -  EHVI time: 89.477s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:32:34,856 - INFO -  Selected idx=6389 (CCC1(CC)C(=O)N(C(=O)NCc2ccccc2)C1OCC(=O)O) → [0.23275862 0.13533528]
+2025-05-18 07:32:35,004 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:32:35,004 - INFO - 
+--- Iter 136 (train size (146, 2)) ---
+2025-05-18 07:32:35,009 - INFO -  Scoring full pool: 9854 candidates
+2025-05-18 07:32:48,125 - INFO -  GP predict time: 13.115s
+2025-05-18 07:32:48,125 - INFO -   EHVI: 9854 candidates with 500 MC samples
+2025-05-18 07:34:17,326 - INFO -  EHVI time: 89.202s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:34:17,328 - INFO -  Selected idx=3829 (COc1ccc(C(=O)OCCc2cc3ccccc3c(=O)o2)cc1) → [0.24786325 1.        ]
+2025-05-18 07:34:17,476 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:34:17,477 - INFO - 
+--- Iter 137 (train size (147, 2)) ---
+2025-05-18 07:34:17,482 - INFO -  Scoring full pool: 9853 candidates
+2025-05-18 07:34:30,203 - INFO -  GP predict time: 12.720s
+2025-05-18 07:34:30,203 - INFO -   EHVI: 9853 candidates with 500 MC samples
+2025-05-18 07:35:59,439 - INFO -  EHVI time: 89.237s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:35:59,441 - INFO -  Selected idx=4374 (CCN(CC)C(=O)C1Sc2ccccc2-c2c1c1cc(OC(F)(F)F)ccc1n2CCF) → [0.20289855 0.13533528]
+2025-05-18 07:35:59,591 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:35:59,591 - INFO - 
+--- Iter 138 (train size (148, 2)) ---
+2025-05-18 07:35:59,597 - INFO -  Scoring full pool: 9852 candidates
+2025-05-18 07:36:12,137 - INFO -  GP predict time: 12.540s
+2025-05-18 07:36:12,137 - INFO -   EHVI: 9852 candidates with 500 MC samples
+2025-05-18 07:37:41,363 - INFO -  EHVI time: 89.226s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:37:41,364 - INFO -  Selected idx=2580 (CCN(c1ccccc1)S(=O)(=O)c1ccc(Cl)c(NC(=O)COC(=O)c2ccc(Cl)c(N)c2)c1) → [0.23913043 1.        ]
+2025-05-18 07:37:41,513 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:37:41,513 - INFO - 
+--- Iter 139 (train size (149, 2)) ---
+2025-05-18 07:37:41,518 - INFO -  Scoring full pool: 9851 candidates
+2025-05-18 07:37:54,342 - INFO -  GP predict time: 12.824s
+2025-05-18 07:37:54,342 - INFO -   EHVI: 9851 candidates with 500 MC samples
+2025-05-18 07:39:23,739 - INFO -  EHVI time: 89.397s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:39:23,741 - INFO -  Selected idx=933 (NC(=O)c1cn(-c2ccc(S(N)(=O)=O)cc2)nc1-c1ccc([N+](=O)[O-])cc1) → [0.12686567 1.        ]
+2025-05-18 07:39:23,895 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:39:23,895 - INFO - 
+--- Iter 140 (train size (150, 2)) ---
+2025-05-18 07:39:23,900 - INFO -  Scoring full pool: 9850 candidates
+2025-05-18 07:39:36,537 - INFO -  GP predict time: 12.636s
+2025-05-18 07:39:36,537 - INFO -   EHVI: 9850 candidates with 500 MC samples
+2025-05-18 07:41:05,647 - INFO -  EHVI time: 89.110s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:41:05,648 - INFO -  Selected idx=7115 (O=P(O)(O)C(O)(c1cccc(-c2ccccc2)c1)P(=O)(O)O) → [0.12396694 0.13533528]
+2025-05-18 07:41:05,802 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:41:05,802 - INFO - 
+--- Iter 141 (train size (151, 2)) ---
+2025-05-18 07:41:05,807 - INFO -  Scoring full pool: 9849 candidates
+2025-05-18 07:41:18,830 - INFO -  GP predict time: 13.023s
+2025-05-18 07:41:18,830 - INFO -   EHVI: 9849 candidates with 500 MC samples
+2025-05-18 07:42:47,879 - INFO -  EHVI time: 89.049s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:42:47,881 - INFO -  Selected idx=8759 (CC(=O)Oc1ccc(-c2csc(Nc3ccc(S(N)(=O)=O)cc3)n2)cc1) → [0.14503817 1.        ]
+2025-05-18 07:42:48,038 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:42:48,038 - INFO - 
+--- Iter 142 (train size (152, 2)) ---
+2025-05-18 07:42:48,043 - INFO -  Scoring full pool: 9848 candidates
+2025-05-18 07:43:01,189 - INFO -  GP predict time: 13.146s
+2025-05-18 07:43:01,189 - INFO -   EHVI: 9848 candidates with 500 MC samples
+2025-05-18 07:44:30,812 - INFO -  EHVI time: 89.623s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:44:30,814 - INFO -  Selected idx=479 (CCOC(=O)c1ccc(OCc2nc3ccccc3n(C)c2=O)cc1) → [0.28695652 1.        ]
+2025-05-18 07:44:30,973 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:44:30,973 - INFO - 
+--- Iter 143 (train size (153, 2)) ---
+2025-05-18 07:44:30,979 - INFO -  Scoring full pool: 9847 candidates
+2025-05-18 07:44:44,203 - INFO -  GP predict time: 13.225s
+2025-05-18 07:44:44,203 - INFO -   EHVI: 9847 candidates with 500 MC samples
+2025-05-18 07:46:13,176 - INFO -  EHVI time: 88.973s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:46:13,178 - INFO -  Selected idx=6445 (O=C(NCc1ccco1)c1cccn2c(=O)c3sccc3nc12) → [0.152      0.13533528]
+2025-05-18 07:46:13,338 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:46:13,338 - INFO - 
+--- Iter 144 (train size (154, 2)) ---
+2025-05-18 07:46:13,344 - INFO -  Scoring full pool: 9846 candidates
+2025-05-18 07:46:26,721 - INFO -  GP predict time: 13.377s
+2025-05-18 07:46:26,721 - INFO -   EHVI: 9846 candidates with 500 MC samples
+2025-05-18 07:47:56,213 - INFO -  EHVI time: 89.492s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:47:56,215 - INFO -  Selected idx=3948 (CC1(C)C(C(=O)OC(C#N)c2cccc(Oc3ccccc3)c2)C1(C)C) → [0.17460317 1.        ]
+2025-05-18 07:47:56,379 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:47:56,379 - INFO - 
+--- Iter 145 (train size (155, 2)) ---
+2025-05-18 07:47:56,385 - INFO -  Scoring full pool: 9845 candidates
+2025-05-18 07:48:09,873 - INFO -  GP predict time: 13.488s
+2025-05-18 07:48:09,873 - INFO -   EHVI: 9845 candidates with 500 MC samples
+2025-05-18 07:49:38,963 - INFO -  EHVI time: 89.089s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:49:38,964 - INFO -  Selected idx=288 (Cc1cccc2sc(NNC(=O)C3COc4ccccc4O3)nc12) → [0.176      0.13533528]
+2025-05-18 07:49:39,128 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:49:39,128 - INFO - 
+--- Iter 146 (train size (156, 2)) ---
+2025-05-18 07:49:39,134 - INFO -  Scoring full pool: 9844 candidates
+2025-05-18 07:49:52,247 - INFO -  GP predict time: 13.113s
+2025-05-18 07:49:52,247 - INFO -   EHVI: 9844 candidates with 500 MC samples
+2025-05-18 07:51:21,359 - INFO -  EHVI time: 89.112s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:51:21,361 - INFO -  Selected idx=2017 (COC(=O)c1c(Cc2ccccc2)[n+]([O-])c2ccc(Cl)cc2[n+]1[O-]) → [0.24137931 1.        ]
+2025-05-18 07:51:21,528 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:51:21,528 - INFO - 
+--- Iter 147 (train size (157, 2)) ---
+2025-05-18 07:51:21,534 - INFO -  Scoring full pool: 9843 candidates
+2025-05-18 07:51:35,164 - INFO -  GP predict time: 13.630s
+2025-05-18 07:51:35,164 - INFO -   EHVI: 9843 candidates with 500 MC samples
+2025-05-18 07:53:03,970 - INFO -  EHVI time: 88.805s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:53:03,971 - INFO -  Selected idx=1495 (Nc1cc(-c2ccc(NC(=O)Nc3cccc(C(F)(F)F)c3)cc2)on1) → [0.12781955 1.        ]
+2025-05-18 07:53:04,141 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:53:04,141 - INFO - 
+--- Iter 148 (train size (158, 2)) ---
+2025-05-18 07:53:04,147 - INFO -  Scoring full pool: 9842 candidates
+2025-05-18 07:53:17,811 - INFO -  GP predict time: 13.664s
+2025-05-18 07:53:17,811 - INFO -   EHVI: 9842 candidates with 500 MC samples
+2025-05-18 07:54:46,661 - INFO -  EHVI time: 88.850s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:54:46,663 - INFO -  Selected idx=3797 (CCOC(=O)C1=CN(Cc2cccc(F)c2)S(=O)(=O)N(CC)C1c1ccccc1) → [0.24409449 1.        ]
+2025-05-18 07:54:46,834 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:54:46,834 - INFO - 
+--- Iter 149 (train size (159, 2)) ---
+2025-05-18 07:54:46,840 - INFO -  Scoring full pool: 9841 candidates
+2025-05-18 07:55:00,613 - INFO -  GP predict time: 13.773s
+2025-05-18 07:55:00,613 - INFO -   EHVI: 9841 candidates with 500 MC samples
+2025-05-18 07:56:29,850 - INFO -  EHVI time: 89.236s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:56:29,852 - INFO -  Selected idx=3836 (CC(C)(C)OC(=O)N(Cc1ccccc1)CC(OS(=O)(=O)c1ccccc1C(F)(F)F)c1ccccc1) → [0.16233766 1.        ]
+2025-05-18 07:56:30,025 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:56:30,025 - INFO - 
+--- Iter 150 (train size (160, 2)) ---
+2025-05-18 07:56:30,031 - INFO -  Scoring full pool: 9840 candidates
+2025-05-18 07:56:43,874 - INFO -  GP predict time: 13.843s
+2025-05-18 07:56:43,874 - INFO -   EHVI: 9840 candidates with 500 MC samples
+2025-05-18 07:58:13,109 - INFO -  EHVI time: 89.235s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:58:13,110 - INFO -  Selected idx=5388 (COc1cccc(OC)c1-c1cc(C(=O)NC(CCCCN)C(=O)O)nn1-c1ccc(F)cc1) → [0.21985816 1.        ]
+2025-05-18 07:58:13,286 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:58:13,286 - INFO - 
+--- Iter 151 (train size (161, 2)) ---
+2025-05-18 07:58:13,291 - INFO -  Scoring full pool: 9839 candidates
+2025-05-18 07:58:27,308 - INFO -  GP predict time: 14.016s
+2025-05-18 07:58:27,308 - INFO -   EHVI: 9839 candidates with 500 MC samples
+2025-05-18 07:59:56,330 - INFO -  EHVI time: 89.022s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 07:59:56,332 - INFO -  Selected idx=6564 (COc1ccc(NC(=O)C2=CC(c3cccs3)=NS(=O)(=O)N2C)cc1) → [0.15748031 1.        ]
+2025-05-18 07:59:56,510 - INFO -  Hypervolume: 0.2867
+2025-05-18 07:59:56,510 - INFO - 
+--- Iter 152 (train size (162, 2)) ---
+2025-05-18 07:59:56,516 - INFO -  Scoring full pool: 9838 candidates
+2025-05-18 08:00:10,668 - INFO -  GP predict time: 14.152s
+2025-05-18 08:00:10,668 - INFO -   EHVI: 9838 candidates with 500 MC samples
+2025-05-18 08:01:39,287 - INFO -  EHVI time: 88.618s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:01:39,288 - INFO -  Selected idx=9299 (Cc1ccc(NC(=O)c2ccccc2)cc1-c1ccc(C(=O)NCC2CC2)cc1) → [0.19402985 0.13533528]
+2025-05-18 08:01:39,471 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:01:39,471 - INFO - 
+--- Iter 153 (train size (163, 2)) ---
+2025-05-18 08:01:39,477 - INFO -  Scoring full pool: 9837 candidates
+2025-05-18 08:01:54,061 - INFO -  GP predict time: 14.585s
+2025-05-18 08:01:54,061 - INFO -   EHVI: 9837 candidates with 500 MC samples
+2025-05-18 08:03:23,313 - INFO -  EHVI time: 89.251s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:03:23,315 - INFO -  Selected idx=3712 (COc1ccc2oc(=O)c(C(=O)Nc3cccc(C(C)=O)c3)cc2c1) → [0.18548387 1.        ]
+2025-05-18 08:03:23,497 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:03:23,497 - INFO - 
+--- Iter 154 (train size (164, 2)) ---
+2025-05-18 08:03:23,503 - INFO -  Scoring full pool: 9836 candidates
+2025-05-18 08:03:37,450 - INFO -  GP predict time: 13.947s
+2025-05-18 08:03:37,450 - INFO -   EHVI: 9836 candidates with 500 MC samples
+2025-05-18 08:05:06,352 - INFO -  EHVI time: 88.902s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:05:06,354 - INFO -  Selected idx=5886 (CCN(CC)CCCNC(=O)c1csc(Nc2cccc3ccccc23)n1) → [0.19230769 1.        ]
+2025-05-18 08:05:06,539 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:05:06,539 - INFO - 
+--- Iter 155 (train size (165, 2)) ---
+2025-05-18 08:05:06,545 - INFO -  Scoring full pool: 9835 candidates
+2025-05-18 08:05:20,650 - INFO -  GP predict time: 14.105s
+2025-05-18 08:05:20,650 - INFO -   EHVI: 9835 candidates with 500 MC samples
+2025-05-18 08:06:49,315 - INFO -  EHVI time: 88.665s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:06:49,317 - INFO -  Selected idx=110 (CCOC(=O)Cc1csc(NC(=O)c2ccc3ccccc3n2)n1) → [0.24786325 1.        ]
+2025-05-18 08:06:49,504 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:06:49,504 - INFO - 
+--- Iter 156 (train size (166, 2)) ---
+2025-05-18 08:06:49,510 - INFO -  Scoring full pool: 9834 candidates
+2025-05-18 08:07:03,521 - INFO -  GP predict time: 14.011s
+2025-05-18 08:07:03,521 - INFO -   EHVI: 9834 candidates with 500 MC samples
+2025-05-18 08:08:32,519 - INFO -  EHVI time: 88.998s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:08:32,521 - INFO -  Selected idx=7571 (CCOC(=O)c1nc(Nc2ccccc2)c2ccccc2n1) → [0.23684211 1.        ]
+2025-05-18 08:08:32,708 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:08:32,708 - INFO - 
+--- Iter 157 (train size (167, 2)) ---
+2025-05-18 08:08:32,715 - INFO -  Scoring full pool: 9833 candidates
+2025-05-18 08:08:47,717 - INFO -  GP predict time: 15.002s
+2025-05-18 08:08:47,717 - INFO -   EHVI: 9833 candidates with 500 MC samples
+2025-05-18 08:10:16,164 - INFO -  EHVI time: 88.447s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:10:16,166 - INFO -  Selected idx=5010 (CC1=C(C(=O)Nc2ccc(C(F)(F)F)cc2)C(c2ccco2)n2c(nc3ccccc32)N1) → [0.19148936 0.00033546]
+2025-05-18 08:10:16,355 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:10:16,356 - INFO - 
+--- Iter 158 (train size (168, 2)) ---
+2025-05-18 08:10:16,362 - INFO -  Scoring full pool: 9832 candidates
+2025-05-18 08:10:30,566 - INFO -  GP predict time: 14.205s
+2025-05-18 08:10:30,567 - INFO -   EHVI: 9832 candidates with 500 MC samples
+2025-05-18 08:11:58,606 - INFO -  EHVI time: 88.039s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:11:58,608 - INFO -  Selected idx=6364 (COc1cccc(C2SC(c3ccc(C)cc3)=NN2C(=O)c2c(F)cc(F)cc2F)c1OC) → [0.18181818 0.13533528]
+2025-05-18 08:11:58,802 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:11:58,802 - INFO - 
+--- Iter 159 (train size (169, 2)) ---
+2025-05-18 08:11:58,809 - INFO -  Scoring full pool: 9831 candidates
+2025-05-18 08:12:13,563 - INFO -  GP predict time: 14.754s
+2025-05-18 08:12:13,563 - INFO -   EHVI: 9831 candidates with 500 MC samples
+2025-05-18 08:13:41,973 - INFO -  EHVI time: 88.410s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:13:41,974 - INFO -  Selected idx=4465 (CC(C)(CCOC(=O)c1ccccc1)NS(=O)(=O)OCC(Cl)(Cl)Cl) → [0.22608696 0.00033546]
+2025-05-18 08:13:42,170 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:13:42,170 - INFO - 
+--- Iter 160 (train size (170, 2)) ---
+2025-05-18 08:13:42,176 - INFO -  Scoring full pool: 9830 candidates
+2025-05-18 08:13:57,165 - INFO -  GP predict time: 14.989s
+2025-05-18 08:13:57,166 - INFO -   EHVI: 9830 candidates with 500 MC samples
+2025-05-18 08:15:25,818 - INFO -  EHVI time: 88.653s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:15:25,820 - INFO -  Selected idx=6429 (CCOC(=O)C1C(C(=O)OCC)C12C(=O)Nc1ccc(F)cc12) → [0.25 1.  ]
+2025-05-18 08:15:26,017 - INFO -  Hypervolume: 0.2867
+2025-05-18 08:15:26,017 - INFO - 
+--- Iter 161 (train size (171, 2)) ---
+2025-05-18 08:15:26,024 - INFO -  Scoring full pool: 9829 candidates
+2025-05-18 08:15:40,955 - INFO -  GP predict time: 14.931s
+2025-05-18 08:15:40,955 - INFO -   EHVI: 9829 candidates with 500 MC samples
+2025-05-18 08:17:09,502 - INFO -  EHVI time: 88.547s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:17:09,504 - INFO -  Selected idx=2113 (CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1ccccc1I) → [0.52631579 0.13533528]
+2025-05-18 08:17:09,703 - INFO -  Hypervolume: 0.3293
+2025-05-18 08:17:09,704 - INFO - 
+--- Iter 162 (train size (172, 2)) ---
+2025-05-18 08:17:09,710 - INFO -  Scoring full pool: 9828 candidates
+2025-05-18 08:17:24,682 - INFO -  GP predict time: 14.971s
+2025-05-18 08:17:24,682 - INFO -   EHVI: 9828 candidates with 500 MC samples
+2025-05-18 08:19:10,015 - INFO -  EHVI time: 105.333s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:19:10,016 - INFO -  Selected idx=940 (Cc1cc(F)ccc1NC(=O)C(C(C)C)N1Cc2ccccc2C1=O) → [0.19672131 1.        ]
+2025-05-18 08:19:10,217 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:19:10,217 - INFO - 
+--- Iter 163 (train size (173, 2)) ---
+2025-05-18 08:19:10,224 - INFO -  Scoring full pool: 9827 candidates
+2025-05-18 08:19:25,326 - INFO -  GP predict time: 15.101s
+2025-05-18 08:19:25,326 - INFO -   EHVI: 9827 candidates with 500 MC samples
+2025-05-18 08:21:10,790 - INFO -  EHVI time: 105.464s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:21:10,792 - INFO -  Selected idx=8665 (CC(=O)OCc1ccc2oc(=O)c(C(=O)Sc3cccc(Br)c3)cc2c1) → [0.19047619 1.        ]
+2025-05-18 08:21:10,997 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:21:10,997 - INFO - 
+--- Iter 164 (train size (174, 2)) ---
+2025-05-18 08:21:11,004 - INFO -  Scoring full pool: 9826 candidates
+2025-05-18 08:21:26,153 - INFO -  GP predict time: 15.150s
+2025-05-18 08:21:26,154 - INFO -   EHVI: 9826 candidates with 500 MC samples
+2025-05-18 08:23:11,379 - INFO -  EHVI time: 105.225s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:23:11,380 - INFO -  Selected idx=8076 (CC(C)OC(=O)c1ccc(CCC2=CC(=O)C(Br)=CC2=O)cc1) → [0.18644068 0.13533528]
+2025-05-18 08:23:11,587 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:23:11,587 - INFO - 
+--- Iter 165 (train size (175, 2)) ---
+2025-05-18 08:23:11,594 - INFO -  Scoring full pool: 9825 candidates
+2025-05-18 08:23:27,498 - INFO -  GP predict time: 15.904s
+2025-05-18 08:23:27,498 - INFO -   EHVI: 9825 candidates with 500 MC samples
+2025-05-18 08:25:13,256 - INFO -  EHVI time: 105.758s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:25:13,257 - INFO -  Selected idx=4560 (CCOC(=O)C1=C(N)n2c(sc(=Cc3ccncc3)c2=O)=C(C(=O)OCC)C1c1ccncc1) → [0.27205882 0.13533528]
+2025-05-18 08:25:13,466 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:25:13,466 - INFO - 
+--- Iter 166 (train size (176, 2)) ---
+2025-05-18 08:25:13,473 - INFO -  Scoring full pool: 9824 candidates
+2025-05-18 08:25:28,411 - INFO -  GP predict time: 14.938s
+2025-05-18 08:25:28,411 - INFO -   EHVI: 9824 candidates with 500 MC samples
+2025-05-18 08:27:14,342 - INFO -  EHVI time: 105.931s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:27:14,344 - INFO -  Selected idx=5970 (COc1ccc(CCNC(=O)CN(c2ccccc2)S(=O)(=O)c2ccccc2)cc1) → [0.17266187 1.        ]
+2025-05-18 08:27:14,555 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:27:14,555 - INFO - 
+--- Iter 167 (train size (177, 2)) ---
+2025-05-18 08:27:14,562 - INFO -  Scoring full pool: 9823 candidates
+2025-05-18 08:27:29,971 - INFO -  GP predict time: 15.409s
+2025-05-18 08:27:29,971 - INFO -   EHVI: 9823 candidates with 500 MC samples
+2025-05-18 08:29:15,583 - INFO -  EHVI time: 105.612s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:29:15,585 - INFO -  Selected idx=7550 (N#CCCN(C(=O)COC(=O)c1cc2ccccc2oc1=O)c1ccccc1) → [0.20769231 1.        ]
+2025-05-18 08:29:15,797 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:29:15,797 - INFO - 
+--- Iter 168 (train size (178, 2)) ---
+2025-05-18 08:29:15,804 - INFO -  Scoring full pool: 9822 candidates
+2025-05-18 08:29:31,707 - INFO -  GP predict time: 15.903s
+2025-05-18 08:29:31,707 - INFO -   EHVI: 9822 candidates with 500 MC samples
+2025-05-18 08:31:17,013 - INFO -  EHVI time: 105.306s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:31:17,014 - INFO -  Selected idx=9546 (O=C(CSC1=NCCS1)Nc1cccc2ccccc12) → [0.15254237 1.        ]
+2025-05-18 08:31:17,230 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:31:17,230 - INFO - 
+--- Iter 169 (train size (179, 2)) ---
+2025-05-18 08:31:17,236 - INFO -  Scoring full pool: 9821 candidates
+2025-05-18 08:31:32,863 - INFO -  GP predict time: 15.626s
+2025-05-18 08:31:32,863 - INFO -   EHVI: 9821 candidates with 500 MC samples
+2025-05-18 08:33:19,130 - INFO -  EHVI time: 106.267s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:33:19,132 - INFO -  Selected idx=8221 (Cc1ccccc1C(CC(=O)O)NC(=O)c1cccc(-c2cccc(C(C)(C)O)c2)n1) → [0.19852941 1.        ]
+2025-05-18 08:33:19,347 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:33:19,347 - INFO - 
+--- Iter 170 (train size (180, 2)) ---
+2025-05-18 08:33:19,354 - INFO -  Scoring full pool: 9820 candidates
+2025-05-18 08:33:35,471 - INFO -  GP predict time: 16.118s
+2025-05-18 08:33:35,472 - INFO -   EHVI: 9820 candidates with 500 MC samples
+2025-05-18 08:35:21,141 - INFO -  EHVI time: 105.670s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:35:21,143 - INFO -  Selected idx=6517 (CCOC(=O)c1ccc(-c2cn3nc(-c4ccco4)nc3c(N)n2)cc1) → [0.20634921 0.13533528]
+2025-05-18 08:35:21,362 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:35:21,362 - INFO - 
+--- Iter 171 (train size (181, 2)) ---
+2025-05-18 08:35:21,369 - INFO -  Scoring full pool: 9819 candidates
+2025-05-18 08:35:37,581 - INFO -  GP predict time: 16.211s
+2025-05-18 08:35:37,581 - INFO -   EHVI: 9819 candidates with 500 MC samples
+2025-05-18 08:37:24,002 - INFO -  EHVI time: 106.421s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:37:24,004 - INFO -  Selected idx=5615 (CCN(CC)c1ccc(NC(=O)c2cccc(OC)c2)c(C)c1) → [0.20512821 0.13533528]
+2025-05-18 08:37:24,226 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:37:24,226 - INFO - 
+--- Iter 172 (train size (182, 2)) ---
+2025-05-18 08:37:24,233 - INFO -  Scoring full pool: 9818 candidates
+2025-05-18 08:37:40,022 - INFO -  GP predict time: 15.789s
+2025-05-18 08:37:40,022 - INFO -   EHVI: 9818 candidates with 500 MC samples
+2025-05-18 08:39:25,814 - INFO -  EHVI time: 105.792s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:39:25,816 - INFO -  Selected idx=2591 (O=C(Nc1nc2ccccc2s1)Nc1ccc(F)cc1F) → [0.16101695 1.        ]
+2025-05-18 08:39:26,039 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:39:26,039 - INFO - 
+--- Iter 173 (train size (183, 2)) ---
+2025-05-18 08:39:26,046 - INFO -  Scoring full pool: 9817 candidates
+2025-05-18 08:39:42,012 - INFO -  GP predict time: 15.965s
+2025-05-18 08:39:42,012 - INFO -   EHVI: 9817 candidates with 500 MC samples
+2025-05-18 08:41:27,586 - INFO -  EHVI time: 105.575s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:41:27,588 - INFO -  Selected idx=9317 (Cc1onc(-c2ccccc2)c1C(=O)OCC(=O)Nc1ccccc1) → [0.22131148 1.        ]
+2025-05-18 08:41:27,813 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:41:27,813 - INFO - 
+--- Iter 174 (train size (184, 2)) ---
+2025-05-18 08:41:27,820 - INFO -  Scoring full pool: 9816 candidates
+2025-05-18 08:41:44,357 - INFO -  GP predict time: 16.538s
+2025-05-18 08:41:44,358 - INFO -   EHVI: 9816 candidates with 500 MC samples
+2025-05-18 08:43:30,165 - INFO -  EHVI time: 105.807s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:43:30,166 - INFO -  Selected idx=3082 (CCOC(=O)c1cnc2n(c1=O)C(C)CCC2=NNc1ccccc1) → [0.25423729 1.        ]
+2025-05-18 08:43:30,399 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:43:30,400 - INFO - 
+--- Iter 175 (train size (185, 2)) ---
+2025-05-18 08:43:30,407 - INFO -  Scoring full pool: 9815 candidates
+2025-05-18 08:43:46,142 - INFO -  GP predict time: 15.735s
+2025-05-18 08:43:46,142 - INFO -   EHVI: 9815 candidates with 500 MC samples
+2025-05-18 08:45:31,449 - INFO -  EHVI time: 105.307s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:45:31,451 - INFO -  Selected idx=7144 (C=C(C)CC1(C(=O)c2ccccc2)C(=O)Oc2ccc3ccccc3c2N1C) → [0.18181818 0.13533528]
+2025-05-18 08:45:31,684 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:45:31,684 - INFO - 
+--- Iter 176 (train size (186, 2)) ---
+2025-05-18 08:45:31,691 - INFO -  Scoring full pool: 9814 candidates
+2025-05-18 08:45:48,227 - INFO -  GP predict time: 16.536s
+2025-05-18 08:45:48,227 - INFO -   EHVI: 9814 candidates with 500 MC samples
+2025-05-18 08:47:33,794 - INFO -  EHVI time: 105.567s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:47:33,796 - INFO -  Selected idx=2001 (Cc1ccc(F)c(NC(=O)c2cncn2-c2ccccc2)c1) → [0.16666667 1.        ]
+2025-05-18 08:47:34,030 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:47:34,031 - INFO - 
+--- Iter 177 (train size (187, 2)) ---
+2025-05-18 08:47:34,038 - INFO -  Scoring full pool: 9813 candidates
+2025-05-18 08:47:50,767 - INFO -  GP predict time: 16.730s
+2025-05-18 08:47:50,768 - INFO -   EHVI: 9813 candidates with 500 MC samples
+2025-05-18 08:49:35,980 - INFO -  EHVI time: 105.212s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:49:35,981 - INFO -  Selected idx=2922 (CN(C)C(=O)N1c2ccccc2Sc2ccccc21) → [0.16964286 1.        ]
+2025-05-18 08:49:36,216 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:49:36,217 - INFO - 
+--- Iter 178 (train size (188, 2)) ---
+2025-05-18 08:49:36,224 - INFO -  Scoring full pool: 9812 candidates
+2025-05-18 08:49:52,881 - INFO -  GP predict time: 16.657s
+2025-05-18 08:49:52,881 - INFO -   EHVI: 9812 candidates with 500 MC samples
+2025-05-18 08:51:38,212 - INFO -  EHVI time: 105.332s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:51:38,214 - INFO -  Selected idx=2937 (Cc1ccccc1NC(=O)C1CC(=O)N(Cc2ccccc2)C1) → [0.18181818 1.        ]
+2025-05-18 08:51:38,965 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:51:38,965 - INFO - 
+--- Iter 179 (train size (189, 2)) ---
+2025-05-18 08:51:38,972 - INFO -  Scoring full pool: 9811 candidates
+2025-05-18 08:51:55,205 - INFO -  GP predict time: 16.233s
+2025-05-18 08:51:55,205 - INFO -   EHVI: 9811 candidates with 500 MC samples
+2025-05-18 08:53:41,100 - INFO -  EHVI time: 105.894s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:53:41,101 - INFO -  Selected idx=4479 (CC(=O)CC(c1ccccc1)c1c(SCC(NC(C)=O)C(=O)O)c2ccccc2oc1=O) → [0.18571429 1.        ]
+2025-05-18 08:53:41,342 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:53:41,342 - INFO - 
+--- Iter 180 (train size (190, 2)) ---
+2025-05-18 08:53:41,349 - INFO -  Scoring full pool: 9810 candidates
+2025-05-18 08:53:57,799 - INFO -  GP predict time: 16.450s
+2025-05-18 08:53:57,799 - INFO -   EHVI: 9810 candidates with 500 MC samples
+2025-05-18 08:55:43,462 - INFO -  EHVI time: 105.662s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:55:43,463 - INFO -  Selected idx=7622 (CCOC(=O)c1oc2ccccc2c1NC(=O)c1ccco1) → [0.27272727 1.        ]
+2025-05-18 08:55:43,703 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:55:43,704 - INFO - 
+--- Iter 181 (train size (191, 2)) ---
+2025-05-18 08:55:43,711 - INFO -  Scoring full pool: 9809 candidates
+2025-05-18 08:56:00,188 - INFO -  GP predict time: 16.478s
+2025-05-18 08:56:00,189 - INFO -   EHVI: 9809 candidates with 500 MC samples
+2025-05-18 08:57:45,400 - INFO -  EHVI time: 105.212s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:57:45,402 - INFO -  Selected idx=291 (CCC(C(=O)N(C)CCCNc1ccnc2cc(Cl)ccc12)c1ccccc1) → [0.20769231 1.        ]
+2025-05-18 08:57:45,647 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:57:45,647 - INFO - 
+--- Iter 182 (train size (192, 2)) ---
+2025-05-18 08:57:45,654 - INFO -  Scoring full pool: 9808 candidates
+2025-05-18 08:58:02,603 - INFO -  GP predict time: 16.948s
+2025-05-18 08:58:02,603 - INFO -   EHVI: 9808 candidates with 500 MC samples
+2025-05-18 08:59:47,874 - INFO -  EHVI time: 105.271s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 08:59:47,876 - INFO -  Selected idx=5859 (COC(=O)CCC(=O)Nc1cccc(COc2ccc3ccccc3c2)c1) → [0.24 1.  ]
+2025-05-18 08:59:48,126 - INFO -  Hypervolume: 0.3492
+2025-05-18 08:59:48,126 - INFO - 
+--- Iter 183 (train size (193, 2)) ---
+2025-05-18 08:59:48,133 - INFO -  Scoring full pool: 9807 candidates
+2025-05-18 09:00:04,960 - INFO -  GP predict time: 16.827s
+2025-05-18 09:00:04,960 - INFO -   EHVI: 9807 candidates with 500 MC samples
+2025-05-18 09:01:50,795 - INFO -  EHVI time: 105.835s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:01:50,797 - INFO -  Selected idx=8328 (O=C(O)C(O)=CC(=O)c1cc(Cc2ccccc2)cn(Cc2c(F)cccc2F)c1=O) → [0.17266187 1.        ]
+2025-05-18 09:01:51,045 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:01:51,045 - INFO - 
+--- Iter 184 (train size (194, 2)) ---
+2025-05-18 09:01:51,053 - INFO -  Scoring full pool: 9806 candidates
+2025-05-18 09:02:08,274 - INFO -  GP predict time: 17.222s
+2025-05-18 09:02:08,275 - INFO -   EHVI: 9806 candidates with 500 MC samples
+2025-05-18 09:03:53,924 - INFO -  EHVI time: 105.649s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:03:53,925 - INFO -  Selected idx=4796 (CCC(C(=O)OCC(=O)c1ccc2c(c1)NC(=O)CO2)c1ccccc1) → [0.23770492 1.        ]
+2025-05-18 09:03:54,173 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:03:54,173 - INFO - 
+--- Iter 185 (train size (195, 2)) ---
+2025-05-18 09:03:54,180 - INFO -  Scoring full pool: 9805 candidates
+2025-05-18 09:04:10,983 - INFO -  GP predict time: 16.803s
+2025-05-18 09:04:10,983 - INFO -   EHVI: 9805 candidates with 500 MC samples
+2025-05-18 09:05:56,606 - INFO -  EHVI time: 105.623s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:05:56,608 - INFO -  Selected idx=9672 (CCOC(=O)n1c(=O)n(Cc2ccccc2C)c2ccccc21) → [0.25663717 1.        ]
+2025-05-18 09:05:56,863 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:05:56,863 - INFO - 
+--- Iter 186 (train size (196, 2)) ---
+2025-05-18 09:05:56,871 - INFO -  Scoring full pool: 9804 candidates
+2025-05-18 09:06:13,850 - INFO -  GP predict time: 16.979s
+2025-05-18 09:06:13,850 - INFO -   EHVI: 9804 candidates with 500 MC samples
+2025-05-18 09:07:59,126 - INFO -  EHVI time: 105.276s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:07:59,128 - INFO -  Selected idx=6793 (O=C(Nc1c(O)c2ccccc2oc1=O)c1ccccc1Cl) → [0.20869565 1.        ]
+2025-05-18 09:07:59,385 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:07:59,385 - INFO - 
+--- Iter 187 (train size (197, 2)) ---
+2025-05-18 09:07:59,392 - INFO -  Scoring full pool: 9803 candidates
+2025-05-18 09:08:16,560 - INFO -  GP predict time: 17.168s
+2025-05-18 09:08:16,560 - INFO -   EHVI: 9803 candidates with 500 MC samples
+2025-05-18 09:10:02,126 - INFO -  EHVI time: 105.565s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:10:02,127 - INFO -  Selected idx=9330 (O=C(Cc1cccs1)N1CCN=C1SCc1cccc(F)c1) → [0.13709677 1.        ]
+2025-05-18 09:10:02,917 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:10:02,917 - INFO - 
+--- Iter 188 (train size (198, 2)) ---
+2025-05-18 09:10:02,924 - INFO -  Scoring full pool: 9802 candidates
+2025-05-18 09:10:20,381 - INFO -  GP predict time: 17.456s
+2025-05-18 09:10:20,381 - INFO -   EHVI: 9802 candidates with 500 MC samples
+2025-05-18 09:12:05,545 - INFO -  EHVI time: 105.164s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:12:05,546 - INFO -  Selected idx=936 (CN(C)C(=O)C(Cc1ccccc1)NC(=O)c1cc2cc(F)ccc2[nH]1) → [0.2 1. ]
+2025-05-18 09:12:05,809 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:12:05,809 - INFO - 
+--- Iter 189 (train size (199, 2)) ---
+2025-05-18 09:12:05,816 - INFO -  Scoring full pool: 9801 candidates
+2025-05-18 09:12:23,436 - INFO -  GP predict time: 17.620s
+2025-05-18 09:12:23,436 - INFO -   EHVI: 9801 candidates with 500 MC samples
+2025-05-18 09:14:08,591 - INFO -  EHVI time: 105.155s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:14:08,593 - INFO -  Selected idx=1882 (CCN(CC)c1ccc2c(Nc3ccccc3)c(C=O)c(=O)oc2c1) → [0.184 1.   ]
+2025-05-18 09:14:08,857 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:14:08,857 - INFO - 
+--- Iter 190 (train size (200, 2)) ---
+2025-05-18 09:14:08,865 - INFO -  Scoring full pool: 9800 candidates
+2025-05-18 09:14:26,153 - INFO -  GP predict time: 17.288s
+2025-05-18 09:14:26,153 - INFO -   EHVI: 9800 candidates with 500 MC samples
+2025-05-18 09:16:11,751 - INFO -  EHVI time: 105.598s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:16:11,752 - INFO -  Selected idx=1457 (Cc1c(C(=O)Nc2ccccc2)csc1-c1ccccc1) → [0.16949153 1.        ]
+2025-05-18 09:16:12,015 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:16:12,015 - INFO - 
+--- Iter 191 (train size (201, 2)) ---
+2025-05-18 09:16:12,023 - INFO -  Scoring full pool: 9799 candidates
+2025-05-18 09:16:29,322 - INFO -  GP predict time: 17.299s
+2025-05-18 09:16:29,322 - INFO -   EHVI: 9799 candidates with 500 MC samples
+2025-05-18 09:18:14,603 - INFO -  EHVI time: 105.281s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:18:14,605 - INFO -  Selected idx=3650 (Cn1c(Cc2cccs2)nnc1SCC(=O)Nc1ccc(F)cc1F) → [0.14728682 1.        ]
+2025-05-18 09:18:15,441 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:18:15,441 - INFO - 
+--- Iter 192 (train size (202, 2)) ---
+2025-05-18 09:18:15,448 - INFO -  Scoring full pool: 9798 candidates
+2025-05-18 09:18:32,849 - INFO -  GP predict time: 17.400s
+2025-05-18 09:18:32,849 - INFO -   EHVI: 9798 candidates with 500 MC samples
+2025-05-18 09:20:18,753 - INFO -  EHVI time: 105.904s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:20:18,755 - INFO -  Selected idx=977 (CCCCCn1cc(C(=O)Nc2ccc3ccccc3c2)c(=O)c2ccccc21) → [0.19259259 0.13533528]
+2025-05-18 09:20:19,027 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:20:19,028 - INFO - 
+--- Iter 193 (train size (203, 2)) ---
+2025-05-18 09:20:19,035 - INFO -  Scoring full pool: 9797 candidates
+2025-05-18 09:20:37,034 - INFO -  GP predict time: 17.999s
+2025-05-18 09:20:37,035 - INFO -   EHVI: 9797 candidates with 500 MC samples
+2025-05-18 09:22:22,797 - INFO -  EHVI time: 105.763s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:22:22,799 - INFO -  Selected idx=5536 (Cc1ccccc1-c1nc(CS(=O)(=O)CC(=O)NC(C)c2ccccc2)c(C)o1) → [0.1969697 1.       ]
+2025-05-18 09:22:23,073 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:22:23,073 - INFO - 
+--- Iter 194 (train size (204, 2)) ---
+2025-05-18 09:22:23,080 - INFO -  Scoring full pool: 9796 candidates
+2025-05-18 09:22:41,099 - INFO -  GP predict time: 18.019s
+2025-05-18 09:22:41,100 - INFO -   EHVI: 9796 candidates with 500 MC samples
+2025-05-18 09:24:26,238 - INFO -  EHVI time: 105.139s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:24:26,240 - INFO -  Selected idx=5273 (CC(=O)OCC[n+]1c(C)n(-c2ccccc2)c2ccc(Cl)cc21) → [0.24561404 1.        ]
+2025-05-18 09:24:26,518 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:24:26,518 - INFO - 
+--- Iter 195 (train size (205, 2)) ---
+2025-05-18 09:24:26,525 - INFO -  Scoring full pool: 9795 candidates
+2025-05-18 09:24:44,205 - INFO -  GP predict time: 17.680s
+2025-05-18 09:24:44,205 - INFO -   EHVI: 9795 candidates with 500 MC samples
+2025-05-18 09:26:29,820 - INFO -  EHVI time: 105.615s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:26:29,821 - INFO -  Selected idx=8738 (CCOC(=O)NN1C(=O)c2ccccc2NC1c1cccs1) → [0.23893805 1.        ]
+2025-05-18 09:26:30,096 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:26:30,096 - INFO - 
+--- Iter 196 (train size (206, 2)) ---
+2025-05-18 09:26:30,103 - INFO -  Scoring full pool: 9794 candidates
+2025-05-18 09:26:47,834 - INFO -  GP predict time: 17.731s
+2025-05-18 09:26:47,834 - INFO -   EHVI: 9794 candidates with 500 MC samples
+2025-05-18 09:28:32,757 - INFO -  EHVI time: 104.922s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:28:32,758 - INFO -  Selected idx=773 (CCOC(=O)CN1C(=O)C(=O)N(CCc2ccccc2)C1=O) → [0.25454545 0.13533528]
+2025-05-18 09:28:33,620 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:28:33,621 - INFO - 
+--- Iter 197 (train size (207, 2)) ---
+2025-05-18 09:28:33,628 - INFO -  Scoring full pool: 9793 candidates
+2025-05-18 09:28:51,356 - INFO -  GP predict time: 17.727s
+2025-05-18 09:28:51,356 - INFO -   EHVI: 9793 candidates with 500 MC samples
+2025-05-18 09:30:36,334 - INFO -  EHVI time: 104.978s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:30:36,336 - INFO -  Selected idx=5020 (O=c1[nH]c(=O)n(Cc2cccc(Cl)c2)cc1Nc1ccccc1) → [0.18181818 1.        ]
+2025-05-18 09:30:36,620 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:30:36,620 - INFO - 
+--- Iter 198 (train size (208, 2)) ---
+2025-05-18 09:30:36,628 - INFO -  Scoring full pool: 9792 candidates
+2025-05-18 09:30:54,546 - INFO -  GP predict time: 17.917s
+2025-05-18 09:30:54,546 - INFO -   EHVI: 9792 candidates with 500 MC samples
+2025-05-18 09:32:39,390 - INFO -  EHVI time: 104.844s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:32:39,392 - INFO -  Selected idx=4826 (COC(=O)c1cc(-c2ccc(C=C3SC(=Nc4ccccc4)N(CCCN(C)C)C3=O)o2)ccc1Cl) → [0.23448276 0.13533528]
+2025-05-18 09:32:39,681 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:32:39,681 - INFO - 
+--- Iter 199 (train size (209, 2)) ---
+2025-05-18 09:32:39,689 - INFO -  Scoring full pool: 9791 candidates
+2025-05-18 09:32:57,701 - INFO -  GP predict time: 18.012s
+2025-05-18 09:32:57,701 - INFO -   EHVI: 9791 candidates with 500 MC samples
+2025-05-18 09:34:42,862 - INFO -  EHVI time: 105.160s
+f1 shape: (1,)
+f2 shape: (1,)
+2025-05-18 09:34:42,863 - INFO -  Selected idx=5232 (CC(C)(C)NC(=O)c1cccc(NC(=O)Cc2ccc(Br)cc2)c1) → [0.17213115 0.13533528]
+2025-05-18 09:34:43,709 - INFO -  Hypervolume: 0.3492
+2025-05-18 09:34:43,766 - INFO - 
+Final Pareto front points: [[0.34513274336283184, 1.0], [0.5263157894736842, 0.13533528323661267]]
+2025-05-18 09:34:43,766 - INFO - Final Pareto front SMILES: [None, None]
