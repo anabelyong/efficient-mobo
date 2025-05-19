@@ -1,0 +1,1212 @@
+['O=C1CSC(=NN=Cc2ccc3c(c2)OCO3)N1Cc1ccccc1',
+ 'CC1(Nc2ncc(C(F)(F)F)cc2F)CCCC1N=C(O)c1ncccc1-n1nccn1',
+ 'Cn1nc(-c2ccc(Cl)cc2)sc1=Nc1ccccc1',
+ 'CC1CC2CN(C(=O)CC3CC3)CCC2O1',
+ 'Oc1ccc2oc(Cc3ccccc3)cc2c1CN1CCOCC1',
+ 'CCCN(CC1CC1)c1cc(C(=O)Nc2ccc(Cn3cncn3)cc2)ncn1',
+ 'CC(=C(c1ccc(O)cc1)c1ccc(OCCN2CCCC2)cc1)c1ccccc1',
+ 'O=C(NC1CC1)c1cc(=O)c2ccccc2o1',
+ 'O=C(OCC(=O)c1ccc[nH]1)c1ccc(S(=O)(=O)N2CCCCC2)cc1',
+ 'Cc1cccc2nc(-c3cccc(-c4cccc(NC(=O)c5cncn5C)c4)c3)[nH]c12']
+f1 shape: (10,)
+2025-05-16 17:52:23,146 - INFO - Initial Y: [0.13533681454197388, 0.11128171767328857, 0.3922322702763681, 0.22742941307367104, 0.13688948653957853, 0.13855141311482636, 0.14429418839867642, 0.42337369193050706, 0.40191847623425025, 0.006946328085858648]
+2025-05-16 17:52:25,844 - INFO - 
+--- Iter 0 (train size=10) ---
+2025-05-16 17:52:26,691 - INFO - Selected Cc1c(C(=O)OCC(=O)N2CCCC2=O)oc2ccccc12 → EI = 0.2716
+f1 shape: (1,)
+2025-05-16 17:52:26,692 - INFO -   True f = 0.491
+2025-05-16 17:52:26,697 - INFO - Iter time: 0.85s
+2025-05-16 17:52:26,697 - INFO - 
+--- Iter 1 (train size=11) ---
+2025-05-16 17:52:27,495 - INFO - Selected O=C(OCC(=O)N1CCc2ccccc21)c1ccc(Br)o1 → EI = 0.2577
+f1 shape: (1,)
+2025-05-16 17:52:27,496 - INFO -   True f = 0.4609
+2025-05-16 17:52:27,502 - INFO - Iter time: 0.81s
+2025-05-16 17:52:27,502 - INFO - 
+--- Iter 2 (train size=12) ---
+2025-05-16 17:52:28,372 - INFO - Selected CCOC(=O)c1oc2ccccc2c1NC(=O)c1ccco1 → EI = 0.2606
+f1 shape: (1,)
+2025-05-16 17:52:28,373 - INFO -   True f = 0.5222
+2025-05-16 17:52:28,379 - INFO - Iter time: 0.88s
+2025-05-16 17:52:28,379 - INFO - 
+--- Iter 3 (train size=13) ---
+2025-05-16 17:52:29,308 - INFO - Selected CCNC(=O)C1(C)CCCN(C(=O)c2oc3ccccc3c2C)C1 → EI = 0.2552
+f1 shape: (1,)
+2025-05-16 17:52:29,309 - INFO -   True f = 0.4694
+2025-05-16 17:52:29,316 - INFO - Iter time: 0.94s
+2025-05-16 17:52:29,316 - INFO - 
+--- Iter 4 (train size=14) ---
+2025-05-16 17:52:30,350 - INFO - Selected CCOCC(=O)Nc1c(C(=O)N2CCN(c3ncccn3)CC2)oc2ccccc12 → EI = 0.2609
+f1 shape: (1,)
+2025-05-16 17:52:30,352 - INFO -   True f = 0.1669
+2025-05-16 17:52:30,358 - INFO - Iter time: 1.04s
+2025-05-16 17:52:30,358 - INFO - 
+--- Iter 5 (train size=15) ---
+2025-05-16 17:52:31,306 - INFO - Selected COC(=O)c1cn(C(=O)c2ccc(Cl)cc2)c2ccccc12 → EI = 0.2542
+f1 shape: (1,)
+2025-05-16 17:52:31,307 - INFO -   True f = 0.5135
+2025-05-16 17:52:31,313 - INFO - Iter time: 0.95s
+2025-05-16 17:52:31,313 - INFO - 
+--- Iter 6 (train size=16) ---
+2025-05-16 17:52:32,330 - INFO - Selected COC(=O)c1cc2ccccc2c(=O)s1 → EI = 0.2637
+f1 shape: (1,)
+2025-05-16 17:52:32,331 - INFO -   True f = 0.1849
+2025-05-16 17:52:32,341 - INFO - Iter time: 1.03s
+2025-05-16 17:52:32,341 - INFO - 
+--- Iter 7 (train size=17) ---
+2025-05-16 17:52:33,433 - INFO - Selected CCOC(=O)Cn1cc(C(=O)C(C)(C)C)c2ccccc21 → EI = 0.2576
+f1 shape: (1,)
+2025-05-16 17:52:33,434 - INFO -   True f = 0.1933
+2025-05-16 17:52:33,441 - INFO - Iter time: 1.10s
+2025-05-16 17:52:33,441 - INFO - 
+--- Iter 8 (train size=18) ---
+2025-05-16 17:52:34,540 - INFO - Selected O=C(Oc1cccc2oc(=O)[nH]c12)c1ccc(Cl)cc1 → EI = 0.2564
+f1 shape: (1,)
+2025-05-16 17:52:34,541 - INFO -   True f = 0.4432
+2025-05-16 17:52:34,548 - INFO - Iter time: 1.11s
+2025-05-16 17:52:34,548 - INFO - 
+--- Iter 9 (train size=19) ---
+2025-05-16 17:52:35,670 - INFO - Selected O=C(Cc1noc2ccccc12)Nc1ccc(Cl)cc1 → EI = 0.2609
+f1 shape: (1,)
+2025-05-16 17:52:35,671 - INFO -   True f = 0.4292
+2025-05-16 17:52:35,677 - INFO - Iter time: 1.13s
+2025-05-16 17:52:35,677 - INFO - 
+--- Iter 10 (train size=20) ---
+2025-05-16 17:52:36,827 - INFO - Selected CSc1ccccc1OCC(=O)c1ccc(Cl)cc1 → EI = 0.2625
+f1 shape: (1,)
+2025-05-16 17:52:36,828 - INFO -   True f = 0.1653
+2025-05-16 17:52:36,834 - INFO - Iter time: 1.16s
+2025-05-16 17:52:36,834 - INFO - 
+--- Iter 11 (train size=21) ---
+2025-05-16 17:52:38,099 - INFO - Selected O=C(Nc1c(O)c2ccccc2oc1=O)c1ccccc1Cl → EI = 0.2561
+f1 shape: (1,)
+2025-05-16 17:52:38,100 - INFO -   True f = 0.4568
+2025-05-16 17:52:38,108 - INFO - Iter time: 1.27s
+2025-05-16 17:52:38,108 - INFO - 
+--- Iter 12 (train size=22) ---
+2025-05-16 17:52:39,321 - INFO - Selected COC(=O)c1ccccc1NS(=O)(=O)Cc1noc2ccccc12 → EI = 0.2595
+f1 shape: (1,)
+2025-05-16 17:52:39,323 - INFO -   True f = 0.4674
+2025-05-16 17:52:39,329 - INFO - Iter time: 1.22s
+2025-05-16 17:52:39,329 - INFO - 
+--- Iter 13 (train size=23) ---
+2025-05-16 17:52:40,634 - INFO - Selected O=c1[nH]c(=O)c2ccccc2o1 → EI = 0.2598
+f1 shape: (1,)
+2025-05-16 17:52:40,635 - INFO -   True f = 0.1564
+2025-05-16 17:52:40,642 - INFO - Iter time: 1.31s
+2025-05-16 17:52:40,642 - INFO - 
+--- Iter 14 (train size=24) ---
+2025-05-16 17:52:41,918 - INFO - Selected CCOC(=O)c1oc2ccc(S(=O)(=O)Nc3ccc(F)cc3)cc2c1C → EI = 0.2607
+f1 shape: (1,)
+2025-05-16 17:52:41,919 - INFO -   True f = 0.4704
+2025-05-16 17:52:41,926 - INFO - Iter time: 1.28s
+2025-05-16 17:52:41,926 - INFO - 
+--- Iter 15 (train size=25) ---
+2025-05-16 17:52:43,227 - INFO - Selected N#Cc1ccc(C(=O)NS(=O)(=O)c2ccc(Cl)cc2)c(Cl)c1 → EI = 0.2595
+f1 shape: (1,)
+2025-05-16 17:52:43,228 - INFO -   True f = 0.1431
+2025-05-16 17:52:43,236 - INFO - Iter time: 1.31s
+2025-05-16 17:52:43,236 - INFO - 
+--- Iter 16 (train size=26) ---
+2025-05-16 17:52:44,731 - INFO - Selected COc1ccc2oc(C(=O)OCC(=O)N3CCCC(C)C3)c(C)c2c1 → EI = 0.2574
+f1 shape: (1,)
+2025-05-16 17:52:44,732 - INFO -   True f = 0.4743
+2025-05-16 17:52:44,740 - INFO - Iter time: 1.50s
+2025-05-16 17:52:44,740 - INFO - 
+--- Iter 17 (train size=27) ---
+2025-05-16 17:52:46,124 - INFO - Selected Cc1ccc(CNC(=O)c2oc3ccc(S(=O)(=O)N4CCCC(C)C4)cc3c2C)cc1 → EI = 0.2596
+f1 shape: (1,)
+2025-05-16 17:52:46,125 - INFO -   True f = 0.1448
+2025-05-16 17:52:46,133 - INFO - Iter time: 1.39s
+2025-05-16 17:52:46,133 - INFO - 
+--- Iter 18 (train size=28) ---
+2025-05-16 17:52:47,635 - INFO - Selected NC(=O)COC(=O)c1ccccc1Nc1ccc(SC(F)F)cc1 → EI = 0.2586
+f1 shape: (1,)
+2025-05-16 17:52:47,636 - INFO -   True f = 0.1686
+2025-05-16 17:52:47,645 - INFO - Iter time: 1.51s
+2025-05-16 17:52:47,645 - INFO - 
+--- Iter 19 (train size=29) ---
+2025-05-16 17:52:49,222 - INFO - Selected COc1ccc2oc(C(=O)OCc3nnc(-c4ccccc4)o3)c(C)c2c1 → EI = 0.2569
+f1 shape: (1,)
+2025-05-16 17:52:49,223 - INFO -   True f = 0.1765
+2025-05-16 17:52:49,232 - INFO - Iter time: 1.59s
+2025-05-16 17:52:49,232 - INFO - 
+--- Iter 20 (train size=30) ---
+2025-05-16 17:52:50,750 - INFO - Selected CCOC(=O)c1ccc(N2C(=O)CC(N3CCN(C(=O)c4ccco4)CC3)C2=O)cc1 → EI = 0.2564
+f1 shape: (1,)
+2025-05-16 17:52:50,751 - INFO -   True f = 0.1663
+2025-05-16 17:52:50,759 - INFO - Iter time: 1.53s
+2025-05-16 17:52:50,760 - INFO - 
+--- Iter 21 (train size=31) ---
+2025-05-16 17:52:52,382 - INFO - Selected O=C(COc1cc(=O)oc2ccccc12)N1CCC(O)(c2ccc(Br)cc2)CC1 → EI = 0.2518
+f1 shape: (1,)
+2025-05-16 17:52:52,383 - INFO -   True f = 0.1469
+2025-05-16 17:52:52,393 - INFO - Iter time: 1.63s
+2025-05-16 17:52:52,393 - INFO - 
+--- Iter 22 (train size=32) ---
+2025-05-16 17:52:54,139 - INFO - Selected COC(=O)C1CC(NC(=O)c2ccc(Cl)cc2)CN1C(C)=O → EI = 0.2523
+f1 shape: (1,)
+2025-05-16 17:52:54,140 - INFO -   True f = 0.1609
+2025-05-16 17:52:54,150 - INFO - Iter time: 1.76s
+2025-05-16 17:52:54,150 - INFO - 
+--- Iter 23 (train size=33) ---
+2025-05-16 17:52:55,863 - INFO - Selected O=C(COC(=O)c1ccc(Br)o1)NC1CCCc2ccccc21 → EI = 0.2486
+f1 shape: (1,)
+2025-05-16 17:52:55,864 - INFO -   True f = 0.4825
+2025-05-16 17:52:55,873 - INFO - Iter time: 1.72s
+2025-05-16 17:52:55,873 - INFO - 
+--- Iter 24 (train size=34) ---
+2025-05-16 17:52:57,536 - INFO - Selected CC(OC(=O)c1ccc(Br)o1)C(=O)NCC1CCCCC1 → EI = 0.2511
+f1 shape: (1,)
+2025-05-16 17:52:57,537 - INFO -   True f = 0.139
+2025-05-16 17:52:57,546 - INFO - Iter time: 1.67s
+2025-05-16 17:52:57,546 - INFO - 
+--- Iter 25 (train size=35) ---
+2025-05-16 17:52:59,460 - INFO - Selected CCOC(=O)c1sc(NS(=O)(=O)c2ccccc2Cl)nc1C → EI = 0.2481
+f1 shape: (1,)
+2025-05-16 17:52:59,461 - INFO -   True f = 0.2114
+2025-05-16 17:52:59,471 - INFO - Iter time: 1.92s
+2025-05-16 17:52:59,471 - INFO - 
+--- Iter 26 (train size=36) ---
+2025-05-16 17:53:01,209 - INFO - Selected COc1cc2c(cc1NC(=O)COC(=O)C=Cc1ccccc1)oc1ccccc12 → EI = 0.2478
+f1 shape: (1,)
+2025-05-16 17:53:01,210 - INFO -   True f = 0.1669
+2025-05-16 17:53:01,220 - INFO - Iter time: 1.75s
+2025-05-16 17:53:01,220 - INFO - 
+--- Iter 27 (train size=37) ---
+2025-05-16 17:53:03,211 - INFO - Selected N#CCC(=O)Nc1ccc(C(=O)OCC(=O)c2c[nH]c3ccccc23)cc1 → EI = 0.2449
+f1 shape: (1,)
+2025-05-16 17:53:03,212 - INFO -   True f = 0.4611
+2025-05-16 17:53:03,221 - INFO - Iter time: 2.00s
+2025-05-16 17:53:03,221 - INFO - 
+--- Iter 28 (train size=38) ---
+2025-05-16 17:53:05,122 - INFO - Selected S=C(NN=Cc1c[nH]c2ccccc12)N1CCCc2ccccc21 → EI = 0.2475
+f1 shape: (1,)
+2025-05-16 17:53:05,123 - INFO -   True f = 0.1325
+2025-05-16 17:53:05,134 - INFO - Iter time: 1.91s
+2025-05-16 17:53:05,135 - INFO - 
+--- Iter 29 (train size=39) ---
+2025-05-16 17:53:07,065 - INFO - Selected N#CCCN(C(=O)COC(=O)c1cc2ccccc2oc1=O)c1ccccc1 → EI = 0.2456
+f1 shape: (1,)
+2025-05-16 17:53:07,066 - INFO -   True f = 0.4557
+2025-05-16 17:53:07,077 - INFO - Iter time: 1.94s
+2025-05-16 17:53:07,077 - INFO - 
+--- Iter 30 (train size=40) ---
+2025-05-16 17:53:09,170 - INFO - Selected COC1CCC(NC(=O)c2n[nH]cc2NC(=O)c2cc3ccccc3o2)CC1 → EI = 0.248
+f1 shape: (1,)
+2025-05-16 17:53:09,171 - INFO -   True f = 0.1633
+2025-05-16 17:53:09,182 - INFO - Iter time: 2.10s
+2025-05-16 17:53:09,182 - INFO - 
+--- Iter 31 (train size=41) ---
+2025-05-16 17:53:11,263 - INFO - Selected O=C(OCC(=O)c1ccc(Cl)s1)c1ccccn1 → EI = 0.2475
+f1 shape: (1,)
+2025-05-16 17:53:11,264 - INFO -   True f = 0.1767
+2025-05-16 17:53:11,274 - INFO - Iter time: 2.09s
+2025-05-16 17:53:11,275 - INFO - 
+--- Iter 32 (train size=42) ---
+2025-05-16 17:53:13,315 - INFO - Selected Cc1cc2ccc(OC(=O)c3ccc(NC(=N)N)cc3)cc2oc1=O → EI = 0.2463
+f1 shape: (1,)
+2025-05-16 17:53:13,316 - INFO -   True f = 0.4195
+2025-05-16 17:53:13,328 - INFO - Iter time: 2.05s
+2025-05-16 17:53:13,328 - INFO - 
+--- Iter 33 (train size=43) ---
+2025-05-16 17:53:15,515 - INFO - Selected CCCCCCn1c(=O)c(C(=O)Nc2ccc(C(=O)OCCCC)cc2)c(O)c2ccccc21 → EI = 0.2494
+f1 shape: (1,)
+2025-05-16 17:53:15,516 - INFO -   True f = 0.4855
+2025-05-16 17:53:15,528 - INFO - Iter time: 2.20s
+2025-05-16 17:53:15,528 - INFO - 
+--- Iter 34 (train size=44) ---
+2025-05-16 17:53:17,642 - INFO - Selected COc1ccc(C(=O)OCCc2cc3ccccc3c(=O)o2)cc1 → EI = 0.2539
+f1 shape: (1,)
+2025-05-16 17:53:17,643 - INFO -   True f = 0.4979
+2025-05-16 17:53:17,654 - INFO - Iter time: 2.13s
+2025-05-16 17:53:17,654 - INFO - 
+--- Iter 35 (train size=45) ---
+2025-05-16 17:53:19,914 - INFO - Selected CCOC(=O)c1ccc(-c2nn(CC)c3ccccc23)cc1 → EI = 0.2592
+f1 shape: (1,)
+2025-05-16 17:53:19,915 - INFO -   True f = 0.5111
+2025-05-16 17:53:19,928 - INFO - Iter time: 2.27s
+2025-05-16 17:53:19,928 - INFO - 
+--- Iter 36 (train size=46) ---
+2025-05-16 17:53:22,251 - INFO - Selected CCOC(=O)c1ccc(NC(=O)c2ccccc2)cc1 → EI = 0.2625
+f1 shape: (1,)
+2025-05-16 17:53:22,252 - INFO -   True f = 0.1891
+2025-05-16 17:53:22,265 - INFO - Iter time: 2.34s
+2025-05-16 17:53:22,265 - INFO - 
+--- Iter 37 (train size=47) ---
+2025-05-16 17:53:24,476 - INFO - Selected COC(=O)c1ccc(S(=O)(=O)N(CCC(F)(F)F)c2sc3ccccc3c2C)cc1 → EI = 0.2568
+f1 shape: (1,)
+2025-05-16 17:53:24,477 - INFO -   True f = 0.4822
+2025-05-16 17:53:24,490 - INFO - Iter time: 2.22s
+2025-05-16 17:53:24,490 - INFO - 
+--- Iter 38 (train size=48) ---
+2025-05-16 17:53:26,873 - INFO - Selected CCCN(CCC)C(=O)C(=O)c1c(-c2ccc(Cl)cc2)[nH]c2ccccc12 → EI = 0.2595
+f1 shape: (1,)
+2025-05-16 17:53:26,874 - INFO -   True f = 0.5143
+2025-05-16 17:53:26,886 - INFO - Iter time: 2.40s
+2025-05-16 17:53:26,886 - INFO - 
+--- Iter 39 (train size=49) ---
+2025-05-16 17:53:29,180 - INFO - Selected CCCCn1c(=O)c2ccccc2c2cc(C(C)=O)ccc21 → EI = 0.2612
+f1 shape: (1,)
+2025-05-16 17:53:29,181 - INFO -   True f = 0.4797
+2025-05-16 17:53:29,194 - INFO - Iter time: 2.31s
+2025-05-16 17:53:29,194 - INFO - 
+--- Iter 40 (train size=50) ---
+2025-05-16 17:53:31,498 - INFO - Selected CCCCN(CCCC)c1cc(=O)c2ccc3ccccc3c2o1 → EI = 0.2639
+f1 shape: (1,)
+2025-05-16 17:53:31,499 - INFO -   True f = 0.4435
+2025-05-16 17:53:31,512 - INFO - Iter time: 2.32s
+2025-05-16 17:53:31,512 - INFO - 
+--- Iter 41 (train size=51) ---
+2025-05-16 17:53:33,853 - INFO - Selected CCCN(CCC)Cc1cc(=O)oc2ccc3ccccc3c12 → EI = 0.2634
+f1 shape: (1,)
+2025-05-16 17:53:33,854 - INFO -   True f = 0.4491
+2025-05-16 17:53:33,867 - INFO - Iter time: 2.36s
+2025-05-16 17:53:33,867 - INFO - 
+--- Iter 42 (train size=52) ---
+2025-05-16 17:53:36,397 - INFO - Selected CCCCc1c(C)c2ccc(OCC(C)=O)cc2oc1=O → EI = 0.263
+f1 shape: (1,)
+2025-05-16 17:53:36,398 - INFO -   True f = 0.1754
+2025-05-16 17:53:36,412 - INFO - Iter time: 2.54s
+2025-05-16 17:53:36,412 - INFO - 
+--- Iter 43 (train size=53) ---
+2025-05-16 17:53:38,988 - INFO - Selected CCN(CC)C(=O)Cn1cc(S(=O)(=O)CC(=O)Nc2ccc(F)cc2F)c2ccccc21 → EI = 0.2613
+f1 shape: (1,)
+2025-05-16 17:53:38,989 - INFO -   True f = 0.4618
+2025-05-16 17:53:39,004 - INFO - Iter time: 2.59s
+2025-05-16 17:53:39,004 - INFO - 
+--- Iter 44 (train size=54) ---
+2025-05-16 17:53:41,623 - INFO - Selected CCN(CC)C(=O)Cn1c2nc3ccccc3c(C)c2c(=O)n1-c1ccc(F)cc1 → EI = 0.2656
+f1 shape: (1,)
+2025-05-16 17:53:41,625 - INFO -   True f = 0.1688
+2025-05-16 17:53:41,639 - INFO - Iter time: 2.64s
+2025-05-16 17:53:41,639 - INFO - 
+--- Iter 45 (train size=55) ---
+2025-05-16 17:53:44,143 - INFO - Selected CCn1c2ccccc2c2cc(NC(=O)CNC)ccc21 → EI = 0.2624
+f1 shape: (1,)
+2025-05-16 17:53:44,145 - INFO -   True f = 0.4492
+2025-05-16 17:53:44,161 - INFO - Iter time: 2.52s
+2025-05-16 17:53:44,161 - INFO - 
+--- Iter 46 (train size=56) ---
+2025-05-16 17:53:46,708 - INFO - Selected CNCc1ccc(-c2nn(C)c3ccccc23)o1 → EI = 0.2645
+f1 shape: (1,)
+2025-05-16 17:53:46,709 - INFO -   True f = 0.4027
+2025-05-16 17:53:46,724 - INFO - Iter time: 2.56s
+2025-05-16 17:53:46,724 - INFO - 
+--- Iter 47 (train size=57) ---
+2025-05-16 17:53:49,411 - INFO - Selected O=c1c2ccccc2n(CCCCCCCl)c2ccccc12 → EI = 0.2645
+f1 shape: (1,)
+2025-05-16 17:53:49,412 - INFO -   True f = 0.4183
+2025-05-16 17:53:49,429 - INFO - Iter time: 2.71s
+2025-05-16 17:53:49,429 - INFO - 
+--- Iter 48 (train size=58) ---
+2025-05-16 17:53:52,125 - INFO - Selected Cc1ccc(NC(=O)NCCOCCn2c(=O)oc3ccccc32)cc1C → EI = 0.2654
+f1 shape: (1,)
+2025-05-16 17:53:52,126 - INFO -   True f = 0.4919
+2025-05-16 17:53:52,143 - INFO - Iter time: 2.71s
+2025-05-16 17:53:52,143 - INFO - 
+--- Iter 49 (train size=59) ---
+2025-05-16 17:53:54,935 - INFO - Selected O=C(CCn1c(=S)oc2ccccc21)Nc1cc([N+](=O)[O-])ccc1F → EI = 0.27
+f1 shape: (1,)
+2025-05-16 17:53:54,936 - INFO -   True f = 0.4195
+2025-05-16 17:53:54,954 - INFO - Iter time: 2.81s
+2025-05-16 17:53:54,954 - INFO - 
+--- Iter 50 (train size=60) ---
+2025-05-16 17:53:57,645 - INFO - Selected COc1ccc(CNC(=O)C(C#N)=Cc2c(C)n(CCCN(C)C)c3ccccc23)cc1 → EI = 0.266
+f1 shape: (1,)
+2025-05-16 17:53:57,646 - INFO -   True f = 0.468
+2025-05-16 17:53:57,663 - INFO - Iter time: 2.71s
+2025-05-16 17:53:57,663 - INFO - 
+--- Iter 51 (train size=61) ---
+2025-05-16 17:54:00,529 - INFO - Selected CCOC(=O)c1cc2n(c1C)-c1ccccc1-c1ccccc1-2 → EI = 0.2667
+f1 shape: (1,)
+2025-05-16 17:54:00,530 - INFO -   True f = 0.1896
+2025-05-16 17:54:00,547 - INFO - Iter time: 2.88s
+2025-05-16 17:54:00,547 - INFO - 
+--- Iter 52 (train size=62) ---
+2025-05-16 17:54:03,467 - INFO - Selected CN(C)CCn1c(=O)oc2cc(C(=O)c3ccccc3)ccc21 → EI = 0.2657
+f1 shape: (1,)
+2025-05-16 17:54:03,468 - INFO -   True f = 0.4396
+2025-05-16 17:54:03,486 - INFO - Iter time: 2.94s
+2025-05-16 17:54:03,486 - INFO - 
+--- Iter 53 (train size=63) ---
+2025-05-16 17:54:06,583 - INFO - Selected O=C(CCn1c(=O)[nH]c(=O)c2ccccc21)Nc1ccccc1F → EI = 0.2633
+f1 shape: (1,)
+2025-05-16 17:54:06,584 - INFO -   True f = 0.4342
+2025-05-16 17:54:06,603 - INFO - Iter time: 3.12s
+2025-05-16 17:54:06,603 - INFO - 
+--- Iter 54 (train size=64) ---
+2025-05-16 17:54:09,439 - INFO - Selected CCCCn1c(N)c(N(CCOC)C(=O)c2ccc(-c3ccc([N+](=O)[O-])cc3)o2)c(=O)[nH]c1=O → EI = 0.2639
+f1 shape: (1,)
+2025-05-16 17:54:09,440 - INFO -   True f = 0.4425
+2025-05-16 17:54:09,459 - INFO - Iter time: 2.86s
+2025-05-16 17:54:09,459 - INFO - 
+--- Iter 55 (train size=65) ---
+2025-05-16 17:54:12,523 - INFO - Selected CN(C)CCCn1c2cc(=O)c3ccccc3c-2nc2cc(Cl)ccc21 → EI = 0.2647
+f1 shape: (1,)
+2025-05-16 17:54:12,524 - INFO -   True f = 0.1599
+2025-05-16 17:54:12,544 - INFO - Iter time: 3.09s
+2025-05-16 17:54:12,544 - INFO - 
+--- Iter 56 (train size=66) ---
+2025-05-16 17:54:15,473 - INFO - Selected COC(=O)c1ccc(C(=O)OC)c(NC(=O)CCc2ccc(C)o2)c1 → EI = 0.2648
+f1 shape: (1,)
+2025-05-16 17:54:15,474 - INFO -   True f = 0.1871
+2025-05-16 17:54:15,494 - INFO - Iter time: 2.95s
+2025-05-16 17:54:15,494 - INFO - 
+--- Iter 57 (train size=67) ---
+2025-05-16 17:54:18,447 - INFO - Selected CCCCCCn1c2ccccc2c2cc(C(=O)N3CCCCC3)ccc21 → EI = 0.2625
+f1 shape: (1,)
+2025-05-16 17:54:18,448 - INFO -   True f = 0.1569
+2025-05-16 17:54:18,468 - INFO - Iter time: 2.97s
+2025-05-16 17:54:18,468 - INFO - 
+--- Iter 58 (train size=68) ---
+2025-05-16 17:54:21,577 - INFO - Selected COc1ccccc1CNC(=O)Cn1nc(-c2ccc(F)cc2)oc1=O → EI = 0.264
+f1 shape: (1,)
+2025-05-16 17:54:21,578 - INFO -   True f = 0.4454
+2025-05-16 17:54:21,598 - INFO - Iter time: 3.13s
+2025-05-16 17:54:21,598 - INFO - 
+--- Iter 59 (train size=69) ---
+2025-05-16 17:54:24,740 - INFO - Selected COc1ccc(N(CN2C(=O)c3ccccc3C2=O)C(C)=O)cc1 → EI = 0.2661
+f1 shape: (1,)
+2025-05-16 17:54:24,741 - INFO -   True f = 0.4583
+2025-05-16 17:54:24,761 - INFO - Iter time: 3.16s
+2025-05-16 17:54:24,761 - INFO - 
+--- Iter 60 (train size=70) ---
+2025-05-16 17:54:27,793 - INFO - Selected CN(C(=O)C(C)(C)c1ccc(F)cc1)C1CCc2c(CC(=O)O)c3ccccc3n2C1 → EI = 0.2644
+f1 shape: (1,)
+2025-05-16 17:54:27,795 - INFO -   True f = 0.1639
+2025-05-16 17:54:27,815 - INFO - Iter time: 3.05s
+2025-05-16 17:54:27,815 - INFO - 
+--- Iter 61 (train size=71) ---
+2025-05-16 17:54:31,244 - INFO - Selected CCCCNC(=O)CN1C(=O)C(=Cc2ccc(-c3ccc(Cl)cc3)o2)SC1=S → EI = 0.2651
+f1 shape: (1,)
+2025-05-16 17:54:31,245 - INFO -   True f = 0.4264
+2025-05-16 17:54:31,268 - INFO - Iter time: 3.45s
+2025-05-16 17:54:31,268 - INFO - 
+--- Iter 62 (train size=72) ---
+2025-05-16 17:54:34,382 - INFO - Selected COc1cccc(CNC(=O)Cn2ncc3c(=O)oc4ccccc4c32)c1 → EI = 0.2647
+f1 shape: (1,)
+2025-05-16 17:54:34,383 - INFO -   True f = 0.1613
+2025-05-16 17:54:34,404 - INFO - Iter time: 3.14s
+2025-05-16 17:54:34,404 - INFO - 
+--- Iter 63 (train size=73) ---
+2025-05-16 17:54:37,509 - INFO - Selected COc1ccc(C=C2CC(CO)(COC(=O)c3ccc([N+](=O)[O-])cc3)OC2=O)cc1 → EI = 0.2629
+f1 shape: (1,)
+2025-05-16 17:54:37,510 - INFO -   True f = 0.4185
+2025-05-16 17:54:37,533 - INFO - Iter time: 3.13s
+2025-05-16 17:54:37,533 - INFO - 
+--- Iter 64 (train size=74) ---
+2025-05-16 17:54:40,886 - INFO - Selected C=CCN1C(=O)c2ccc(C(=O)N(CC)CC(=O)Nc3ccc(OC)cc3)cc2C1=O → EI = 0.264
+f1 shape: (1,)
+2025-05-16 17:54:40,887 - INFO -   True f = 0.4356
+2025-05-16 17:54:40,910 - INFO - Iter time: 3.38s
+2025-05-16 17:54:40,910 - INFO - 
+--- Iter 65 (train size=75) ---
+2025-05-16 17:54:44,481 - INFO - Selected CNCCN1C(=O)C(OC(C)=O)C(c2ccc(OC)cc2)Sc2ccccc21 → EI = 0.2645
+f1 shape: (1,)
+2025-05-16 17:54:44,482 - INFO -   True f = 0.4677
+2025-05-16 17:54:44,504 - INFO - Iter time: 3.59s
+2025-05-16 17:54:44,504 - INFO - 
+--- Iter 66 (train size=76) ---
+2025-05-16 17:54:47,752 - INFO - Selected CCC(=O)N1CCc2cc(S(=O)(=O)CCC(=O)N(C)c3ccc(OC)cc3)ccc21 → EI = 0.2661
+f1 shape: (1,)
+2025-05-16 17:54:47,753 - INFO -   True f = 0.4405
+2025-05-16 17:54:47,776 - INFO - Iter time: 3.27s
+2025-05-16 17:54:47,776 - INFO - 
+--- Iter 67 (train size=77) ---
+2025-05-16 17:54:51,105 - INFO - Selected CCN(CC)C(=O)CCn1c(=O)c(-c2ccc(OC)cc2)cc2c(OC)cc(OC)cc21 → EI = 0.2651
+f1 shape: (1,)
+2025-05-16 17:54:51,107 - INFO -   True f = 0.4504
+2025-05-16 17:54:51,130 - INFO - Iter time: 3.35s
+2025-05-16 17:54:51,130 - INFO - 
+--- Iter 68 (train size=78) ---
+2025-05-16 17:54:54,671 - INFO - Selected COc1ccc(-c2noc(CN(C)C(=O)CCCN3C(=O)C4CC=CCC4C3=O)n2)cc1 → EI = 0.2682
+f1 shape: (1,)
+2025-05-16 17:54:54,672 - INFO -   True f = 0.1538
+2025-05-16 17:54:54,696 - INFO - Iter time: 3.57s
+2025-05-16 17:54:54,696 - INFO - 
+--- Iter 69 (train size=79) ---
+2025-05-16 17:54:58,049 - INFO - Selected COCCOC(=O)c1c(C)oc2ccc(OC(=O)c3cccs3)cc12 → EI = 0.2649
+f1 shape: (1,)
+2025-05-16 17:54:58,050 - INFO -   True f = 0.5252
+2025-05-16 17:54:58,074 - INFO - Iter time: 3.38s
+2025-05-16 17:54:58,074 - INFO - 
+--- Iter 70 (train size=80) ---
+2025-05-16 17:55:01,845 - INFO - Selected COc1ccc(N(CCC(N)=O)C(=O)CSc2ccc(F)c(F)c2)cc1 → EI = 0.2651
+f1 shape: (1,)
+2025-05-16 17:55:01,846 - INFO -   True f = 0.1612
+2025-05-16 17:55:01,870 - INFO - Iter time: 3.80s
+2025-05-16 17:55:01,870 - INFO - 
+--- Iter 71 (train size=81) ---
+2025-05-16 17:55:05,302 - INFO - Selected CC(C)c1c(S(=O)(=O)c2ccc(OCCCNC(C)(C)C)cc2)c2ccccc2n1C → EI = 0.2636
+f1 shape: (1,)
+2025-05-16 17:55:05,303 - INFO -   True f = 0.4372
+2025-05-16 17:55:05,330 - INFO - Iter time: 3.46s
+2025-05-16 17:55:05,330 - INFO - 
+--- Iter 72 (train size=82) ---
+2025-05-16 17:55:08,944 - INFO - Selected CCOc1ccc(S(=O)(=O)Nc2ccc3oc(C)c(C(=O)OC(C)C)c3c2)cc1 → EI = 0.2653
+f1 shape: (1,)
+2025-05-16 17:55:08,945 - INFO -   True f = 0.4455
+2025-05-16 17:55:08,972 - INFO - Iter time: 3.64s
+2025-05-16 17:55:08,972 - INFO - 
+--- Iter 73 (train size=83) ---
+2025-05-16 17:55:12,682 - INFO - Selected COc1ccccc1-c1ccc(S(=O)(=O)NCCCCCO)cc1 → EI = 0.2649
+f1 shape: (1,)
+2025-05-16 17:55:12,683 - INFO -   True f = 0.1597
+2025-05-16 17:55:12,709 - INFO - Iter time: 3.74s
+2025-05-16 17:55:12,709 - INFO - 
+--- Iter 74 (train size=84) ---
+2025-05-16 17:55:16,427 - INFO - Selected CNC(=O)C(Cc1c[nH]c2ccccc12)NC(=O)C(CC(=O)NNc1ccc(OC)cc1)CC(C)C → EI = 0.2634
+f1 shape: (1,)
+2025-05-16 17:55:16,428 - INFO -   True f = 0.4502
+2025-05-16 17:55:16,456 - INFO - Iter time: 3.75s
+2025-05-16 17:55:16,456 - INFO - 
+--- Iter 75 (train size=85) ---
+2025-05-16 17:55:20,442 - INFO - Selected CCOP(=O)(c1ccc(OC)cc1)N1Cc2[nH]c3ccccc3c2CC1C(=O)NO → EI = 0.2643
+f1 shape: (1,)
+2025-05-16 17:55:20,443 - INFO -   True f = 0.1754
+2025-05-16 17:55:20,470 - INFO - Iter time: 4.01s
+2025-05-16 17:55:20,470 - INFO - 
+--- Iter 76 (train size=86) ---
+2025-05-16 17:55:24,119 - INFO - Selected CCN(CC)c1ccc(C(=O)NNC(=O)CNC(=O)c2ccco2)cc1 → EI = 0.2636
+f1 shape: (1,)
+2025-05-16 17:55:24,120 - INFO -   True f = 0.1525
+2025-05-16 17:55:24,148 - INFO - Iter time: 3.68s
+2025-05-16 17:55:24,148 - INFO - 
+--- Iter 77 (train size=87) ---
+2025-05-16 17:55:27,983 - INFO - Selected CCn1c(=O)c2cc(C(=O)N(C)CC(OC)OC)sc2c2ccccc21 → EI = 0.2622
+f1 shape: (1,)
+2025-05-16 17:55:27,984 - INFO -   True f = 0.4916
+2025-05-16 17:55:28,013 - INFO - Iter time: 3.86s
+2025-05-16 17:55:28,013 - INFO - 
+--- Iter 78 (train size=88) ---
+2025-05-16 17:55:31,941 - INFO - Selected CCN(CC)CCCOc1ccc(-c2nn(C(C)C)c(=O)c3ccsc23)cc1 → EI = 0.2638
+f1 shape: (1,)
+2025-05-16 17:55:31,942 - INFO -   True f = 0.4159
+2025-05-16 17:55:31,971 - INFO - Iter time: 3.96s
+2025-05-16 17:55:31,971 - INFO - 
+--- Iter 79 (train size=89) ---
+2025-05-16 17:55:35,714 - INFO - Selected COC(=O)c1cc2occc2n1CC(=O)Nc1cc(OC)cc(OC)c1 → EI = 0.2632
+f1 shape: (1,)
+2025-05-16 17:55:35,715 - INFO -   True f = 0.4791
+2025-05-16 17:55:35,744 - INFO - Iter time: 3.77s
+2025-05-16 17:55:35,744 - INFO - 
+--- Iter 80 (train size=90) ---
+2025-05-16 17:55:39,716 - INFO - Selected Cc1ccc(NC(=O)Cn2c(=O)n(CCCCC(=O)NCc3ccccc3Cl)c(=O)c3ccccc32)cc1C → EI = 0.264
+f1 shape: (1,)
+2025-05-16 17:55:39,718 - INFO -   True f = 0.1703
+2025-05-16 17:55:39,748 - INFO - Iter time: 4.00s
+2025-05-16 17:55:39,748 - INFO - 
+--- Iter 81 (train size=91) ---
+2025-05-16 17:55:43,755 - INFO - Selected CCCCOc1ccc(C(=O)n2c(C)c(C(=O)O)c3cc(OC)ccc32)cc1 → EI = 0.2642
+f1 shape: (1,)
+2025-05-16 17:55:43,756 - INFO -   True f = 0.4899
+2025-05-16 17:55:43,787 - INFO - Iter time: 4.04s
+2025-05-16 17:55:43,787 - INFO - 
+--- Iter 82 (train size=92) ---
+2025-05-16 17:55:47,993 - INFO - Selected CCOC(=O)c1cc2sccc2n1CC(=O)Nc1ccc(OC)cc1OC → EI = 0.2655
+f1 shape: (1,)
+2025-05-16 17:55:47,994 - INFO -   True f = 0.5244
+2025-05-16 17:55:48,027 - INFO - Iter time: 4.24s
+2025-05-16 17:55:48,027 - INFO - 
+--- Iter 83 (train size=93) ---
+2025-05-16 17:55:52,114 - INFO - Selected CCC(C(=O)Nc1ccccc1OC)n1c(C(=O)OC)cc2ccsc21 → EI = 0.2689
+f1 shape: (1,)
+2025-05-16 17:55:52,116 - INFO -   True f = 0.5208
+2025-05-16 17:55:52,152 - INFO - Iter time: 4.13s
+2025-05-16 17:55:52,153 - INFO - 
+--- Iter 84 (train size=94) ---
+2025-05-16 17:55:56,083 - INFO - Selected CCOC(=O)Cc1ccccc1OC(=O)c1cc(OC)cc(OC)c1 → EI = 0.2708
+f1 shape: (1,)
+2025-05-16 17:55:56,084 - INFO -   True f = 0.2057
+2025-05-16 17:55:56,117 - INFO - Iter time: 3.96s
+2025-05-16 17:55:56,117 - INFO - 
+--- Iter 85 (train size=95) ---
+2025-05-16 17:56:00,288 - INFO - Selected COC(=O)c1cc2sccc2n1CC(=O)N(C)c1ccccc1 → EI = 0.2706
+f1 shape: (1,)
+2025-05-16 17:56:00,289 - INFO -   True f = 0.4956
+2025-05-16 17:56:00,322 - INFO - Iter time: 4.20s
+2025-05-16 17:56:00,322 - INFO - 
+--- Iter 86 (train size=96) ---
+2025-05-16 17:56:04,461 - INFO - Selected CCN(CC)C(=O)C1Sc2ccccc2-c2c1c1cc(OC(F)(F)F)ccc1n2CCF → EI = 0.2658
+f1 shape: (1,)
+2025-05-16 17:56:04,462 - INFO -   True f = 0.1657
+2025-05-16 17:56:04,497 - INFO - Iter time: 4.17s
+2025-05-16 17:56:04,497 - INFO - 
+--- Iter 87 (train size=97) ---
+2025-05-16 17:56:08,494 - INFO - Selected COC(=O)c1ccc(C2C(C(=O)OCC(C)C)=C(C)N=C3SCCC(=O)N32)cc1 → EI = 0.2633
+f1 shape: (1,)
+2025-05-16 17:56:08,495 - INFO -   True f = 0.5258
+2025-05-16 17:56:08,529 - INFO - Iter time: 4.03s
+2025-05-16 17:56:08,529 - INFO - 
+--- Iter 88 (train size=98) ---
+2025-05-16 17:56:12,819 - INFO - Selected CC(C)OC(=O)c1ccc(CCC2=CC(=O)C(Br)=CC2=O)cc1 → EI = 0.2677
+f1 shape: (1,)
+2025-05-16 17:56:12,820 - INFO -   True f = 0.1588
+2025-05-16 17:56:12,855 - INFO - Iter time: 4.33s
+2025-05-16 17:56:12,855 - INFO - 
+--- Iter 89 (train size=99) ---
+2025-05-16 17:56:17,445 - INFO - Selected COC(=O)CC(Oc1c(C)n(C)c2ccccc2c1=O)c1ccccc1 → EI = 0.2644
+f1 shape: (1,)
+2025-05-16 17:56:17,446 - INFO -   True f = 0.4896
+2025-05-16 17:56:17,482 - INFO - Iter time: 4.63s
+2025-05-16 17:56:17,482 - INFO - 
+--- Iter 90 (train size=100) ---
+2025-05-16 17:56:21,862 - INFO - Selected CCOC(=O)c1c(S(=O)(=O)NCC(=O)Nc2ccc(C(C)=O)cc2)c(C)n(C)c1C → EI = 0.2645
+f1 shape: (1,)
+2025-05-16 17:56:21,863 - INFO -   True f = 0.1825
+2025-05-16 17:56:21,899 - INFO - Iter time: 4.42s
+2025-05-16 17:56:21,899 - INFO - 
+--- Iter 91 (train size=101) ---
+2025-05-16 17:56:26,085 - INFO - Selected COC(=O)c1cc2sccc2n1Cc1nc(-c2cccc(Cl)c2)oc1C → EI = 0.2651
+f1 shape: (1,)
+2025-05-16 17:56:26,087 - INFO -   True f = 0.1717
+2025-05-16 17:56:26,123 - INFO - Iter time: 4.22s
+2025-05-16 17:56:26,123 - INFO - 
+--- Iter 92 (train size=102) ---
+2025-05-16 17:56:30,556 - INFO - Selected N#Cc1ccccc1NC(=O)Cn1sc2ccccc2c1=O → EI = 0.2654
+f1 shape: (1,)
+2025-05-16 17:56:30,557 - INFO -   True f = 0.4082
+2025-05-16 17:56:30,594 - INFO - Iter time: 4.47s
+2025-05-16 17:56:30,594 - INFO - 
+--- Iter 93 (train size=103) ---
+2025-05-16 17:56:35,100 - INFO - Selected CCCn1c(=O)c(C(=O)Nc2ccccc2C)c(O)c2ccccc21 → EI = 0.2651
+f1 shape: (1,)
+2025-05-16 17:56:35,102 - INFO -   True f = 0.4635
+2025-05-16 17:56:35,141 - INFO - Iter time: 4.55s
+2025-05-16 17:56:35,141 - INFO - 
+--- Iter 94 (train size=104) ---
+2025-05-16 17:56:39,915 - INFO - Selected Cc1cc(F)ccc1NC(=O)C(C(C)C)N1Cc2ccccc2C1=O → EI = 0.2629
+f1 shape: (1,)
+2025-05-16 17:56:39,916 - INFO -   True f = 0.4435
+2025-05-16 17:56:39,954 - INFO - Iter time: 4.81s
+2025-05-16 17:56:39,954 - INFO - 
+--- Iter 95 (train size=105) ---
+2025-05-16 17:56:44,524 - INFO - Selected COc1ccc(NC(=O)C(=O)Nc2ccc(C)cc2OC)cc1 → EI = 0.2644
+f1 shape: (1,)
+2025-05-16 17:56:44,525 - INFO -   True f = 0.1666
+2025-05-16 17:56:44,563 - INFO - Iter time: 4.61s
+2025-05-16 17:56:44,564 - INFO - 
+--- Iter 96 (train size=106) ---
+2025-05-16 17:56:48,979 - INFO - Selected CCCOC(=O)Nc1ccc(S(=O)(=O)N2CC(c3ccccc3)NC2=O)cc1CC → EI = 0.2621
+f1 shape: (1,)
+2025-05-16 17:56:48,981 - INFO -   True f = 0.4785
+2025-05-16 17:56:49,196 - INFO - Iter time: 4.63s
+2025-05-16 17:56:49,196 - INFO - 
+--- Iter 97 (train size=107) ---
+2025-05-16 17:56:53,883 - INFO - Selected CCC(C)C(NC(=O)N1CC(=O)Nc2ccccc21)C(=O)Nc1ccccc1C → EI = 0.2641
+f1 shape: (1,)
+2025-05-16 17:56:53,885 - INFO -   True f = 0.4741
+2025-05-16 17:56:53,925 - INFO - Iter time: 4.73s
+2025-05-16 17:56:53,925 - INFO - 
+--- Iter 98 (train size=108) ---
+2025-05-16 17:56:58,672 - INFO - Selected CCC(C)NC(=O)C(NS(=O)(=O)c1ccc2c(c1)c(=O)n(C)c(=O)n2C)c1ccccc1 → EI = 0.2668
+f1 shape: (1,)
+2025-05-16 17:56:58,673 - INFO -   True f = 0.4241
+2025-05-16 17:56:58,714 - INFO - Iter time: 4.79s
+2025-05-16 17:56:58,714 - INFO - 
+--- Iter 99 (train size=109) ---
+2025-05-16 17:57:03,724 - INFO - Selected CC(=O)CC(c1ccccc1)c1c(SCC(NC(C)=O)C(=O)O)c2ccccc2oc1=O → EI = 0.2644
+f1 shape: (1,)
+2025-05-16 17:57:03,726 - INFO -   True f = 0.4309
+2025-05-16 17:57:03,768 - INFO - Iter time: 5.05s
+2025-05-16 17:57:03,768 - INFO - 
+--- Iter 100 (train size=110) ---
+2025-05-16 17:57:08,637 - INFO - Selected CCOC(=O)c1c(-c2cc3ccc(OC)cc3oc2=O)nn(-c2ccccc2)c1C(=O)OCC → EI = 0.2651
+f1 shape: (1,)
+2025-05-16 17:57:08,639 - INFO -   True f = 0.1952
+2025-05-16 17:57:08,681 - INFO - Iter time: 4.91s
+2025-05-16 17:57:08,682 - INFO - 
+--- Iter 101 (train size=111) ---
+2025-05-16 17:57:13,332 - INFO - Selected Cc1ccccc1NC(=O)C(C)OC(=O)CCC(=O)N(CC(C)C)c1c(N)n(CC(C)C)c(=O)[nH]c1=O → EI = 0.2639
+f1 shape: (1,)
+2025-05-16 17:57:13,333 - INFO -   True f = 0.1767
+2025-05-16 17:57:13,377 - INFO - Iter time: 4.70s
+2025-05-16 17:57:13,377 - INFO - 
+--- Iter 102 (train size=112) ---
+2025-05-16 17:57:18,350 - INFO - Selected CCC1(C)OC(=O)C(OC(C)C)=C1c1ccc(S(C)(=O)=O)cc1 → EI = 0.2628
+f1 shape: (1,)
+2025-05-16 17:57:18,351 - INFO -   True f = 0.147
+2025-05-16 17:57:18,397 - INFO - Iter time: 5.02s
+2025-05-16 17:57:18,397 - INFO - 
+--- Iter 103 (train size=113) ---
+2025-05-16 17:57:23,415 - INFO - Selected COC(=O)c1ccc2[nH]c(C(=O)NC3Cc4ccccc4N(C)C3=O)cc2c1 → EI = 0.2619
+f1 shape: (1,)
+2025-05-16 17:57:23,416 - INFO -   True f = 0.1832
+2025-05-16 17:57:23,462 - INFO - Iter time: 5.07s
+2025-05-16 17:57:23,462 - INFO - 
+--- Iter 104 (train size=114) ---
+2025-05-16 17:57:28,219 - INFO - Selected C=CCn1c2ccccc2c(=O)c2cc(C#CCC(C)O)ccc21 → EI = 0.2603
+f1 shape: (1,)
+2025-05-16 17:57:28,220 - INFO -   True f = 0.4
+2025-05-16 17:57:28,266 - INFO - Iter time: 4.80s
+2025-05-16 17:57:28,266 - INFO - 
+--- Iter 105 (train size=115) ---
+2025-05-16 17:57:33,350 - INFO - Selected CN(C)CCC(=O)N1CC(C#Cc2ccc3c(=O)c(-c4ccc(NS(C)(=O)=O)cc4)coc3c2)C1 → EI = 0.2602
+f1 shape: (1,)
+2025-05-16 17:57:33,351 - INFO -   True f = 0.14
+2025-05-16 17:57:33,398 - INFO - Iter time: 5.13s
+2025-05-16 17:57:33,398 - INFO - 
+--- Iter 106 (train size=116) ---
+2025-05-16 17:57:38,529 - INFO - Selected CCn1c(=N)n(CCCOc2ccc(F)cc2)c2ccccc21 → EI = 0.2602
+f1 shape: (1,)
+2025-05-16 17:57:38,530 - INFO -   True f = 0.4378
+2025-05-16 17:57:38,577 - INFO - Iter time: 5.18s
+2025-05-16 17:57:38,577 - INFO - 
+--- Iter 107 (train size=117) ---
+2025-05-16 17:57:43,771 - INFO - Selected CCOC(=O)c1ccc(OCc2nc3ccccc3n(C)c2=O)cc1 → EI = 0.2617
+f1 shape: (1,)
+2025-05-16 17:57:43,772 - INFO -   True f = 0.5357
+2025-05-16 17:57:43,821 - INFO - Iter time: 5.24s
+2025-05-16 17:57:43,821 - INFO - 
+--- Iter 108 (train size=118) ---
+2025-05-16 17:57:49,021 - INFO - Selected O=C(O)Cc1ccc(OCCN2C(=O)COc3ccsc32)cc1 → EI = 0.2582
+f1 shape: (1,)
+2025-05-16 17:57:49,022 - INFO -   True f = 0.4032
+2025-05-16 17:57:49,070 - INFO - Iter time: 5.25s
+2025-05-16 17:57:49,070 - INFO - 
+--- Iter 109 (train size=119) ---
+2025-05-16 17:57:54,327 - INFO - Selected Cc1ccc2oc(=O)n(CCOc3ccccc3)c2c1 → EI = 0.2581
+f1 shape: (1,)
+2025-05-16 17:57:54,328 - INFO -   True f = 0.4412
+2025-05-16 17:57:54,379 - INFO - Iter time: 5.31s
+2025-05-16 17:57:54,379 - INFO - 
+--- Iter 110 (train size=120) ---
+2025-05-16 17:57:59,642 - INFO - Selected CCOC(=O)n1c(=O)n(Cc2ccccc2C)c2ccccc21 → EI = 0.2586
+f1 shape: (1,)
+2025-05-16 17:57:59,643 - INFO -   True f = 0.5066
+2025-05-16 17:57:59,695 - INFO - Iter time: 5.31s
+2025-05-16 17:57:59,695 - INFO - 
+--- Iter 111 (train size=121) ---
+2025-05-16 17:58:04,758 - INFO - Selected CCOc1ccc(C(O)=C2C(=O)CN(C(C)CC)C2=O)cc1 → EI = 0.2582
+f1 shape: (1,)
+2025-05-16 17:58:04,759 - INFO -   True f = 0.1609
+2025-05-16 17:58:04,812 - INFO - Iter time: 5.12s
+2025-05-16 17:58:04,812 - INFO - 
+--- Iter 112 (train size=122) ---
+2025-05-16 17:58:10,416 - INFO - Selected CCCn1c(SCC(=O)N2CC(=O)Nc3ccccc32)nc2ccccc21 → EI = 0.258
+f1 shape: (1,)
+2025-05-16 17:58:10,418 - INFO -   True f = 0.169
+2025-05-16 17:58:10,471 - INFO - Iter time: 5.66s
+2025-05-16 17:58:10,472 - INFO - 
+--- Iter 113 (train size=123) ---
+2025-05-16 17:58:15,602 - INFO - Selected Cn1c(=NC(=O)CS(=O)(=O)c2ccccc2)sc2cc([N+](=O)[O-])ccc21 → EI = 0.2562
+f1 shape: (1,)
+2025-05-16 17:58:15,603 - INFO -   True f = 0.405
+2025-05-16 17:58:15,658 - INFO - Iter time: 5.19s
+2025-05-16 17:58:15,658 - INFO - 
+--- Iter 114 (train size=124) ---
+2025-05-16 17:58:21,103 - INFO - Selected CCOn1c(=O)c(-c2ccc(Br)cc2)[n+]([O-])c2ccccc21 → EI = 0.2549
+f1 shape: (1,)
+2025-05-16 17:58:21,104 - INFO -   True f = 0.4336
+2025-05-16 17:58:21,160 - INFO - Iter time: 5.50s
+2025-05-16 17:58:21,160 - INFO - 
+--- Iter 115 (train size=125) ---
+2025-05-16 17:58:26,946 - INFO - Selected CCOC(=O)c1c(-c2ccc([N+](=O)[O-])cc2)[n+]([O-])c2ccccc2[n+]1[O-] → EI = 0.2565
+f1 shape: (1,)
+2025-05-16 17:58:26,947 - INFO -   True f = 0.4916
+2025-05-16 17:58:27,003 - INFO - Iter time: 5.84s
+2025-05-16 17:58:27,003 - INFO - 
+--- Iter 116 (train size=126) ---
+2025-05-16 17:58:32,549 - INFO - Selected CC(C)c1ccc(C(=O)Oc2ccc([N+](=O)[O-])cc2[N+](=O)[O-])cc1 → EI = 0.2559
+f1 shape: (1,)
+2025-05-16 17:58:32,551 - INFO -   True f = 0.1446
+2025-05-16 17:58:32,609 - INFO - Iter time: 5.61s
+2025-05-16 17:58:32,609 - INFO - 
+--- Iter 117 (train size=127) ---
+2025-05-16 17:58:37,887 - INFO - Selected CCOC(=O)NN1C(=O)c2ccccc2NC1c1cccs1 → EI = 0.2559
+f1 shape: (1,)
+2025-05-16 17:58:37,888 - INFO -   True f = 0.4888
+2025-05-16 17:58:37,945 - INFO - Iter time: 5.34s
+2025-05-16 17:58:37,945 - INFO - 
+--- Iter 118 (train size=128) ---
+2025-05-16 17:58:43,758 - INFO - Selected C=COCCN1C=C(C(=O)OCC)C(c2ccccc2)NC1=O → EI = 0.257
+f1 shape: (1,)
+2025-05-16 17:58:43,759 - INFO -   True f = 0.1984
+2025-05-16 17:58:43,817 - INFO - Iter time: 5.87s
+2025-05-16 17:58:43,817 - INFO - 
+--- Iter 119 (train size=129) ---
+2025-05-16 17:58:49,763 - INFO - Selected CCN(C(=O)COc1cc(=O)n(C)c2ccccc12)c1cccc(Cl)c1 → EI = 0.2554
+f1 shape: (1,)
+2025-05-16 17:58:49,765 - INFO -   True f = 0.4791
+2025-05-16 17:58:49,824 - INFO - Iter time: 6.01s
+2025-05-16 17:58:49,824 - INFO - 
+--- Iter 120 (train size=130) ---
+2025-05-16 17:58:55,293 - INFO - Selected CCc1ccccc1NC(=O)Oc1ccc2c(c1)C1(C)CCN(C)OC1N2C → EI = 0.2554
+f1 shape: (1,)
+2025-05-16 17:58:55,294 - INFO -   True f = 0.1607
+2025-05-16 17:58:55,352 - INFO - Iter time: 5.53s
+2025-05-16 17:58:55,352 - INFO - 
+--- Iter 121 (train size=131) ---
+2025-05-16 17:59:01,367 - INFO - Selected CCC(CC)NC(=O)CON=C1c2ccccc2-c2ccccc21 → EI = 0.2545
+f1 shape: (1,)
+2025-05-16 17:59:01,368 - INFO -   True f = 0.4545
+2025-05-16 17:59:01,428 - INFO - Iter time: 6.08s
+2025-05-16 17:59:01,428 - INFO - 
+--- Iter 122 (train size=132) ---
+2025-05-16 17:59:07,286 - INFO - Selected CCCN(CCC)C(=O)C1c2ccccc2Oc2ccccc21 → EI = 0.2566
+f1 shape: (1,)
+2025-05-16 17:59:07,287 - INFO -   True f = 0.4825
+2025-05-16 17:59:07,349 - INFO - Iter time: 5.92s
+2025-05-16 17:59:07,349 - INFO - 
+--- Iter 123 (train size=133) ---
+2025-05-16 17:59:12,862 - INFO - Selected CC(C)Oc1ccc(C2NC(=O)c3ccccc3O2)cc1 → EI = 0.2564
+f1 shape: (1,)
+2025-05-16 17:59:12,864 - INFO -   True f = 0.4255
+2025-05-16 17:59:12,926 - INFO - Iter time: 5.58s
+2025-05-16 17:59:12,926 - INFO - 
+--- Iter 124 (train size=134) ---
+2025-05-16 17:59:18,978 - INFO - Selected CC(C)C(Nc1c2ccccc2[n+]([O-])c2ccccc12)C(=O)O → EI = 0.2569
+f1 shape: (1,)
+2025-05-16 17:59:18,980 - INFO -   True f = 0.4066
+2025-05-16 17:59:19,040 - INFO - Iter time: 6.11s
+2025-05-16 17:59:19,040 - INFO - 
+--- Iter 125 (train size=135) ---
+2025-05-16 17:59:25,146 - INFO - Selected O=C(Cn1[nH]c(=O)c2ccccc2c1=O)NCC1COc2ccccc2O1 → EI = 0.2573
+f1 shape: (1,)
+2025-05-16 17:59:25,147 - INFO -   True f = 0.1575
+2025-05-16 17:59:25,209 - INFO - Iter time: 6.17s
+2025-05-16 17:59:25,209 - INFO - 
+--- Iter 126 (train size=136) ---
+2025-05-16 17:59:30,815 - INFO - Selected Cc1ccccc1S(=O)(=O)Cc1ccc(C(=O)O)o1 → EI = 0.2563
+f1 shape: (1,)
+2025-05-16 17:59:30,816 - INFO -   True f = 0.1622
+2025-05-16 17:59:30,880 - INFO - Iter time: 5.67s
+2025-05-16 17:59:30,880 - INFO - 
+--- Iter 127 (train size=137) ---
+2025-05-16 17:59:37,045 - INFO - Selected CCCCOC(=O)NS(=O)(=O)c1sc(CC(C)C)cc1-c1ccc(Cc2ccsc2)cc1 → EI = 0.2564
+f1 shape: (1,)
+2025-05-16 17:59:37,046 - INFO -   True f = 0.4392
+2025-05-16 17:59:37,110 - INFO - Iter time: 6.23s
+2025-05-16 17:59:37,110 - INFO - 
+--- Iter 128 (train size=138) ---
+2025-05-16 17:59:43,056 - INFO - Selected CCCCOc1cc(NC(=O)NC2CCc3ccccc32)ccc1OC → EI = 0.2576
+f1 shape: (1,)
+2025-05-16 17:59:43,057 - INFO -   True f = 0.5062
+2025-05-16 17:59:43,124 - INFO - Iter time: 6.01s
+2025-05-16 17:59:43,124 - INFO - 
+--- Iter 129 (train size=139) ---
+2025-05-16 17:59:49,449 - INFO - Selected COc1ccccc1C1OC(C)Cn2c1c(C)c1ccccc12 → EI = 0.2581
+f1 shape: (1,)
+2025-05-16 17:59:49,450 - INFO -   True f = 0.1693
+2025-05-16 17:59:49,517 - INFO - Iter time: 6.39s
+2025-05-16 17:59:49,517 - INFO - 
+--- Iter 130 (train size=140) ---
+2025-05-16 17:59:55,306 - INFO - Selected CCCN(Cc1cccs1)C(=O)Nc1ccc(Br)cc1F → EI = 0.2586
+f1 shape: (1,)
+2025-05-16 17:59:55,308 - INFO -   True f = 0.1482
+2025-05-16 17:59:55,376 - INFO - Iter time: 5.86s
+2025-05-16 17:59:55,376 - INFO - 
+--- Iter 131 (train size=141) ---
+2025-05-16 18:00:01,840 - INFO - Selected COc1ccc(CNC(=O)C(C)N2Cc3ccccc3C2=O)cc1 → EI = 0.2599
+f1 shape: (1,)
+2025-05-16 18:00:01,841 - INFO -   True f = 0.4454
+2025-05-16 18:00:01,910 - INFO - Iter time: 6.53s
+2025-05-16 18:00:01,910 - INFO - 
+--- Iter 132 (train size=142) ---
+2025-05-16 18:00:07,776 - INFO - Selected CCc1ccc(OCCCC(=O)Oc2ccc3c(C)cc(=O)oc3c2)cc1 → EI = 0.2568
+f1 shape: (1,)
+2025-05-16 18:00:07,778 - INFO -   True f = 0.4611
+2025-05-16 18:00:07,847 - INFO - Iter time: 5.94s
+2025-05-16 18:00:07,847 - INFO - 
+--- Iter 133 (train size=143) ---
+2025-05-16 18:00:14,334 - INFO - Selected COC(=O)c1c(NC(=O)CCCOc2ccccc2)sc2c1CCC(C)C2 → EI = 0.2586
+f1 shape: (1,)
+2025-05-16 18:00:14,336 - INFO -   True f = 0.5323
+2025-05-16 18:00:14,405 - INFO - Iter time: 6.56s
+2025-05-16 18:00:14,405 - INFO - 
+--- Iter 134 (train size=144) ---
+2025-05-16 18:00:20,930 - INFO - Selected Cc1cc(OCCCC(=O)NC2(C(N)=O)Cc3ccccc3C2)ccc1Cl → EI = 0.2606
+f1 shape: (1,)
+2025-05-16 18:00:20,931 - INFO -   True f = 0.5143
+2025-05-16 18:00:21,002 - INFO - Iter time: 6.60s
+2025-05-16 18:00:21,002 - INFO - 
+--- Iter 135 (train size=145) ---
+2025-05-16 18:00:26,952 - INFO - Selected C#CCCCCOc1ccc2oc(=O)c(C(=O)OC)cc2c1 → EI = 0.262
+f1 shape: (1,)
+2025-05-16 18:00:26,953 - INFO -   True f = 0.1806
+2025-05-16 18:00:27,025 - INFO - Iter time: 6.02s
+2025-05-16 18:00:27,025 - INFO - 
+--- Iter 136 (train size=146) ---
+2025-05-16 18:00:33,651 - INFO - Selected CCn1c(C(=O)NCCCN2CCc3ccccc3C2)cc2sccc21 → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:00:33,652 - INFO -   True f = 0.1587
+2025-05-16 18:00:33,725 - INFO - Iter time: 6.70s
+2025-05-16 18:00:33,725 - INFO - 
+--- Iter 137 (train size=147) ---
+2025-05-16 18:00:40,113 - INFO - Selected CCCCN(C)C(=O)c1c(F)cccc1OCC(=O)NC(CO)Cc1ccccc1 → EI = 0.2573
+f1 shape: (1,)
+2025-05-16 18:00:40,115 - INFO -   True f = 0.1688
+2025-05-16 18:00:40,188 - INFO - Iter time: 6.46s
+2025-05-16 18:00:40,188 - INFO - 
+--- Iter 138 (train size=148) ---
+2025-05-16 18:00:46,553 - INFO - Selected Cc1ccc(NC(=S)OCCN2C(=O)c3ccccc3C2=O)cc1 → EI = 0.2574
+f1 shape: (1,)
+2025-05-16 18:00:46,554 - INFO -   True f = 0.4674
+2025-05-16 18:00:46,627 - INFO - Iter time: 6.44s
+2025-05-16 18:00:46,628 - INFO - 
+--- Iter 139 (train size=149) ---
+2025-05-16 18:00:53,369 - INFO - Selected CC(=O)OCC[n+]1c(C)n(-c2ccccc2)c2ccc(Cl)cc21 → EI = 0.2573
+f1 shape: (1,)
+2025-05-16 18:00:53,371 - INFO -   True f = 0.4956
+2025-05-16 18:00:53,448 - INFO - Iter time: 6.82s
+2025-05-16 18:00:53,448 - INFO - 
+--- Iter 140 (train size=150) ---
+2025-05-16 18:01:00,602 - INFO - Selected CN(C)CCOC(=O)C1=C(Cc2ccccn2)c2ccccc2C1 → EI = 0.2572
+f1 shape: (1,)
+2025-05-16 18:01:00,603 - INFO -   True f = 0.4763
+2025-05-16 18:01:00,680 - INFO - Iter time: 7.23s
+2025-05-16 18:01:00,680 - INFO - 
+--- Iter 141 (train size=151) ---
+2025-05-16 18:01:06,897 - INFO - Selected Cc1sc2ccccc2[n+]1CCC[n+]1c(C)sc2ccccc21 → EI = 0.2585
+f1 shape: (1,)
+2025-05-16 18:01:06,898 - INFO -   True f = 0.1562
+2025-05-16 18:01:06,976 - INFO - Iter time: 6.30s
+2025-05-16 18:01:06,976 - INFO - 
+--- Iter 142 (train size=152) ---
+2025-05-16 18:01:13,852 - INFO - Selected CCCOC(=O)c1[nH]c2c(c1C)C(=O)CC(c1cccs1)C2 → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:01:13,853 - INFO -   True f = 0.491
+2025-05-16 18:01:13,934 - INFO - Iter time: 6.96s
+2025-05-16 18:01:13,934 - INFO - 
+--- Iter 143 (train size=153) ---
+2025-05-16 18:01:20,294 - INFO - Selected CCC(C(=O)OCC(=O)c1ccc2c(c1)NC(=O)CO2)c1ccccc1 → EI = 0.2577
+f1 shape: (1,)
+2025-05-16 18:01:20,296 - INFO -   True f = 0.4875
+2025-05-16 18:01:20,376 - INFO - Iter time: 6.44s
+2025-05-16 18:01:20,377 - INFO - 
+--- Iter 144 (train size=154) ---
+2025-05-16 18:01:27,692 - INFO - Selected CCC(C)c1ccccc1NC(=O)COC(=O)c1ccc2c(c1)S(=O)(=O)c1ccccc1C2=O → EI = 0.2582
+f1 shape: (1,)
+2025-05-16 18:01:27,693 - INFO -   True f = 0.1691
+2025-05-16 18:01:27,774 - INFO - Iter time: 7.40s
+2025-05-16 18:01:27,774 - INFO - 
+--- Iter 145 (train size=155) ---
+2025-05-16 18:01:34,153 - INFO - Selected CCC(Cn1nnc2ccccc2c1=O)NC(=O)Nc1ccc(C)cc1 → EI = 0.2571
+f1 shape: (1,)
+2025-05-16 18:01:34,154 - INFO -   True f = 0.4454
+2025-05-16 18:01:34,238 - INFO - Iter time: 6.46s
+2025-05-16 18:01:34,238 - INFO - 
+--- Iter 146 (train size=156) ---
+2025-05-16 18:01:41,347 - INFO - Selected COc1ccc(NC(=O)NC(C)c2ccccc2)cc1OCCC(C)C → EI = 0.257
+f1 shape: (1,)
+2025-05-16 18:01:41,348 - INFO -   True f = 0.1685
+2025-05-16 18:01:41,431 - INFO - Iter time: 7.19s
+2025-05-16 18:01:41,431 - INFO - 
+--- Iter 147 (train size=157) ---
+2025-05-16 18:01:48,206 - INFO - Selected CCOc1ccc(-c2nnc(NC(=O)CCCOc3cccc(C)c3)o2)cc1 → EI = 0.2569
+f1 shape: (1,)
+2025-05-16 18:01:48,208 - INFO -   True f = 0.4641
+2025-05-16 18:01:48,292 - INFO - Iter time: 6.86s
+2025-05-16 18:01:48,292 - INFO - 
+--- Iter 148 (train size=158) ---
+2025-05-16 18:01:55,180 - INFO - Selected CCOC(=O)C(CNC(C)=O)c1cn(C(=O)OCC)c2ccccc12 → EI = 0.2559
+f1 shape: (1,)
+2025-05-16 18:01:55,181 - INFO -   True f = 0.191
+2025-05-16 18:01:55,267 - INFO - Iter time: 6.98s
+2025-05-16 18:01:55,267 - INFO - 
+--- Iter 149 (train size=159) ---
+2025-05-16 18:02:02,135 - INFO - Selected CCNCCCOc1ccc2c(c1)CN(C)CC2c1ccc(OC)cc1 → EI = 0.2541
+f1 shape: (1,)
+2025-05-16 18:02:02,136 - INFO -   True f = 0.4437
+2025-05-16 18:02:02,221 - INFO - Iter time: 6.95s
+2025-05-16 18:02:02,221 - INFO - 
+--- Iter 150 (train size=160) ---
+2025-05-16 18:02:09,404 - INFO - Selected CCCCNC(=O)N1N=C(c2ccc(N)cc2)c2cc(OC)ccc2C1C → EI = 0.2549
+f1 shape: (1,)
+2025-05-16 18:02:09,405 - INFO -   True f = 0.4629
+2025-05-16 18:02:09,494 - INFO - Iter time: 7.27s
+2025-05-16 18:02:09,494 - INFO - 
+--- Iter 151 (train size=161) ---
+2025-05-16 18:02:17,125 - INFO - Selected CCOC(=O)C1=C(C)OC(N)=C(C#N)C1c1ccc(OC)cc1 → EI = 0.2555
+f1 shape: (1,)
+2025-05-16 18:02:17,126 - INFO -   True f = 0.2083
+2025-05-16 18:02:17,215 - INFO - Iter time: 7.72s
+2025-05-16 18:02:17,215 - INFO - 
+--- Iter 152 (train size=162) ---
+2025-05-16 18:02:23,903 - INFO - Selected CC(=O)c1ccc(OCCCC(=O)Nc2cc(Cl)ccc2-n2cncn2)cc1 → EI = 0.2557
+f1 shape: (1,)
+2025-05-16 18:02:23,905 - INFO -   True f = 0.4352
+2025-05-16 18:02:23,993 - INFO - Iter time: 6.78s
+2025-05-16 18:02:23,993 - INFO - 
+--- Iter 153 (train size=163) ---
+2025-05-16 18:02:31,302 - INFO - Selected CCN(CC)CCCOc1ccc(C=C2C(=O)Nc3ccc(Cl)cc32)cc1 → EI = 0.255
+f1 shape: (1,)
+2025-05-16 18:02:31,303 - INFO -   True f = 0.4507
+2025-05-16 18:02:31,395 - INFO - Iter time: 7.40s
+2025-05-16 18:02:31,395 - INFO - 
+--- Iter 154 (train size=164) ---
+2025-05-16 18:02:38,501 - INFO - Selected CCCNC1C(=O)N2C(C(=O)OCCC)=C(C)CSC12 → EI = 0.255
+f1 shape: (1,)
+2025-05-16 18:02:38,502 - INFO -   True f = 0.16
+2025-05-16 18:02:38,591 - INFO - Iter time: 7.20s
+2025-05-16 18:02:38,592 - INFO - 
+--- Iter 155 (train size=165) ---
+2025-05-16 18:02:46,047 - INFO - Selected CCOc1ccc(C=C2SC(=S)N(CCC(=O)Nc3cccc(C(=O)O)c3)C2=O)cc1 → EI = 0.2548
+f1 shape: (1,)
+2025-05-16 18:02:46,048 - INFO -   True f = 0.4341
+2025-05-16 18:02:46,140 - INFO - Iter time: 7.55s
+2025-05-16 18:02:46,140 - INFO - 
+--- Iter 156 (train size=166) ---
+2025-05-16 18:02:53,313 - INFO - Selected CNC(=O)C(=NOC)c1ccccc1COc1ccc(C)cc1 → EI = 0.255
+f1 shape: (1,)
+2025-05-16 18:02:53,314 - INFO -   True f = 0.1783
+2025-05-16 18:02:53,406 - INFO - Iter time: 7.27s
+2025-05-16 18:02:53,406 - INFO - 
+--- Iter 157 (train size=167) ---
+2025-05-16 18:03:00,623 - INFO - Selected CCOc1ccccc1NC(=O)CC1Sc2ccccc2NC1=O → EI = 0.2548
+f1 shape: (1,)
+2025-05-16 18:03:00,624 - INFO -   True f = 0.4871
+2025-05-16 18:03:00,719 - INFO - Iter time: 7.31s
+2025-05-16 18:03:00,719 - INFO - 
+--- Iter 158 (train size=168) ---
+2025-05-16 18:03:08,272 - INFO - Selected CCCC(=O)Nc1n[nH]c2cc(-c3ccc(Cl)cc3)ccc12 → EI = 0.2553
+f1 shape: (1,)
+2025-05-16 18:03:08,273 - INFO -   True f = 0.4318
+2025-05-16 18:03:08,368 - INFO - Iter time: 7.65s
+2025-05-16 18:03:08,368 - INFO - 
+--- Iter 159 (train size=169) ---
+2025-05-16 18:03:15,573 - INFO - Selected O=C1NC2(CCc3ccccc3C2)C(=O)N1CCOc1cccc(Cl)c1 → EI = 0.2545
+f1 shape: (1,)
+2025-05-16 18:03:15,574 - INFO -   True f = 0.1632
+2025-05-16 18:03:15,977 - INFO - Iter time: 7.61s
+2025-05-16 18:03:15,977 - INFO - 
+--- Iter 160 (train size=170) ---
+2025-05-16 18:03:23,661 - INFO - Selected Cc1cc(OCCCC(=O)NCCc2nnc3ccccn23)ccc1Cl → EI = 0.2541
+f1 shape: (1,)
+2025-05-16 18:03:23,662 - INFO -   True f = 0.4752
+2025-05-16 18:03:23,759 - INFO - Iter time: 7.78s
+2025-05-16 18:03:23,759 - INFO - 
+--- Iter 161 (train size=171) ---
+2025-05-16 18:03:31,127 - INFO - Selected O=C(CCCCCN1C(=O)c2ccccc2C(F)c2ccccc21)NO → EI = 0.2553
+f1 shape: (1,)
+2025-05-16 18:03:31,129 - INFO -   True f = 0.4561
+2025-05-16 18:03:31,229 - INFO - Iter time: 7.47s
+2025-05-16 18:03:31,229 - INFO - 
+--- Iter 162 (train size=172) ---
+2025-05-16 18:03:38,633 - INFO - Selected CCC(=O)NC(c1cccs1)c1ccc2cccnc2c1O → EI = 0.255
+f1 shape: (1,)
+2025-05-16 18:03:38,634 - INFO -   True f = 0.3963
+2025-05-16 18:03:38,733 - INFO - Iter time: 7.50s
+2025-05-16 18:03:38,733 - INFO - 
+--- Iter 163 (train size=173) ---
+2025-05-16 18:03:46,222 - INFO - Selected CC1C(=O)Oc2ccc(C(=O)c3cccs3)cc21 → EI = 0.2557
+f1 shape: (1,)
+2025-05-16 18:03:46,223 - INFO -   True f = 0.4175
+2025-05-16 18:03:46,322 - INFO - Iter time: 7.59s
+2025-05-16 18:03:46,322 - INFO - 
+--- Iter 164 (train size=174) ---
+2025-05-16 18:03:54,158 - INFO - Selected CCc1ccc(OCc2nnc(NC(=O)c3cccs3)s2)cc1 → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:03:54,159 - INFO -   True f = 0.4132
+2025-05-16 18:03:54,260 - INFO - Iter time: 7.94s
+2025-05-16 18:03:54,260 - INFO - 
+--- Iter 165 (train size=175) ---
+2025-05-16 18:04:02,181 - INFO - Selected Cc1[nH]cnc1Cn1cccc(-c2cccs2)c1=O → EI = 0.2581
+f1 shape: (1,)
+2025-05-16 18:04:02,182 - INFO -   True f = 0.3974
+2025-05-16 18:04:02,284 - INFO - Iter time: 8.02s
+2025-05-16 18:04:02,284 - INFO - 
+--- Iter 166 (train size=176) ---
+2025-05-16 18:04:09,534 - INFO - Selected O=C1NC(=O)C(=Cc2ccc(C=CC(=O)c3cccs3)cc2)S1 → EI = 0.2581
+f1 shape: (1,)
+2025-05-16 18:04:09,535 - INFO -   True f = 0.3914
+2025-05-16 18:04:09,638 - INFO - Iter time: 7.35s
+2025-05-16 18:04:09,638 - INFO - 
+--- Iter 167 (train size=177) ---
+2025-05-16 18:04:17,619 - INFO - Selected CCCN(CCC)C(=O)Cc1c(-c2cccs2)[nH]c2ccc(Cl)cc12 → EI = 0.2577
+f1 shape: (1,)
+2025-05-16 18:04:17,620 - INFO -   True f = 0.4616
+2025-05-16 18:04:17,723 - INFO - Iter time: 8.09s
+2025-05-16 18:04:17,723 - INFO - 
+--- Iter 168 (train size=178) ---
+2025-05-16 18:04:25,772 - INFO - Selected COc1ccc(N2CC(NC(=O)Cc3cccs3)CC2=O)cc1 → EI = 0.2581
+f1 shape: (1,)
+2025-05-16 18:04:25,773 - INFO -   True f = 0.4032
+2025-05-16 18:04:25,879 - INFO - Iter time: 8.16s
+2025-05-16 18:04:25,879 - INFO - 
+--- Iter 169 (train size=179) ---
+2025-05-16 18:04:34,335 - INFO - Selected CCC(C)NC(=O)c1cc2c(=O)n3ccccc3nc2s1 → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:04:34,336 - INFO -   True f = 0.4273
+2025-05-16 18:04:34,441 - INFO - Iter time: 8.56s
+2025-05-16 18:04:34,441 - INFO - 
+--- Iter 170 (train size=180) ---
+2025-05-16 18:04:42,210 - INFO - Selected CCC(C)NC(=O)C=C1Sc2ccccc2NC1=O → EI = 0.2582
+f1 shape: (1,)
+2025-05-16 18:04:42,211 - INFO -   True f = 0.175
+2025-05-16 18:04:42,319 - INFO - Iter time: 7.88s
+2025-05-16 18:04:42,319 - INFO - 
+--- Iter 171 (train size=181) ---
+2025-05-16 18:04:49,752 - INFO - Selected O=C(CC1SC(NN=Cc2cccs2)=NC1=O)Nc1ccc(Cl)c(Cl)c1 → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:04:49,753 - INFO -   True f = 0.413
+2025-05-16 18:04:49,862 - INFO - Iter time: 7.54s
+2025-05-16 18:04:49,862 - INFO - 
+--- Iter 172 (train size=182) ---
+2025-05-16 18:04:58,016 - INFO - Selected COc1ccc(O)c(C(=O)c2cnn(C(=O)c3cccs3)c2)c1 → EI = 0.2576
+f1 shape: (1,)
+2025-05-16 18:04:58,017 - INFO -   True f = 0.4166
+2025-05-16 18:04:58,128 - INFO - Iter time: 8.27s
+2025-05-16 18:04:58,128 - INFO - 
+--- Iter 173 (train size=183) ---
+2025-05-16 18:05:06,362 - INFO - Selected COc1ccc(NC(=O)C2=CC(c3cccs3)=NS(=O)(=O)N2C)cc1 → EI = 0.2588
+f1 shape: (1,)
+2025-05-16 18:05:06,363 - INFO -   True f = 0.3968
+2025-05-16 18:05:06,792 - INFO - Iter time: 8.66s
+2025-05-16 18:05:06,792 - INFO - 
+--- Iter 174 (train size=184) ---
+2025-05-16 18:05:15,082 - INFO - Selected COc1ccc(-c2cnc3ccccn3c2=O)cc1 → EI = 0.2581
+f1 shape: (1,)
+2025-05-16 18:05:15,083 - INFO -   True f = 0.3974
+2025-05-16 18:05:15,195 - INFO - Iter time: 8.40s
+2025-05-16 18:05:15,196 - INFO - 
+--- Iter 175 (train size=185) ---
+2025-05-16 18:05:23,138 - INFO - Selected CC(C)(C)NCC(O)COc1ccc(-c2nc(-c3cccs3)c[nH]2)cc1 → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:05:23,139 - INFO -   True f = 0.3794
+2025-05-16 18:05:23,252 - INFO - Iter time: 8.06s
+2025-05-16 18:05:23,252 - INFO - 
+--- Iter 176 (train size=186) ---
+2025-05-16 18:05:32,088 - INFO - Selected Cc1ccc(C2=C(CC(=O)O)C(c3cccs3)NC(S)=N2)cc1 → EI = 0.2586
+f1 shape: (1,)
+2025-05-16 18:05:32,089 - INFO -   True f = 0.4166
+2025-05-16 18:05:32,203 - INFO - Iter time: 8.95s
+2025-05-16 18:05:32,203 - INFO - 
+--- Iter 177 (train size=187) ---
+2025-05-16 18:05:40,233 - INFO - Selected O=C(CSc1nnc(-c2cccs2)o1)Oc1ccc(Cl)cc1 → EI = 0.2593
+f1 shape: (1,)
+2025-05-16 18:05:40,234 - INFO -   True f = 0.3946
+2025-05-16 18:05:40,354 - INFO - Iter time: 8.15s
+2025-05-16 18:05:40,354 - INFO - 
+--- Iter 178 (train size=188) ---
+2025-05-16 18:05:48,439 - INFO - Selected COCCn1c(=O)c(-c2cccs2)nc2cnc(Oc3ccc(OC)cc3)nc21 → EI = 0.2593
+f1 shape: (1,)
+2025-05-16 18:05:48,440 - INFO -   True f = 0.1502
+2025-05-16 18:05:48,558 - INFO - Iter time: 8.20s
+2025-05-16 18:05:48,558 - INFO - 
+--- Iter 179 (train size=189) ---
+2025-05-16 18:05:56,671 - INFO - Selected CN(C)CCCOc1ccc(-c2nc3cc(C(N)=O)ccc3[nH]2)cc1 → EI = 0.2565
+f1 shape: (1,)
+2025-05-16 18:05:56,672 - INFO -   True f = 0.4399
+2025-05-16 18:05:56,792 - INFO - Iter time: 8.23s
+2025-05-16 18:05:56,792 - INFO - 
+--- Iter 180 (train size=190) ---
+2025-05-16 18:06:04,904 - INFO - Selected CCCCOc1c(C(=O)Nc2ccccc2)c[nH]c2nncc1-2 → EI = 0.2569
+f1 shape: (1,)
+2025-05-16 18:06:04,905 - INFO -   True f = 0.4694
+2025-05-16 18:06:05,025 - INFO - Iter time: 8.23s
+2025-05-16 18:06:05,025 - INFO - 
+--- Iter 181 (train size=191) ---
+2025-05-16 18:06:13,605 - INFO - Selected CCn1cc(C(=O)Nc2ccccc2)c(=O)c2ccc(C)nc21 → EI = 0.2589
+f1 shape: (1,)
+2025-05-16 18:06:13,606 - INFO -   True f = 0.4623
+2025-05-16 18:06:13,726 - INFO - Iter time: 8.70s
+2025-05-16 18:06:13,726 - INFO - 
+--- Iter 182 (train size=192) ---
+2025-05-16 18:06:22,253 - INFO - Selected CCCCN(C(=O)Nc1cc(-c2ccc(Cl)c(Cl)c2)sc1C(=O)O)c1ccccc1 → EI = 0.2575
+f1 shape: (1,)
+2025-05-16 18:06:22,254 - INFO -   True f = 0.4785
+2025-05-16 18:06:22,376 - INFO - Iter time: 8.65s
+2025-05-16 18:06:22,376 - INFO - 
+--- Iter 183 (train size=193) ---
+2025-05-16 18:06:31,017 - INFO - Selected CCCCOc1ccc(-c2[nH]ncc2C=O)cc1 → EI = 0.2578
+f1 shape: (1,)
+2025-05-16 18:06:31,018 - INFO -   True f = 0.1529
+2025-05-16 18:06:31,141 - INFO - Iter time: 8.76s
+2025-05-16 18:06:31,141 - INFO - 
+--- Iter 184 (train size=194) ---
+2025-05-16 18:06:39,786 - INFO - Selected NC(=O)c1cc2ccccc2n1Cc1ccc(Cl)c(Cl)c1 → EI = 0.2576
+f1 shape: (1,)
+2025-05-16 18:06:39,787 - INFO -   True f = 0.4629
+2025-05-16 18:06:39,912 - INFO - Iter time: 8.77s
+2025-05-16 18:06:39,912 - INFO - 
+--- Iter 185 (train size=195) ---
+2025-05-16 18:06:48,208 - INFO - Selected NC(=O)c1nn(Cc2ccc(Cl)cc2)c2ccccc12 → EI = 0.2602
+f1 shape: (1,)
+2025-05-16 18:06:48,209 - INFO -   True f = 0.4432
+2025-05-16 18:06:48,336 - INFO - Iter time: 8.42s
+2025-05-16 18:06:48,336 - INFO - 
+--- Iter 186 (train size=196) ---
+2025-05-16 18:06:57,496 - INFO - Selected NC(=O)c1ccsc1NC(=O)Cc1ccc(-c2ccccc2)cc1 → EI = 0.26
+f1 shape: (1,)
+2025-05-16 18:06:57,497 - INFO -   True f = 0.4324
+2025-05-16 18:06:57,627 - INFO - Iter time: 9.29s
+2025-05-16 18:06:57,627 - INFO - 
+--- Iter 187 (train size=197) ---
+2025-05-16 18:07:06,015 - INFO - Selected O=C(O)CN(CC(=O)NC(Cc1ccc(OCc2c(Cl)cccc2Cl)cc1)C(=O)O)S(=O)(=O)c1cccs1 → EI = 0.2601
+f1 shape: (1,)
+2025-05-16 18:07:06,016 - INFO -   True f = 0.4443
+2025-05-16 18:07:06,146 - INFO - Iter time: 8.52s
+2025-05-16 18:07:06,146 - INFO - 
+--- Iter 188 (train size=198) ---
+2025-05-16 18:07:14,935 - INFO - Selected CCCCC(N)C(=O)Nc1cc(C(=O)NC(Cc2c[nH]c3ccccc23)C(=O)O)ccc1N → EI = 0.2594
+f1 shape: (1,)
+2025-05-16 18:07:14,936 - INFO -   True f = 0.4646
+2025-05-16 18:07:15,066 - INFO - Iter time: 8.92s
+2025-05-16 18:07:15,066 - INFO - 
+--- Iter 189 (train size=199) ---
+2025-05-16 18:07:23,470 - INFO - Selected CCOC(=O)C1=C(C)Nc2nc(SCc3ccc(C(=O)O)cc3)nn2C1c1cccs1 → EI = 0.2598
+f1 shape: (1,)
+2025-05-16 18:07:23,471 - INFO -   True f = 0.2012
+2025-05-16 18:07:23,605 - INFO - Iter time: 8.54s
+2025-05-16 18:07:23,605 - INFO - 
+--- Iter 190 (train size=200) ---
+2025-05-16 18:07:32,547 - INFO - Selected O=C(NCc1ccco1)c1cccn2c(=O)c3sccc3nc12 → EI = 0.2592
+f1 shape: (1,)
+2025-05-16 18:07:32,549 - INFO -   True f = 0.1434
+2025-05-16 18:07:32,681 - INFO - Iter time: 9.08s
+2025-05-16 18:07:32,681 - INFO - 
+--- Iter 191 (train size=201) ---
+2025-05-16 18:07:42,051 - INFO - Selected CC(=NOC(=O)Nc1cccc2ccccc12)c1ccc(-c2cccs2)s1 → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:07:42,052 - INFO -   True f = 0.1491
+2025-05-16 18:07:42,186 - INFO - Iter time: 9.50s
+2025-05-16 18:07:42,186 - INFO - 
+--- Iter 192 (train size=202) ---
+2025-05-16 18:07:50,823 - INFO - Selected CC1NC(c2ccccc2Cl)c2cc([N+](=O)[O-])ccc2NC1=O → EI = 0.2579
+f1 shape: (1,)
+2025-05-16 18:07:50,824 - INFO -   True f = 0.5089
+2025-05-16 18:07:50,961 - INFO - Iter time: 8.77s
+2025-05-16 18:07:50,961 - INFO - 
+--- Iter 193 (train size=203) ---
+2025-05-16 18:07:59,646 - INFO - Selected Cn1c(=N)n(CC(O)c2ccc(Cl)c(Cl)c2)c2ccccc21 → EI = 0.2601
+f1 shape: (1,)
+2025-05-16 18:07:59,647 - INFO -   True f = 0.4237
+2025-05-16 18:07:59,784 - INFO - Iter time: 8.82s
+2025-05-16 18:07:59,784 - INFO - 
+--- Iter 194 (train size=204) ---
+2025-05-16 18:08:08,989 - INFO - Selected O=C(O)c1ccc2c(c1)NC(=O)C(CSCc1ccccc1Cl)N2 → EI = 0.2602
+f1 shape: (1,)
+2025-05-16 18:08:08,990 - INFO -   True f = 0.5
+2025-05-16 18:08:09,129 - INFO - Iter time: 9.35s
+2025-05-16 18:08:09,129 - INFO - 
+--- Iter 195 (train size=205) ---
+2025-05-16 18:08:18,417 - INFO - Selected O=C1NC(c2ccccc2Cl)Nc2ncccc21 → EI = 0.2628
+f1 shape: (1,)
+2025-05-16 18:08:18,418 - INFO -   True f = 0.4903
+2025-05-16 18:08:18,559 - INFO - Iter time: 9.43s
+2025-05-16 18:08:18,559 - INFO - 
+--- Iter 196 (train size=206) ---
+2025-05-16 18:08:27,384 - INFO - Selected COc1ccc(NC(=O)CN(C)C2=NS(=O)(=O)c3ccccc32)cc1Cl → EI = 0.2607
+f1 shape: (1,)
+2025-05-16 18:08:27,385 - INFO -   True f = 0.481
+2025-05-16 18:08:27,526 - INFO - Iter time: 8.97s
+2025-05-16 18:08:27,526 - INFO - 
+--- Iter 197 (train size=207) ---
+2025-05-16 18:08:35,957 - INFO - Selected CN1C(=O)CN=C(c2ccccc2Cl)c2ccccc21 → EI = 0.2609
+f1 shape: (1,)
+2025-05-16 18:08:35,958 - INFO -   True f = 0.4432
+2025-05-16 18:08:36,100 - INFO - Iter time: 8.57s
+2025-05-16 18:08:36,100 - INFO - 
+--- Iter 198 (train size=208) ---
+2025-05-16 18:08:45,800 - INFO - Selected O=C(N=C1SCC(=O)N1c1ccccc1Cl)c1ccco1 → EI = 0.2623
+f1 shape: (1,)
+2025-05-16 18:08:45,801 - INFO -   True f = 0.4492
+2025-05-16 18:08:45,945 - INFO - Iter time: 9.85s
+2025-05-16 18:08:45,945 - INFO - 
+--- Iter 199 (train size=209) ---
+2025-05-16 18:08:54,862 - INFO - Selected COC(=O)c1c(SCC(=O)Nc2cccc(Cl)c2C)[nH]c2ccccc2c1=O → EI = 0.2617
+f1 shape: (1,)
+2025-05-16 18:08:54,863 - INFO -   True f = 0.55
+2025-05-16 18:08:55,013 - INFO - Iter time: 9.07s
