@@ -32,6 +32,7 @@ BO Iteration,Selected SMILES,Hypervolume,f1,f2,f3
 30,COc1ccc(-c2c(C(=O)O)c(C(N)=O)cc3ccc4c(c23)OCO4)cc1OC,0.2709,1.0,0.15502611,1.0
 31,COc1ccc(C(=O)NC(CC(=O)O)c2ccccc2Cl)nc1-c1ccccc1Cl,0.2709,0.98910775,0.18096515,0.60058685
 32,CCN(C(C)=O)c1ccc(OC)c2nc(NC(=O)C3CCN(C(=O)c4cccc(C(F)(F)F)c4)CC3)sc12,0.2709,1.0,0.2221201,0.49412865
+33,COc1ccc(NC(=O)N2CCN(c3ccccc3C)CC2)cc1N1CCN(C)CC1,0.2709,1.0, 0.270863836,1.0
 34,COc1ccccc1CCC(=O)Nc1ccc(S(=O)(=O)Nc2cc(C)nc(C)n2)cc1,0.2709,1.0,0.16061453,1.0
 35,COc1ccccc1S(=O)(=O)NCc1ccc(C(=O)N(C)Cc2ccc(F)cc2)cc1,0.2709,0.36022714,0.17580872,1.0
 36,COc1cc(C(=O)Nc2ccc(C(N)=O)cc2)c([N+](=O)[O-])cc1OC,0.2709,1.0,0.13533835,1.0
@@ -41,6 +42,7 @@ BO Iteration,Selected SMILES,Hypervolume,f1,f2,f3
 40,COc1ccc(C=NNC(=O)Cn2c(=O)c(C)nc3ccccc32)c(OC)c1,0.2801,1.0,0.15195369,1.0
 41,Cc1c(-c2ccccc2)nc2ccccc2c1C(=O)Oc1ccc([N+](=O)[O-])cc1,0.2801,0.74516881,0.1654161,0.4087655
 42,COc1ccc(-c2c(C(=O)NS(=O)(=O)c3cccc(C(F)(F)F)c3)n(Cc3cccc(C(F)(F)F)c3)c3ccccc23)cc1,0.2801,0.45212346,0.15241128,0.00202845
+43,CCc1ccc(N2CCN(C(=O)c3ccc(OC)c(OC)c3)CC2)cc1,0.3012,1.0,0.243506494,1.0
 44,CCN1C(=O)c2cccc3c(S(=O)(=O)N(C(=O)c4cccnc4)c4ccc(OC)cc4)ccc1c23,0.3012,1.0,0.16918345,0.96696564
 45,CCC(=O)NCCc1nc2cc(NC(=O)c3cccc([N+](=O)[O-])c3)ccc2n1C,0.3012,1.0,0.2191679,1.0
 46,CCC(C)NC(=O)C(NS(=O)(=O)c1ccc2c(c1)c(=O)n(C)c(=O)n2C)c1ccccc1,0.3012,1.0,0.16229713,1.0
@@ -80,6 +82,7 @@ BO Iteration,Selected SMILES,Hypervolume,f1,f2,f3
 80,CN1CCN(c2cc(CNC(=O)c3ccc(=O)[nH]n3)ccn2)CC1,0.3012,1.0,0.18821604,1.0
 81,COc1ccc(C)cc1NC(=O)NCc1ccc2c(c1)CCN2C(=O)c1ccccc1,0.3012,0.15439446,0.24524158,0.8697859
 82,NS(=O)(=O)c1ccc(NC(=O)NC(Cc2ccccc2)C(=O)O)cc1,0.3012,1.0,0.15163297,1.0
+83,COc1cccc(NC(=O)c2cccc(OC)c2)c1,0.3012,1.0,0.65307971,1.0
 84,CCCN(CCc1cccc(-c2ccccc2)c1)C(=O)C1OC(C(=O)O)=CC(N)C1NC(C)=O,0.3188,1.0,0.32099185,1.0
 85,CS(=O)(=O)c1cccc(Nc2nccc(Nc3c(Cl)ccc4c3OCO4)n2)c1,0.3198,1.0,0.13575458,1.0
 86,O=C(O)CCc1cc(CCNS(=O)(=O)c2ccc(Br)cc2)cc(Cc2cccnc2)c1,0.3198,1.0,0.27474527,1.0

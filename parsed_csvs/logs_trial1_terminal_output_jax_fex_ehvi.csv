@@ -116,6 +116,7 @@ BO Iteration,Selected SMILES,Hypervolume,f1,f2,f3
 114,Cc1cc(NS(=O)(=O)c2ccc(NC(=O)c3ccc([N+](=O)[O-])cc3)cc2)nc(C)n1,0.3583,1.0,0.14121339,1.0
 115,Cc1csc(NC(=O)c2cccc(Oc3ccc(S(C)(=O)=O)cc3)c2)n1,0.3583,0.89794362,0.15648855,1.0
 116,Cc1cc(F)ccc1NC(=O)CCc1ccc(S(=O)(=O)N2CCOCC2)cc1,0.3583,0.36022714,0.21511628,1.0
+117,CC1(CC(=O)Nc2ccccc2C(=O)O)CC(c2cccc(Cl)c2)C(c2ccc(Cl)cc2)N(C(CS(=O)(=O)C(C)(C)C)C2CC2)C1=O,0.3583,1.0,0.281137993, 1.0
 118,COC(=O)NN=C(CCN1CCCC1)CC(c1ccccc1)c1c(O)c2ccccc2oc1=O,0.3652,1.0,0.31887755,0.97641154
 119,O=C(CCN1C(=O)SC(=Cc2ccccc2)C1=O)Nc1ccc(C(=O)O)c(O)c1,0.3652,1.0,0.23746201,1.0
 120,Cc1ccc(S(=O)(=O)NC(Cc2ccccc2)C(=O)N2CCCC2C(=O)O)cc1,0.3652,1.0,0.2613798,1.0
