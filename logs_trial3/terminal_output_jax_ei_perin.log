@@ -1,4 +1,4 @@
-['O=[Se](=O)(c1ccccc1)c1ncn(C2CC(O)C(CO)O2)n1',
+Initial SMILES: ['O=[Se](=O)(c1ccccc1)c1ncn(C2CC(O)C(CO)O2)n1',
  'O=C(C=CN(O)Cc1ccccc1)c1ccc(F)cc1',
  'COc1ccc(C(=O)N2CCC3(CC2)CCN(C(c2ccccc2)c2ccccc2)CC3)cc1',
  'COc1ccc(C=CC(=O)C=Cc2ccc(OCc3cn(-c4ccnc5cc(Cl)ccc45)nn3)c(OC)c2)c(OC)c1',

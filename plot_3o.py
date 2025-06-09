@@ -5,30 +5,26 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-# ─── Edit these for your trial ───────────────────────────────────────────────
 ehvi_csv = "parsed_csvs/logs_trial1_terminal_output_jax_fex_ehvi.csv"
 ei_csv   = "evaluated_ei/logs_trial1_terminal_output_jax_ei_fex_evaluated.csv"
 ehvi_log = "logs_trial1/terminal_output_jax_fex_ehvi.log"
 out_pdf  = "plots/fex_trial1_plots.pdf"
-# ──────────────────────────────────────────────────────────────────────────────
 
 def load_data():
-    # 1) EHVI selections
+    # EHVI
     df_ehvi = pd.read_csv(ehvi_csv)
-    # 2) EI evaluations
+    # EI
     df_ei   = pd.read_csv(ei_csv)
 
     # pick out objective columns from EHVI
     fcols = sorted(c for c in df_ehvi.columns if c.startswith("f"))
     pts_ehvi = df_ehvi[fcols].values
-
-    # pick same columns from EI dataframe (they should exist)
     missing = set(fcols) - set(df_ei.columns)
     if missing:
         raise RuntimeError(f"EI CSV missing columns: {missing}")
     pts_ei = df_ei[fcols].values
 
-    # 3) Pareto front from the log
+    # pareto
     with open(ehvi_log) as f:
         txt = f.read()
     m = re.search(r"Final Pareto front points:\s*(\[\[.*?\]\])", txt, re.S)

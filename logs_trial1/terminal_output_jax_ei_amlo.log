@@ -1,4 +1,4 @@
-['OC1=NC(c2ccc(OCCCC(F)(F)F)cc2F)(C(F)(F)F)CC(c2ccc(CC3CC3)cc2)=C1c1nn[nH]n1',
+Initial SMILES: ['OC1=NC(c2ccc(OCCCC(F)(F)F)cc2F)(C(F)(F)F)CC(c2ccc(CC3CC3)cc2)=C1c1nn[nH]n1',
  'COc1cc(NC2c3c([nH]c4ccccc34)C(c3cc(OC)c(O)c(OC)c3)N3C(=O)OCC23)ccc1O',
  'CC(=O)Nc1cc(C)c(-c2nnc3sc(=S)[nH]n23)s1',
  'CC(CCc1ccc(C(N)=O)cc1)NCC(=O)c1ccc(Cl)cc1',
