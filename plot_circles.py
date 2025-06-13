@@ -6,14 +6,14 @@ import os
 # === Paths to each method's 3 trial results ===
 methods = {
     "EHVI": [
-        "circles/circles_ehvi_trial1_fex.csv",
-        "circles/circles_ehvi_trial2_fex.csv",
-        "circles/circles_ehvi_trial3_fex.csv"
+        "circles/circles_ehvi_trial1_perin.csv",
+        "circles/circles_ehvi_trial2_perin.csv",
+        "circles/circles_ehvi_trial3_perin.csv"
     ],
     "EI": [
-        "circles/circles_ei_trial1_fex.csv",
-        "circles/circles_ei_trial2_fex.csv",
-        "circles/circles_ei_trial3_fex.csv"
+        "circles/circles_ei_trial1_perin.csv",
+        "circles/circles_ei_trial2_perin.csv",
+        "circles/circles_ei_trial3_perin.csv"
     ]
 }
 
@@ -71,8 +71,8 @@ ax.set_yscale("log")
 ax.tick_params(labelsize=11)
 ax.grid(True, which="both", linestyle="--", alpha=0.3)
 ax.legend(title="Method", fontsize=11)
-ax.set_title("Fexofenadine: #Circles across thresholds", fontsize=14)
+ax.set_title("Perindopril: #Circles across thresholds", fontsize=14)
 
 plt.tight_layout()
-plt.savefig("fex_circles_markerplot.pdf", dpi=300)
+plt.savefig("perin_circles_markerplot.pdf", dpi=300)
 plt.show()

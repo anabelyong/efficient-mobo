@@ -1,75 +1,101 @@
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import os
+from matplotlib.ticker import MultipleLocator
 
-def load_trials(prefix, suffix, trials, column="Hypervolume", path_template="{prefix}{n}{suffix}"):
+def load_trials(prefix: str, suffix: str, trials: list[int]) -> list:
+    """Load multiple trial CSVs into a list of DataFrames."""
     dfs = []
-    for n in trials:
-        path = path_template.format(prefix=prefix, n=n, suffix=suffix)
-        df = pd.read_csv(path)
-        df['BO Iteration'] = df['BO Iteration'] + 1
-        dfs.append(df)
+    for t in trials:
+        path = f"{prefix}{t}{suffix}"
+        if os.path.exists(path):
+            df = pd.read_csv(path)
+            dfs.append(df)
+        else:
+            print(f"[WARN] Missing: {path}")
     return dfs
 
-def combine_trials(dfs):
-    df_comb = pd.DataFrame({"BO Iteration": dfs[0]["BO Iteration"]})
-    for i, df in enumerate(dfs, 1):
-        df_comb[f"trial{i}"] = df["Hypervolume"]
-    df_comb["mean"] = df_comb[[f"trial{i}" for i in range(1, 4)]].mean(axis=1)
-    df_comb["std"] = df_comb[[f"trial{i}" for i in range(1, 4)]].std(axis=1)
-    return df_comb
+def plot_refined_hv_comparison(dfs: dict, title: str, out_file: str):
+    plt.figure(figsize=(8, 5))
+    colors = {
+        "EHVI": "#5e3c99",             # purple
+        "EI": "#e377c2",               # pink
+        "Random Sampling": "#e6ac00"   # gold
+    }
 
-# === Load all trials ===
+    for method, method_dfs in dfs.items():
+        df_all = pd.concat(method_dfs)
+        grouped = df_all.groupby("BO Iteration")["Hypervolume"]
+
+        mean = grouped.mean()
+        std = grouped.std()
+
+        xticks = sorted(grouped.mean().index)
+        mean_vals = mean.loc[xticks]
+        std_vals = std.loc[xticks]
+
+        # Step plot
+        plt.step(
+            xticks, mean_vals,
+            label=method,
+            color=colors[method],
+            linewidth=2,
+            where="post"
+        )
+
+        # Fill between mean ± std
+        plt.fill_between(
+            xticks,
+            (mean_vals - std_vals).clip(lower=0.0),
+            (mean_vals + std_vals),
+            step="post",
+            color=colors[method],
+            alpha=0.2,
+            linewidth=0
+        )
+
+    plt.xlabel("BO Iteration", fontsize=13)
+    plt.ylabel("Hypervolume", fontsize=13)
+    plt.xticks(np.arange(0, 201, 10), fontsize=11)
+    plt.gca().yaxis.set_major_locator(MultipleLocator(0.05))  # tick every 0.05 (or 0.025 for finer)
+    plt.yticks(fontsize=11)
+    plt.title(title, fontsize=14)
+    plt.grid(alpha=0.3, linestyle="--")
+    plt.legend(loc="lower right", fontsize=11, frameon=False)
+    plt.tight_layout()
+    plt.savefig(out_file, dpi=300)
+    plt.close()
+
+# === Example usage ===
 trials = [1, 2, 3]
 
-# EHVI
-ehvi_dfs = load_trials(
-    prefix="parsed_csvs/logs_trial",
-    suffix="_terminal_output_jax_perin_ehvi.csv",
-    trials=trials
-)
-ehvi_hv = combine_trials(ehvi_dfs)
-
-# EI
 ei_dfs = load_trials(
     prefix="evaluated_ei/logs_trial",
     suffix="_ei_evaluated_perin.csv",
     trials=trials
 )
-ei_hv = combine_trials(ei_dfs)
 
-# Random Sampling
+ehvi_dfs = load_trials(
+    prefix="parsed_csvs/logs_trial",
+    suffix="_terminal_output_jax_perin_ehvi.csv",
+    trials=trials
+)
+
 rs_dfs = load_trials(
     prefix="evaluated_rs/random_sampling_perin_trial",
     suffix=".csv",
     trials=trials
 )
-rs_hv = combine_trials(rs_dfs)
 
-# === Plotting ===
-plt.figure(figsize=(10, 6))
+dfs = {
+    "EHVI": ehvi_dfs,
+    "EI": ei_dfs,
+    "Random Sampling": rs_dfs
+}
 
-# EHVI
-plt.plot(ehvi_hv["BO Iteration"], ehvi_hv["mean"], label="EHVI (mean)", color="tab:blue")
-plt.fill_between(ehvi_hv["BO Iteration"], ehvi_hv["mean"] - ehvi_hv["std"], ehvi_hv["mean"] + ehvi_hv["std"],
-                alpha=0.25, color="tab:blue", label="EHVI ± std")
-
-# EI
-plt.plot(ei_hv["BO Iteration"], ei_hv["mean"], label="EI (mean)", color="tab:orange")
-plt.fill_between(ei_hv["BO Iteration"], ei_hv["mean"] - ei_hv["std"], ei_hv["mean"] + ei_hv["std"],
-                 alpha=0.25, color="tab:orange", label="EI ± std")
-
-# RS
-plt.plot(rs_hv["BO Iteration"], rs_hv["mean"], label="Random Sampling (mean)", color="tab:green")
-#plt.fill_between(rs_hv["BO Iteration"], rs_hv["mean"] - rs_hv["std"], rs_hv["mean"] + rs_hv["std"],
-                 #alpha=0.25, color="tab:green", label="RS ± std")
-
-plt.xlabel("BO Iteration")
-plt.ylabel("Hypervolume")
-plt.title("Perindopril MPO: Hypervolume over BO Iterations")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-
-# Save as PDF
-plt.savefig("perin_hypervolume_comparison.pdf", format="pdf")
-plt.close()
+plot_refined_hv_comparison(
+    dfs,
+    "Perindopril MPO: Hypervolume over 200 BO Evaluations",
+    "perin_hv3.pdf"
+)

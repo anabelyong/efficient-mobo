@@ -52,7 +52,7 @@ def main():
     # Setup R2 evaluation
     nobj = initial_Y.shape[1]
     ref_points = uniform_reference_points(nobj, p=10)
-    utopian_point = np.max(initial_Y, axis=0) + 0.05  # you can tweak this offset
+    utopian_point = np.max(initial_Y, axis=0) + 0.05  
 
     for i, row in bo_df.iterrows():
         idx = int(row["BO Iteration"])

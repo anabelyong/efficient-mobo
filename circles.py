@@ -20,7 +20,7 @@ def compute_circles(smiles_list: List[str], threshold: float) -> int:
 
 if __name__ == "__main__":
     # Load CSV and SMILES column
-    df = pd.read_csv("evaluated_ei/logs_trial1_ei_evaluated_amlo.csv")
+    df = pd.read_csv("evaluated_ei/logs_trial2_ei_evaluated_perin.csv")
     smiles = df["Selected SMILES by EI"].dropna().tolist()
     print(f"Loaded {len(smiles)} SMILES")
 
@@ -40,5 +40,5 @@ if __name__ == "__main__":
 
     # Save results
     out_df = pd.DataFrame(results)
-    out_df.to_csv("circles/circles_ei_trial1_amlo.csv", index=False)
-    print("Saved to circles_ei_trial1_amlo.csv")
+    out_df.to_csv("circles/circles_ei_trial2_perin.csv", index=False)
+    print("Saved to circles_ei_trial2_perin.csv")
