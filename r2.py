@@ -7,6 +7,7 @@ from acquisition_funcs.r2 import r2_indicator_set, uniform_reference_points
 from acquisition_funcs.pareto import pareto_front
 from utils.utils_final import evaluate_amlo_objectives
 
+# --- Logger setup ---
 logger = logging.getLogger("BO")
 logger.setLevel(logging.INFO)
 logger.propagate = False
@@ -21,6 +22,7 @@ if not logger.handlers:
     logger.addHandler(ch)
     logger.addHandler(fh)
 
+# --- Helper functions ---
 def extract_initial_smiles(log_text: str) -> list:
     match = re.findall(r"Initial SMILES:\s*\[((?:\s*'[^']+',?\s*)+)\]", log_text, re.DOTALL)
     if not match:
@@ -29,12 +31,13 @@ def extract_initial_smiles(log_text: str) -> list:
 
 def extract_bo_smiles_from_csv(csv_path: str) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
-    return df[["BO Iteration", "SMILES"]]
+    return df[["BO Iteration", "Selected SMILES by EI"]]
 
+# --- Main execution ---
 def main():
-    log_path = "logs_trial2/terminal_output_jax_amlo_ehvi.log"
-    csv_path = "evaluated_rs/random_sampling_amlo_trial1.csv"
-    output_csv_path = "evaluated_rs/logs_trial1_rs_evaluated_amlo_r2.csv"
+    log_path = "logs_trial3/terminal_output_jax_amlo_ehvi.log"
+    csv_path = "evaluated_ei/logs_trial1_ei_evaluated_amlo.csv"
+    output_csv_path = "evaluated_ei/r2/logs_trial1_ei_evaluated_amlo_r2.csv"
 
     with open(log_path, "r") as f:
         log_text = f.read()
@@ -52,11 +55,10 @@ def main():
     # Setup R2 evaluation
     nobj = initial_Y.shape[1]
     ref_points = uniform_reference_points(nobj, p=10)
-    utopian_point = np.max(initial_Y, axis=0) + 0.05  
 
     for i, row in bo_df.iterrows():
         idx = int(row["BO Iteration"])
-        smile = row["SMILES"]
+        smile = row["Selected SMILES by EI"]
         logger.info(f"\n--- Iter {idx} ---")
 
         f_vec = evaluate_amlo_objectives([smile])[0]
@@ -66,15 +68,18 @@ def main():
         Y_array = np.array(archive)
         pareto_Y = Y_array[pareto_front(Y_array, maximize=True)]
 
+        # Use current archive to define utopian point (optional but safer)
+        utopian_point = np.max(Y_array, axis=0) + 0.05
+
         r2_val = r2_indicator_set(ref_points, pareto_Y, utopian_point)
         logger.info(f"R2 Indicator: {r2_val:.4f}")
 
         results.append({
             "BO Iteration": idx,
-            "Selected SMILES by RS": smile,
+            "Selected SMILES by EI": smile,
             "f1": f_vec[0],
             "f2": f_vec[1],
-            "R2 Indicator": r2_val
+            "R2 Indicator": round(r2_val, 4)
         })
 
     pd.DataFrame(results).to_csv(output_csv_path, index=False)

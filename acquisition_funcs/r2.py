@@ -1,7 +1,7 @@
 #Reference Code from @MokshJain: https://github.com/MJ10/mo_gfn
 import numpy as np
 
-def uniform_reference_points(nobj, p=4, scaling=None):
+def uniform_reference_points(nobj, p=10, scaling=None):
     """Generate reference points uniformly on the hyperplane intersecting
     each axis at 1. The scaling factor is used to combine multiple layers of
     reference points.

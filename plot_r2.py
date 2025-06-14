@@ -75,7 +75,7 @@ if __name__ == "__main__":
     trials = [1, 2, 3]
 
     ei_dfs = load_trials(
-        prefix="evaluated_ei/logs_trial",
+        prefix="evaluated_ei/r2/logs_trial",
         suffix="_ei_evaluated_amlo_r2.csv",
         trials=trials
     )
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     )
 
     rs_dfs = load_trials(
-        prefix="evaluated_rs/logs_trial",
+        prefix="evaluated_rs/r2/logs_trial",
         suffix="_rs_evaluated_amlo_r2.csv",
         trials=trials
     )

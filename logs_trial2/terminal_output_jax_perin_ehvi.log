@@ -1,4 +1,4 @@
-['CC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CCCC1(C)C=Cc2cc(O)ccc2O1',
+Initial SMILES: ['CC(C)=CCCC(C)=CCCC(C)=CCCC(C)=CCCC1(C)C=Cc2cc(O)ccc2O1',
  'O=C(NC1CCCC1)C(c1c(F)cccc1Cl)N(C(=O)c1csnn1)C1CC1',
  'NC(=O)C1CCN(c2nc(-c3cccc(Cl)c3)cs2)CC1',
  'CCCCCC=CCCCCCCCCCCC(=O)O',

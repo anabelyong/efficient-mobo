@@ -34,9 +34,9 @@ def extract_bo_smiles_from_csv(csv_path: str) -> pd.DataFrame:
     return df[["BO Iteration", "Selected SMILES"]]
 
 def main():
-    log_path = "logs_trial1/terminal_output_jax_ei_amlo.log"
-    csv_path = "rs/random_sampling_fex_results_1.csv"
-    output_csv_path = "evaluated_rs/logs_trial1_rs_evaluated_fex.csv"
+    log_path = "logs_trial1/terminal_output_jax_ei_fex.log"
+    csv_path = "parsed_csvs/logs_trial1_terminal_output_jax_ei_fex.csv"
+    output_csv_path = "evaluated_ei/logs_trial1_ei_evaluated_fex.csv"
 
     with open(log_path, "r") as f:
         log_text = f.read()

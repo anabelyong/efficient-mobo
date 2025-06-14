@@ -5,7 +5,7 @@ import pandas as pd
 import logging
 from acquisition_funcs.hypervolume import Hypervolume, infer_reference_point
 from acquisition_funcs.pareto import pareto_front
-from utils.utils_final import evaluate_perin_objectives
+from utils.utils_final import evaluate_amlo_objectives
 
 logger = logging.getLogger("BO")
 logger.setLevel(logging.INFO)
@@ -34,9 +34,9 @@ def extract_bo_smiles_from_csv(csv_path: str) -> pd.DataFrame:
     return df[["BO Iteration", "Selected SMILES"]]
 
 def main():
-    log_path = "logs_trial3/terminal_output_jax_ei_perin.log"
-    csv_path = "parsed_csvs/logs_trial1_terminal_output_jax_ei_perin.csv"
-    output_csv_path = "evaluated_ei/logs_trial1_ei_evaluated_perin.csv"
+    log_path = "logs_trial2/terminal_output_jax_ei_amlo.log"
+    csv_path = "parsed_csvs/logs_trial2_terminal_output_jax_ei_amlo.csv"
+    output_csv_path = "evaluated_ei/logs_trial2_ei_evaluated_amlo.csv"
 
     with open(log_path, "r") as f:
         log_text = f.read()
@@ -44,7 +44,7 @@ def main():
     # Extract and evaluate initial SMILES
     initial_smiles = extract_initial_smiles(log_text)
     logger.info(f"Initial SMILES ({len(initial_smiles)}): {initial_smiles}")
-    initial_Y = evaluate_perin_objectives(initial_smiles)
+    initial_Y = evaluate_amlo_objectives(initial_smiles)
     logger.info(f"f1 shape: {initial_Y[:, 0].shape}")
     logger.info(f"f2 shape: {initial_Y[:, 1].shape}")
     logger.info(f"Initial objectives:\n{initial_Y}")
@@ -65,7 +65,7 @@ def main():
         logger.info(f"\n--- Iter {idx} (train size {np.array(archive).shape}) ---")
 
         # Evaluate new SMILES
-        f_vec = evaluate_perin_objectives([smile])[0]
+        f_vec = evaluate_amlo_objectives([smile])[0]
         logger.info(f"f1 shape: {np.array([f_vec[0]]).shape}")
         logger.info(f"f2 shape: {np.array([f_vec[1]]).shape}")
         logger.info(f"Selected SMILES: {smile} → {f_vec}")
