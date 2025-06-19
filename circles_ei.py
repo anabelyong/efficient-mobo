@@ -9,6 +9,7 @@ from typing import List, Any
 from acquisition_funcs.measures import NCircles
 from acquisition_funcs.pareto import pareto_front
 from kernel_only_GP.tanimoto_gp import get_fingerprint
+from utils.utils_final import evaluate_fex_objectives, evaluate_amlo_objectives, evaluate_perin_objectives
 
 def vectorizer(smiles_list: List[str]) -> List[Any]:
     return [get_fingerprint(smi) for smi in tqdm(smiles_list, desc="Vectorizing")]
@@ -27,56 +28,30 @@ def extract_initial_smiles(log_text: str) -> list:
         raise ValueError("No initial SMILES found.")
     return re.findall(r"'([^']+)'", match[0])
 
-def extract_initial_objectives(log_text: str) -> np.ndarray:
-    """
-    Parses the multi-line initial objective array from the log text.
-    Handles formats like:
-        Initial objectives:
-        [[... ... ...]
-         [... ... ...]
-         ...
-        ]
-    """
-    lines = log_text.splitlines()
-    start_idx = None
-
-    for i, line in enumerate(lines):
-        if "Initial Y:" in line:
-            start_idx = i + 1
-            break
-
-    if start_idx is None:
+def extract_1d_initial_objectives(log_text: str) -> np.ndarray:
+    match = re.search(r"Initial objectives:\s*\[([^\]]+)\]", log_text)
+    if not match:
         raise ValueError("Initial objectives block not found in log.")
+    values = list(map(float, match.group(1).split(',')))
+    return np.array(values).reshape(-1, 1)
 
-    objective_lines = []
-    for line in lines[start_idx:]:
-        if line.strip().startswith("["):
-            objective_lines.append(line.strip().lstrip("[").rstrip("]"))
-        else:
-            break  # end of matrix block
-
-    if not objective_lines:
-        raise ValueError("Failed to parse objectives block.")
-
-    # Convert lines into floats
-    parsed = []
-    for line in objective_lines:
-        row = list(map(float, line.split()))
-        parsed.append(row)
-
-    return np.array(parsed)
-
+def get_eval_fn(target):
+    if target == "fex": return evaluate_fex_objectives
+    if target == "amlo": return evaluate_amlo_objectives
+    if target == "perin": return evaluate_perin_objectives
+    raise ValueError(f"Unknown target: {target}")
 
 if __name__ == "__main__":
-    method = "ehvi"        # or "ei", "rs"
-    target = "fex"         # or "perin", etc.
-    column_name = "Selected SMILES"  # common column name after parsing
+    method = "ei"        # for EI
+    target = "fex"        # or "perin", "amlo"
+    column_name = "Selected SMILES"
+    eval_fn = get_eval_fn(target)
 
     for trial in [1, 2, 3]:
         print(f"\n== Trial {trial} ==")
 
         csv_path = f"evaluated_{method}/r2/logs_trial{trial}_{method}_evaluated_{target}_r2.csv"
-        log_path = f"logs_trial{trial}/terminal_output_jax_{target}_{method}_.log"
+        log_path = f"logs_trial{trial}/terminal_output_jax_{method}_{target}.log"
 
         if not os.path.exists(csv_path) or not os.path.exists(log_path):
             print(f"[WARN] Missing data for trial {trial}: {csv_path} or {log_path}")
@@ -90,7 +65,7 @@ if __name__ == "__main__":
 
         try:
             initial_smiles = extract_initial_smiles(log_text)
-            initial_Y = extract_initial_objectives(log_text)
+            initial_Y = eval_fn(initial_smiles)
         except Exception as e:
             print(f"[ERROR] Failed to extract from {log_path}: {e}")
             continue
@@ -99,7 +74,7 @@ if __name__ == "__main__":
 
         # Combine BO data and initial data
         all_smiles = df[column_name].dropna().tolist() + initial_smiles
-        all_objectives = np.vstack([df[["f1", "f2", "f3"]].values, initial_Y])
+        all_objectives = np.vstack([df[[col for col in df.columns if col.startswith("f")]].values, initial_Y])
 
         # Pareto filtering
         mask = pareto_front(all_objectives, maximize=True)

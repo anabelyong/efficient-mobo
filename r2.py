@@ -67,8 +67,6 @@ def main():
         archive.append(f_vec.tolist())
         Y_array = np.array(archive)
         pareto_Y = Y_array[pareto_front(Y_array, maximize=True)]
-
-        # Use current archive to define utopian point (optional but safer)
         utopian_point = np.max(Y_array, axis=0) + 0.05
 
         r2_val = r2_indicator_set(ref_points, pareto_Y, utopian_point)
