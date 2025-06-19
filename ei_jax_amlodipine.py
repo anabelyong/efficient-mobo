@@ -12,7 +12,7 @@ from kernel_only_GP.tanimoto_gp import (
 from utils.utils_final import evaluate_amlo_MPO
 
 # === Logging setup ===
-log_file = "logs_trial3/terminal_output_jax_ei_amlo.log"
+log_file = "logs_trial2/terminal_output_jax_ei_amlo.log"
 sys.stdout = open(log_file, "w")
 sys.stderr = sys.stdout
 
